@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Card } from "@/components/Card";
+import { Footer } from "@/components/Footer";
+import Link from "next/link";
+import { ContactSection } from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -103,18 +106,18 @@ export default function Home() {
 
         </section>
 
-        {/* 3. TECHNICAL SKILLS (With Descriptions) */}
+        {/* 3. TECHNICAL SKILLS (FE, BE, AI) */}
         <section className="space-y-8">
-             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             >
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Technical Skills</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Frontend */}
+                {/* Frontend Development */}
                 <Card className="p-6 border-t-4 border-t-emerald-500 hover:-translate-y-1 transition-transform flex flex-col justify-between">
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Frontend Development</h3>
@@ -127,16 +130,16 @@ export default function Home() {
                         </div>
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Specializing in building modern client web solutions and high-performance landing pages. Focus on translating business requirements into scalable frontend code.
+                        Specializing in building modern, responsive web interfaces and high-performance landing pages. Focus on creating seamless user experiences using the latest frontend frameworks.
                     </p>
                 </Card>
 
-                {/* Backend & Languages */}
+                {/* Backend Development */}
                 <Card className="p-6 border-t-4 border-t-indigo-500 hover:-translate-y-1 transition-transform flex flex-col justify-between">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Backend & Languages</h3>
+                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Backend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["Node.js", "ASP.NET", "Laravel", "C#", "PHP", "Python", "SQL", "JavaScript"].map(tech => (
+                            {["ASP.NET", "Laravel", "Flask", "Node.js", "C#", "PHP", "SQL Server", "REST APIs"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
                                     {tech}
                                 </span>
@@ -144,16 +147,16 @@ export default function Home() {
                         </div>
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Experienced in architecting complex Warehouse Management Systems (WMS) and optimizing database queries for performance.
+                        Specializing in robust API architectures using C#. Experienced in architecting complex Warehouse Management Systems (WMS), inventory, and tracking systems. Have also built scalable API services using Flask and Laravel.
                     </p>
                 </Card>
 
-                {/* Cloud & Tools */}
+                {/* Artificial Intelligence */}
                 <Card className="p-6 border-t-4 border-t-orange-500 hover:-translate-y-1 transition-transform flex flex-col justify-between">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Cloud & Soft Skills</h3>
+                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Artificial Intelligence</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["Alibaba Cloud", "AWS", "Git", "Technical Leadership", "Project Management"].map(tech => (
+                            {["TensorFlow", "Keras", "OpenCV", "Scikit-learn", "LangChain", "FAISS", "HuggingFace", "Pandas"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-300">
                                     {tech}
                                 </span>
@@ -161,7 +164,7 @@ export default function Home() {
                         </div>
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Committed to delivering scalable software architectures. Experienced in cross-functional collaboration and technical mentorship.
+                        Engineering intelligent systems including RAG pipelines for document retrieval, real-time Computer Vision for sign language recognition, and predictive modeling for sports analytics.
                     </p>
                 </Card>
             </div>
@@ -234,13 +237,18 @@ export default function Home() {
                             </div>
                             
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Architected a comprehensive <strong className="text-slate-900 dark:text-white">Warehouse Management System (WMS)</strong> using ASP.NET & SQL.</li>
+                                <li>Architected a comprehensive <strong className="text-slate-900 dark:text-white">Warehouse Management System (WMS)</strong> using ASP.NET.</li>
+                                <li>Developed a comprehensive <strong className="text-slate-900 dark:text-white">Transport Tracker</strong> system using React for the frontend and C# Web API for the backend to monitor product logistics in real-time.</li>
                                 <li>Optimized database queries and frontend performance using jQuery.</li>
                             </ul>
 
                             <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">ASP.NET</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
                                 <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
                                 <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
                             </div>
                         </Card>
@@ -268,13 +276,18 @@ export default function Home() {
                             
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                                 <li>Developed responsive internal sales dashboards using <strong className="text-slate-900 dark:text-white">ASP.NET & Bootstrap</strong></li>
+                                <li>Architected scalable Backend services using C# and ASP.NET Core.</li>
                                 <li>Designed complex backend logic to handle sales data processing.</li>
                             </ul>
 
                              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">ASP.NET</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
                                 <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Bootstrap</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
                                 <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
                             </div>
                         </Card>
                     </div>
@@ -301,12 +314,12 @@ export default function Home() {
                             
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                                 <li>Engineered a location-tracking CRUD application integrating <strong className="text-slate-900 dark:text-white">Google Maps API</strong></li>
-                                <li>Built real-time chat features using VB.NET and SQL</li>
+                                <li>Built real-time chat features using VB.NET.</li>
                             </ul>
 
                              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
                                 <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">VB.NET</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL</span>
+                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
                                 <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Google Maps API</span>
                             </div>
                         </Card>
@@ -474,7 +487,130 @@ export default function Home() {
             </div>
         </section>
 
+        {/* 6. SELECTED PROJECTS */}
+        <section id="projects" className="space-y-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-between"
+            >
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Selected Projects</h2>
+                <Link href="/projects" className="group flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                    View All Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                {/* PROJECT 1: SIGNLINGO (Featured Large) */}
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="md:col-span-2"
+                >
+                    <Link href="/projects/signlingo">
+                        <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+                            <div className="grid md:grid-cols-5 gap-0">
+                                {/* Visual Side (Larger ratio) */}
+                                <div className="md:col-span-3 h-64 md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
+                                     {/* Placeholder for Image - Replace with actual image */}
+                                     <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"/>
+                                     <div className="text-slate-400 font-mono text-sm">[Signlingo Gameplay/Dashboard Image]</div>
+                                </div>
+                                {/* Content Side */}
+                                <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
+                                    <div className="mb-4">
+                                        <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-wider font-semibold">AI & Machine Learning</span>
+                                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-emerald-500 transition-colors">Signlingo</h3>
+                                    </div>
+                                    <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                        An interactive platform designed to make learning sign language accessible. Features real-time AI hand sign recognition using webcam feedback.
+                                    </p>
+                                    
+                                    <div className="space-y-6 mt-auto">
+                                      <div className="flex flex-wrap gap-2">
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">TensorFlow</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
+                                      </div>
+
+                                      {/* NEW "VIEW PROJECT" BUTTON */}
+                                      <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
+                                        View Project Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </motion.div>
+
+                {/* PROJECT 2: FLUX (Half Width) */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <Link href="/projects/flux">
+                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+                            <div className="h-48 bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/20 transition-colors">
+                                <span className="text-indigo-600/40 dark:text-indigo-400/20 font-mono text-3xl font-bold">FLUX</span>
+                            </div>
+                            <div className="p-8 flex flex-col flex-1">
+                                <div className="mb-4">
+                                    <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs uppercase tracking-wider font-semibold">Fullstack Architecture</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-indigo-500 transition-colors">Flux Budget App</h3>
+                                </div>
+                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
+                                    Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
+                                </p>
+                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
+                                    View Details <ArrowRight className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </motion.div>
+
+                {/* PROJECT 3: FAQ ASSISTANT (Half Width) */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                >
+                    <Link href="/projects/faq-assistant">
+                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+                            <div className="h-48 bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/20 transition-colors">
+                                <span className="text-violet-600/40 dark:text-violet-400/20 font-mono text-3xl font-bold">FAQ</span>
+                            </div>
+                            <div className="p-8 flex flex-col flex-1">
+                                <div className="mb-4">
+                                    <span className="text-violet-600 dark:text-violet-400 font-mono text-xs uppercase tracking-wider font-semibold">Generative AI</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-violet-500 transition-colors">FaQ Assistant</h3>
+                                </div>
+                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
+                                    Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
+                                </p>
+                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
+                                    View Details <ArrowRight className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </motion.div>
+                
+            </div>
+        </section>
       </div>
+
+      {/* 8. NEW CONTACT SECTION */}
+      <ContactSection />
+
+      {/* 9. FOOTER */}
+      <Footer />
     </main>
   );
 }
