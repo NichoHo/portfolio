@@ -60,7 +60,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Available for Internships (July 2026)
+              Available for Internships (July)
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white">
