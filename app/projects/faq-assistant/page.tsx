@@ -56,7 +56,7 @@ export default function FaqPage() {
             transition={{ delay: 0.2 }}
             className="w-full h-auto md:bg-violet-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
         >
-             <img src="/portfolio/faq-assistant.jpg" alt="FaQ Assistant" className="object-cover"/>
+             <img src="/portfolio/faq-assistant.jpeg" alt="FaQ Assistant" className="object-cover"/>
         </motion.div>
 
         {/* CONTENT GRID */}
