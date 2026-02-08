@@ -117,7 +117,7 @@ export default function Home() {
              className="relative"
           >
             <img 
-              src="/photo.jpg"
+              src="/portfolio/photo.jpg"
               alt="Nicholas Ho" 
               className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl"
             />
@@ -376,7 +376,7 @@ export default function Home() {
                             <div className="grid md:grid-cols-5 gap-0">
                                 {/* Visual Side (Larger ratio) */}
                                 <div className="md:col-span-3 h-auto md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
-                                     <img src="/signlingo-2.jpg" alt="Signlingo" className="object-cover w-full h-full"/>
+                                     <img src="/portfolio/signlingo-2.jpg" alt="Signlingo" className="object-cover w-full h-full"/>
                                 </div>
                                 {/* Content Side */}
                                 <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
@@ -415,7 +415,7 @@ export default function Home() {
                     <Link href="/projects/flux">
                          <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
                             <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/20 transition-colors">
-                                <img src="/flux.jpg" alt="Flux" className="object-cover"/>
+                                <img src="/portfolio/flux.jpg" alt="Flux" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
@@ -443,7 +443,7 @@ export default function Home() {
                     <Link href="/projects/faq-assistant">
                          <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
                             <div className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/20 transition-colors">
-                                <img src="/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
+                                <img src="/portfolio/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
@@ -489,7 +489,7 @@ export default function Home() {
                     <Card className="h-full flex flex-col group hover:border-orange-500/50 transition-colors">
                         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/alibaba-logo.png" alt="Alibaba" className="w-full h-full object-cover" />
+                                <img src="/portfolio/alibaba-logo.png" alt="Alibaba" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-bold text-slate-900 dark:text-white">Alibaba Cloud Associate</h3>
@@ -525,7 +525,7 @@ export default function Home() {
                     <Card className="h-full flex flex-col group hover:border-green-500/50 transition-colors">
                         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
+                                <img src="/portfolio/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-bold text-slate-900 dark:text-white">Conversational AI</h3>
@@ -570,7 +570,7 @@ export default function Home() {
                     <Card className="h-full flex flex-col group hover:border-[#232F3E] transition-colors">
                         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
+                                <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-bold text-slate-900 dark:text-white">Getting Started with Compute</h3>
@@ -601,7 +601,7 @@ export default function Home() {
                     <Card className="h-full flex flex-col group hover:border-[#232F3E] transition-colors">
                         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
+                                <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-bold text-slate-900 dark:text-white">Introduction to Cloud 101</h3>

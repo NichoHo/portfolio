@@ -7,9 +7,9 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PROJECT_IMAGES = [
-  "/nexus.jpg",
-  "/nexus-2.jpg",
-  "/nexus-3.jpg"
+  "/portfolio/nexus.jpg",
+  "/portfolio/nexus-2.jpg",
+  "/portfolio/nexus-3.jpg"
 ];
 
 export default function NexusPage() {

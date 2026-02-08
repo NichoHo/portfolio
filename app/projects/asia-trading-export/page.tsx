@@ -7,8 +7,8 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PROJECT_IMAGES = [
-    "/asia-trading-export.jpg",
-    "/asia-trading-export-2.jpg"
+    "/portfolio/asia-trading-export.jpg",
+    "/portfolio/asia-trading-export-2.jpg"
 ];
 
 export default function AsiaTradingPage() {

@@ -33,7 +33,7 @@ export default function ProjectsPage() {
                 <Link href="/projects/signlingo" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <div className="h-auto bg-emerald-50 dark:bg-emerald-900/10 relative overflow-hidden flex items-center justify-center">
-                             <img src="/signlingo-2.jpg" alt="Signlingo" className="object-cover"/>
+                             <img src="/portfolio/signlingo-2.jpg" alt="Signlingo" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
                 <Link href="/projects/flux" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center">
-                             <img src="/flux.jpg" alt="Flux" className="object-cover"/>
+                             <img src="/portfolio/flux.jpg" alt="Flux" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -89,7 +89,7 @@ export default function ProjectsPage() {
                 <Link href="/projects/faq-assistant" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <div className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center">
-                            <img src="/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
+                            <img src="/portfolio/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
                 <Link href="/projects/f1-undercut-predictor" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <div className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center">
-                             <img src="/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
+                             <img src="/portfolio/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/nexus" className="h-auto bg-cyan-50 dark:bg-cyan-900/10 relative overflow-hidden flex items-center justify-center block">
-                         <img src="/nexus.jpg" alt="Nexus Agency" className="object-cover"/>
+                         <img src="/portfolio/nexus.jpg" alt="Nexus Agency" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/asia-trading-export" className="h-auto bg-amber-50 dark:bg-amber-900/10 relative overflow-hidden flex items-center justify-center block">
-                         <img src="/asia-trading-export.jpg" alt="Asia Trading Export" className="object-cover"/>
+                         <img src="/portfolio/asia-trading-export.jpg" alt="Asia Trading Export" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -210,7 +210,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/hammouda-charcoal" className="h-auto bg-stone-100 dark:bg-stone-900/50 relative overflow-hidden flex items-center justify-center block">
-                         <img src="/hammouda-charcoal-2.jpg" alt="Hammouda Charcoal" className="object-cover"/>
+                         <img src="/portfolio/hammouda-charcoal-2.jpg" alt="Hammouda Charcoal" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">

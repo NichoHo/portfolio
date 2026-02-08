@@ -7,12 +7,12 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PROJECT_IMAGES = [
-  "/flux.jpg",
-  "/flux-2.jpg",
-  "/flux-3.jpg",
-  "/flux-4.jpg",
-  "/flux-5.jpg",
-  "/flux-6.jpg",
+  "/portfolio/flux.jpg",
+  "/portfolio/flux-2.jpg",
+  "/portfolio/flux-3.jpg",
+  "/portfolio/flux-4.jpg",
+  "/portfolio/flux-5.jpg",
+  "/portfolio/flux-6.jpg",
 ];
 
 export default function FluxPage() {

@@ -7,9 +7,9 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PROJECT_IMAGES = [
-  "/hammouda-charcoal-2.jpg",
-  "/hammouda-charcoal.jpg",
-  "/hammouda-charcoal-3.jpg"
+  "/portfolio/hammouda-charcoal-2.jpg",
+  "/portfolio/hammouda-charcoal.jpg",
+  "/portfolio/hammouda-charcoal-3.jpg"
 ];
 
 export default function HammoudaPage() {

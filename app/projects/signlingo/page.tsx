@@ -7,12 +7,12 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PROJECT_IMAGES = [
-  "/signlingo-2.jpg",
-  "/signlingo.jpeg",
-  "/signlingo-5.jpg",
-  "/signlingo-6.jpg",
-  "/signlingo-3.jpeg",
-  "/signlingo-4.jpg"
+  "/portfolio/signlingo-2.jpg",
+  "/portfolio/signlingo.jpeg",
+  "/portfolio/signlingo-5.jpg",
+  "/portfolio/signlingo-6.jpg",
+  "/portfolio/signlingo-3.jpeg",
+  "/portfolio/signlingo-4.jpg"
 ];
 
 export default function SignlingoPage() {

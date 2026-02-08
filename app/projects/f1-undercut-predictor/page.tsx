@@ -56,7 +56,7 @@ export default function F1PredictorPage() {
             transition={{ delay: 0.2 }}
             className="w-full h-auto md:bg-red-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
         >
-             <img src="/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
+             <img src="/portfolio/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
         </motion.div>
 
         {/* CONTENT GRID */}
