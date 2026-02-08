@@ -1,11 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowLeft, Github, ExternalLink, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Github, ExternalLink, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
+const PROJECT_IMAGES = [
+    "/asia-trading-export.jpg",
+    "/asia-trading-export-2.jpg"
+];
+
 export default function AsiaTradingPage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % PROJECT_IMAGES.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + PROJECT_IMAGES.length) % PROJECT_IMAGES.length);
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 font-sans selection:bg-emerald-500/20">
       
@@ -57,22 +73,56 @@ export default function AsiaTradingPage() {
             </div>
         </motion.div>
 
-        {/* HERO VISUAL */}
+        {/* HERO VISUAL (CAROUSEL) */}
         <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full h-64 md:h-96 bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
+            className="group relative w-full rounded-2xl overflow-hidden border border-[#dee2e6] dark:border-slate-800 shadow-md"
         >
-             {/* Abstract Representation of Globe/Trade */}
-             <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                <div className="w-64 h-64 rounded-full border border-amber-500/30 flex items-center justify-center">
-                    <div className="w-48 h-48 rounded-full border border-amber-500/50 flex items-center justify-center animate-pulse">
-                         <div className="w-32 h-32 rounded-full bg-amber-500/20 blur-xl" />
-                    </div>
-                </div>
+             <AnimatePresence mode="wait">
+                <motion.img 
+                    key={currentImageIndex}
+                    src={PROJECT_IMAGES[currentImageIndex]} 
+                    alt={`Asia Trading Export Screenshot ${currentImageIndex + 1}`} 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full h-auto object-contain block"
+                />
+             </AnimatePresence>
+
+             {/* Carousel Controls */}
+             <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <button 
+                    onClick={prevImage}
+                    className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-slate-900 dark:text-white hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button 
+                    onClick={nextImage}
+                    className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-slate-900 dark:text-white hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <ChevronRight className="w-6 h-6" />
+                </button>
              </div>
-             <div className="relative z-10 text-amber-500 font-mono text-sm">[Interactive D3.js Globe]</div>
+
+             {/* Dots Indicator */}
+             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {PROJECT_IMAGES.map((_, idx) => (
+                    <button
+                        key={idx}
+                        onClick={() => setCurrentImageIndex(idx)}
+                        className={`h-2 rounded-full transition-all duration-300 shadow-sm border border-black/10 ${
+                            idx === currentImageIndex 
+                            ? "w-6 bg-amber-500" 
+                            : "w-2 bg-white/70 hover:bg-white"
+                        }`}
+                    />
+                ))}
+             </div>
         </motion.div>
 
         {/* CONTENT GRID */}
@@ -127,7 +177,6 @@ export default function AsiaTradingPage() {
                     </p>
                 </div>
             </div>
-
         </div>
       </div>
     </main>

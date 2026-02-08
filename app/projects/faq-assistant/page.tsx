@@ -54,15 +54,9 @@ export default function FaqPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full h-64 md:h-96 bg-violet-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
+            className="w-full h-auto md:bg-violet-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
         >
-             {/* Abstract UI representation */}
-             <div className="absolute inset-x-20 top-16 bottom-0 bg-white dark:bg-slate-950 rounded-t-xl shadow-2xl border-x border-t border-slate-200 dark:border-slate-800 opacity-90 flex flex-col p-6 gap-4">
-                <div className="w-full h-8 bg-slate-100 dark:bg-slate-900 rounded-lg animate-pulse" />
-                <div className="w-3/4 h-8 bg-violet-100 dark:bg-violet-900/20 rounded-lg self-end" />
-                <div className="w-5/6 h-8 bg-slate-100 dark:bg-slate-900 rounded-lg" />
-             </div>
-             <div className="relative z-10 text-slate-400 font-mono text-sm">[RAG Chat Interface]</div>
+             <img src="/faq-assistant.jpeg" alt="FaQ Assistant" className="object-cover"/>
         </motion.div>
 
         {/* CONTENT GRID */}

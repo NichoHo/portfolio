@@ -7,6 +7,8 @@ import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { ContactSection } from "@/components/ContactSection";
+import { Education } from "@/components/Education";
+import { Volunteering } from "@/components/Volunteering";
 
 export default function Home() {
   return (
@@ -14,11 +16,28 @@ export default function Home() {
       
       {/* 1. NAVBAR */}
       <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <span className="font-bold text-xl tracking-tight">Nicholas Ho</span>
-          <div className="flex items-center gap-4">
-            <a href="#work" className="text-sm font-medium hover:text-emerald-500 transition-colors">Work</a>
-            <a href="#contact" className="text-sm font-medium hover:text-emerald-500 transition-colors">Contact</a>
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+          <span className="font-bold text-xl tracking-tight hidden md:block">Nicholas Ho</span>
+          <span className="font-bold text-xl tracking-tight md:hidden">NH</span>
+          
+          <div className="flex items-center gap-6">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#work" className="text-sm font-medium hover:text-emerald-500 transition-colors">Work</a>
+              <a href="#projects" className="text-sm font-medium hover:text-emerald-500 transition-colors">Projects</a>
+              <a href="#education" className="text-sm font-medium hover:text-emerald-500 transition-colors">Education</a>
+              <a href="#volunteering" className="text-sm font-medium hover:text-emerald-500 transition-colors">Volunteering</a>
+              <a href="#certifications" className="text-sm font-medium hover:text-emerald-500 transition-colors">Certifications</a>
+              <a href="#contact" className="text-sm font-medium hover:text-emerald-500 transition-colors">Contact</a>
+            </div>
+
+            {/* Mobile Navigation (Simplified) */}
+            <div className="md:hidden flex items-center gap-4">
+               <a href="#work" className="text-sm font-medium hover:text-emerald-500 transition-colors">Work</a>
+               <a href="#projects" className="text-sm font-medium hover:text-emerald-500 transition-colors">Projects</a>
+               <a href="#contact" className="text-sm font-medium hover:text-emerald-500 transition-colors">Contact</a>
+            </div>
+
             <div className="w-px h-4 bg-slate-300 dark:bg-slate-700" /> 
             <ThemeToggle />
           </div>
@@ -329,12 +348,136 @@ export default function Home() {
             </div>
         </section>
 
-        {/* 5. CERTIFICATIONS */}
-        <section className="space-y-8">
-             <motion.div 
+        {/* 6. SELECTED PROJECTS */}
+        <section id="projects" className="space-y-8">
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="flex items-center justify-between"
+            >
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Selected Projects</h2>
+                <Link href="/projects" className="group flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                    View All Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                {/* PROJECT 1: SIGNLINGO (Featured Large) */}
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="md:col-span-2"
+                >
+                    <Link href="/projects/signlingo">
+                        <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+                            <div className="grid md:grid-cols-5 gap-0">
+                                {/* Visual Side (Larger ratio) */}
+                                <div className="md:col-span-3 h-auto md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
+                                     <img src="/signlingo-2.jpg" alt="Signlingo" className="object-cover w-full h-full"/>
+                                </div>
+                                {/* Content Side */}
+                                <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
+                                    <div className="mb-4">
+                                        <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-wider font-semibold">AI & Machine Learning</span>
+                                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-emerald-500 transition-colors">Signlingo</h3>
+                                    </div>
+                                    <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                        An interactive platform designed to make learning sign language accessible. Features real-time AI hand sign recognition using webcam feedback.
+                                    </p>
+                                    
+                                    <div className="space-y-6 mt-auto">
+                                      <div className="flex flex-wrap gap-2">
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">TensorFlow</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
+                                      </div>
+
+                                      {/* NEW "VIEW PROJECT" BUTTON */}
+                                      <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
+                                        View Project Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </motion.div>
+
+                {/* PROJECT 2: FLUX (Half Width) */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <Link href="/projects/flux">
+                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+                            <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/20 transition-colors">
+                                <img src="/flux.jpg" alt="Flux" className="object-cover"/>
+                            </div>
+                            <div className="p-8 flex flex-col flex-1">
+                                <div className="mb-4">
+                                    <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs uppercase tracking-wider font-semibold">Fullstack Architecture</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-indigo-500 transition-colors">Flux Budget App</h3>
+                                </div>
+                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
+                                    Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
+                                </p>
+                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
+                                    View Details <ArrowRight className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </motion.div>
+
+                {/* PROJECT 3: FAQ ASSISTANT (Half Width) */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                >
+                    <Link href="/projects/faq-assistant">
+                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+                            <div className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/20 transition-colors">
+                                <img src="/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
+                            </div>
+                            <div className="p-8 flex flex-col flex-1">
+                                <div className="mb-4">
+                                    <span className="text-violet-600 dark:text-violet-400 font-mono text-xs uppercase tracking-wider font-semibold">Generative AI</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-violet-500 transition-colors">FaQ Assistant</h3>
+                                </div>
+                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
+                                    Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
+                                </p>
+                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
+                                    View Details <ArrowRight className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </motion.div>
+                
+            </div>
+        </section>
+      </div>
+
+      {/* 8. NEW EDUCATION SECTION */}
+      <Education />
+
+      {/* 9. NEW VOLUNTEERING SECTION */}
+      <Volunteering />
+
+      {/* 5. CERTIFICATIONS */}
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 space-y-24">
+        <section className="space-y-12">
+                <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
             >
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Certifications</h2>
             </motion.div>
@@ -442,7 +585,7 @@ export default function Home() {
                                     <span className="font-mono text-slate-700 dark:text-slate-200">Oct 2024</span>
                                 </div>
                             </div>
-                             <a 
+                                <a 
                                 href="https://www.credly.com/badges/2f074998-a38b-4769-9bbc-14503a42893d/linked_in_profile" 
                                 target="_blank"
                                 className="block w-full text-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:border-[#232F3E] hover:text-[#232F3E] dark:hover:text-white transition-colors"
@@ -453,8 +596,8 @@ export default function Home() {
                     </Card>
                 </motion.div>
 
-                 {/* 4. AWS CLOUD 101 */}
-                 <motion.div whileHover={{ y: -5 }}>
+                    {/* 4. AWS CLOUD 101 */}
+                    <motion.div whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col group hover:border-[#232F3E] transition-colors">
                         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
@@ -467,13 +610,13 @@ export default function Home() {
                         </div>
                         
                         <div className="p-4 flex-1 flex flex-col justify-between gap-6">
-                             <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                                <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
                                 <div className="flex justify-between">
                                     <span>Issued</span>
                                     <span className="font-mono text-slate-700 dark:text-slate-200">Oct 2024</span>
                                 </div>
                             </div>
-                             <a 
+                                <a 
                                 href="https://www.credly.com/badges/8bc28ca2-d1db-49e0-802a-f78b4ad922f8/linked_in_profile" 
                                 target="_blank"
                                 className="block w-full text-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:border-[#232F3E] hover:text-[#232F3E] dark:hover:text-white transition-colors"
@@ -484,124 +627,6 @@ export default function Home() {
                     </Card>
                 </motion.div>
 
-            </div>
-        </section>
-
-        {/* 6. SELECTED PROJECTS */}
-        <section id="projects" className="space-y-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center justify-between"
-            >
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Selected Projects</h2>
-                <Link href="/projects" className="group flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
-                    View All Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                {/* PROJECT 1: SIGNLINGO (Featured Large) */}
-                <motion.div 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    className="md:col-span-2"
-                >
-                    <Link href="/projects/signlingo">
-                        <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
-                            <div className="grid md:grid-cols-5 gap-0">
-                                {/* Visual Side (Larger ratio) */}
-                                <div className="md:col-span-3 h-64 md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
-                                     {/* Placeholder for Image - Replace with actual image */}
-                                     <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"/>
-                                     <div className="text-slate-400 font-mono text-sm">[Signlingo Gameplay/Dashboard Image]</div>
-                                </div>
-                                {/* Content Side */}
-                                <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
-                                    <div className="mb-4">
-                                        <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-wider font-semibold">AI & Machine Learning</span>
-                                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-emerald-500 transition-colors">Signlingo</h3>
-                                    </div>
-                                    <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                                        An interactive platform designed to make learning sign language accessible. Features real-time AI hand sign recognition using webcam feedback.
-                                    </p>
-                                    
-                                    <div className="space-y-6 mt-auto">
-                                      <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">TensorFlow</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
-                                      </div>
-
-                                      {/* NEW "VIEW PROJECT" BUTTON */}
-                                      <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
-                                        View Project Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                </motion.div>
-
-                {/* PROJECT 2: FLUX (Half Width) */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    <Link href="/projects/flux">
-                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
-                            <div className="h-48 bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/20 transition-colors">
-                                <span className="text-indigo-600/40 dark:text-indigo-400/20 font-mono text-3xl font-bold">FLUX</span>
-                            </div>
-                            <div className="p-8 flex flex-col flex-1">
-                                <div className="mb-4">
-                                    <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs uppercase tracking-wider font-semibold">Fullstack Architecture</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-indigo-500 transition-colors">Flux Budget App</h3>
-                                </div>
-                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
-                                    Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
-                                </p>
-                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
-                                    View Details <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                </motion.div>
-
-                {/* PROJECT 3: FAQ ASSISTANT (Half Width) */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                >
-                    <Link href="/projects/faq-assistant">
-                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
-                            <div className="h-48 bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/20 transition-colors">
-                                <span className="text-violet-600/40 dark:text-violet-400/20 font-mono text-3xl font-bold">FAQ</span>
-                            </div>
-                            <div className="p-8 flex flex-col flex-1">
-                                <div className="mb-4">
-                                    <span className="text-violet-600 dark:text-violet-400 font-mono text-xs uppercase tracking-wider font-semibold">Generative AI</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-violet-500 transition-colors">FaQ Assistant</h3>
-                                </div>
-                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
-                                    Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
-                                </p>
-                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
-                                    View Details <ArrowRight className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                </motion.div>
-                
             </div>
         </section>
       </div>

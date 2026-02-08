@@ -1,19 +1,39 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowLeft, Github, ExternalLink, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Github, ExternalLink, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
+const PROJECT_IMAGES = [
+  "/signlingo-2.jpg",
+  "/signlingo.jpeg",
+  "/signlingo-5.jpg",
+  "/signlingo-6.jpg",
+  "/signlingo-3.jpeg",
+  "/signlingo-4.jpg"
+];
+
 export default function SignlingoPage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % PROJECT_IMAGES.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + PROJECT_IMAGES.length) % PROJECT_IMAGES.length);
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 font-sans selection:bg-emerald-500/20">
       
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-sm font-medium hover:text-emerald-500 transition-colors">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
+          <Link href="/projects" className="flex items-center gap-2 text-sm font-medium hover:text-emerald-500 transition-colors">
+            <ArrowLeft className="w-4 h-4" /> Back to Projects
           </Link>
           <div className="flex items-center gap-4">
             <ThemeToggle />
@@ -39,7 +59,7 @@ export default function SignlingoPage() {
 
             <div className="flex gap-4">
                 <a 
-                    href="https://github.com/NichoHo/Signlingo"
+                    href="https://github.com/NichoHo/Signlingo" 
                     className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
@@ -47,14 +67,56 @@ export default function SignlingoPage() {
             </div>
         </motion.div>
 
-        {/* HERO IMAGE PLACEHOLDER */}
+        {/* HERO VISUAL (CAROUSEL) */}
         <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full h-64 md:h-96 bg-slate-200 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-300 dark:border-slate-800"
+            className="group relative w-full rounded-2xl overflow-hidden border border-[#dee2e6] dark:border-slate-800 shadow-md"
         >
-            <p className="text-slate-500 font-mono text-sm">Project Screenshot / Demo Video</p>
+             <AnimatePresence mode="wait">
+                <motion.img 
+                    key={currentImageIndex}
+                    src={PROJECT_IMAGES[currentImageIndex]} 
+                    alt={`Signlingo Screenshot ${currentImageIndex + 1}`} 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full h-auto object-contain block"
+                />
+             </AnimatePresence>
+
+             {/* Carousel Controls */}
+             <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <button 
+                    onClick={prevImage}
+                    className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-slate-900 dark:text-white hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button 
+                    onClick={nextImage}
+                    className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-slate-900 dark:text-white hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <ChevronRight className="w-6 h-6" />
+                </button>
+             </div>
+
+             {/* Dots Indicator */}
+             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {PROJECT_IMAGES.map((_, idx) => (
+                    <button
+                        key={idx}
+                        onClick={() => setCurrentImageIndex(idx)}
+                        className={`h-2 rounded-full transition-all duration-300 shadow-sm border border-black/10 ${
+                            idx === currentImageIndex 
+                            ? "w-6 bg-emerald-500" 
+                            : "w-2 bg-white/70 hover:bg-white"
+                        }`}
+                    />
+                ))}
+             </div>
         </motion.div>
 
         {/* CONTENT GRID */}

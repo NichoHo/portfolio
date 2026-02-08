@@ -9,9 +9,8 @@ import { Footer } from "@/components/Footer";
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 font-sans">
-      
       <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-sm font-medium hover:text-emerald-500 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
@@ -19,8 +18,7 @@ export default function ProjectsPage() {
         </div>
       </nav>
 
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 space-y-12">
-        
+      <div className="max-w-7xl mx-auto px-4 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">All Projects</h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -34,9 +32,8 @@ export default function ProjectsPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
                 <Link href="/projects/signlingo" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                        <div className="h-56 bg-emerald-50 dark:bg-emerald-900/10 relative overflow-hidden flex items-center justify-center">
-                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                             <span className="text-emerald-600/40 dark:text-emerald-400/20 font-mono text-4xl font-bold">SL</span>
+                        <div className="h-auto bg-emerald-50 dark:bg-emerald-900/10 relative overflow-hidden flex items-center justify-center">
+                             <img src="/signlingo-2.jpg" alt="Signlingo" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -63,9 +60,8 @@ export default function ProjectsPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                 <Link href="/projects/flux" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                        <div className="h-56 bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center">
-                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                             <span className="text-indigo-600/40 dark:text-indigo-400/20 font-mono text-4xl font-bold">FLX</span>
+                        <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center">
+                             <img src="/flux.jpg" alt="Flux" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -92,9 +88,8 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                 <Link href="/projects/faq-assistant" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                        <div className="h-56 bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center">
-                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                             <span className="text-violet-600/40 dark:text-violet-400/20 font-mono text-4xl font-bold">FAQ</span>
+                        <div className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center">
+                            <img src="/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -121,9 +116,8 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
                 <Link href="/projects/f1-undercut-predictor" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                        <div className="h-56 bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center">
-                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                             <span className="text-red-600/40 dark:text-red-400/20 font-mono text-4xl font-bold">F1</span>
+                        <div className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center">
+                             <img src="/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -149,9 +143,8 @@ export default function ProjectsPage() {
              {/* 5. NEXUS AGENCY CARD (Dual Action) */}
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                    <Link href="/projects/nexus" className="h-56 bg-cyan-50 dark:bg-cyan-900/10 relative overflow-hidden flex items-center justify-center block">
-                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                         <span className="text-cyan-600/40 dark:text-cyan-400/20 font-mono text-4xl font-bold">NXS</span>
+                    <Link href="/projects/nexus" className="h-auto bg-cyan-50 dark:bg-cyan-900/10 relative overflow-hidden flex items-center justify-center block">
+                         <img src="/nexus.jpg" alt="Nexus Agency" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -183,9 +176,8 @@ export default function ProjectsPage() {
             {/* 6. ASIA TRADING EXPORT CARD (Dual Action) */}
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                    <Link href="/projects/asia-trading-export" className="h-56 bg-amber-50 dark:bg-amber-900/10 relative overflow-hidden flex items-center justify-center block">
-                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                         <span className="text-amber-600/40 dark:text-amber-400/20 font-mono text-4xl font-bold">ATE</span>
+                    <Link href="/projects/asia-trading-export" className="h-auto bg-amber-50 dark:bg-amber-900/10 relative overflow-hidden flex items-center justify-center block">
+                         <img src="/asia-trading-export.jpg" alt="Asia Trading Export" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -217,9 +209,8 @@ export default function ProjectsPage() {
             {/* 7. HAMMOUDA CHARCOAL CARD (Dual Action) */}
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                    <Link href="/projects/hammouda-charcoal" className="h-56 bg-stone-100 dark:bg-stone-900/50 relative overflow-hidden flex items-center justify-center block">
-                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                         <span className="text-stone-600/40 dark:text-stone-400/20 font-mono text-4xl font-bold">HC</span>
+                    <Link href="/projects/hammouda-charcoal" className="h-auto bg-stone-100 dark:bg-stone-900/50 relative overflow-hidden flex items-center justify-center block">
+                         <img src="/hammouda-charcoal-2.jpg" alt="Hammouda Charcoal" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -247,7 +238,6 @@ export default function ProjectsPage() {
                     </div>
                 </div>
             </motion.div>
-
         </div>
       </div>
       <Footer />

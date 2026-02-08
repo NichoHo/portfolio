@@ -54,14 +54,9 @@ export default function F1PredictorPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full h-64 md:h-96 bg-red-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
+            className="w-full h-auto md:bg-red-50 dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 overflow-hidden relative"
         >
-             {/* Abstract UI representation of a race track or graph */}
-             <div className="absolute w-full h-full flex items-center justify-center">
-                <div className="w-64 h-32 border-t-8 border-r-8 border-red-500/20 rounded-tr-full transform rotate-12" />
-                <div className="absolute w-64 h-32 border-b-8 border-l-8 border-slate-900/10 dark:border-white/10 rounded-bl-full transform rotate-12" />
-             </div>
-             <div className="relative z-10 text-slate-400 font-mono text-sm">[Strategy Prediction Dashboard]</div>
+             <img src="/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
         </motion.div>
 
         {/* CONTENT GRID */}
