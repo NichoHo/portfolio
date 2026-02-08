@@ -52,7 +52,7 @@ export function Volunteering() {
                 {/* IMAGE SIDE */}
                 <div className="relative h-64 md:h-auto bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
                     <img 
-                      src="/volunteering.jpg"
+                      src="/portfolio/volunteering.jpg"
                       alt="Volunteering" 
                       className="object-cover w-full h-full"
                     />
