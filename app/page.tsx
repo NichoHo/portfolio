@@ -84,7 +84,7 @@ export default function Home() {
 
               {/* CV BUTTON -> Opens in New Tab */}
               <a 
-                href="/CV.pdf" 
+                href="/portfolio/CV.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 px-8 py-3 text-sm font-medium transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
@@ -510,7 +510,7 @@ export default function Home() {
                             </div>
                             
                             <a 
-                                href="/alibaba-certificate.jpg" 
+                                href="/portfolio/alibaba-certificate.jpg" 
                                 download="Alibaba_Certificate.jpg"
                                 className="block w-full text-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
                             >
@@ -547,7 +547,7 @@ export default function Home() {
                             
                             <div className="flex gap-2">
                                 <a 
-                                    href="/nvidia-certificate.pdf" 
+                                    href="/portfolio/nvidia-certificate.pdf" 
                                     download="NVIDIA_Certificate.pdf"
                                     className="flex-1 flex items-center justify-center gap-2 py-2 rounded border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
                                 >
