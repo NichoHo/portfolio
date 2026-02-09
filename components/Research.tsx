@@ -16,7 +16,6 @@ export function Research() {
           className="space-y-4"
         >
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-            <BookOpen className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
             Research & Publications
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl">
