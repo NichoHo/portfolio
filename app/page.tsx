@@ -176,7 +176,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Artificial Intelligence</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["TensorFlow", "Keras", "OpenCV", "Scikit-learn", "LangChain", "FAISS", "HuggingFace", "Pandas"].map(tech => (
+                            {["TensorFlow", "Keras", "OpenCV", "Scikit-learn", "LangChain", "FAISS", "HuggingFace", "SHAP"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-300">
                                     {tech}
                                 </span>
@@ -184,7 +184,7 @@ export default function Home() {
                         </div>
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Engineering intelligent systems including RAG pipelines for document retrieval, real-time Computer Vision for sign language recognition, and predictive modeling for sports analytics.
+                        Engineering intelligent systems including RAG pipelines for document retrieval, real-time Computer Vision for sign language recognition, and predictive modeling for sports analytics. Published researcher in Explainable AI, applying predictive modeling to healthcare diagnostics with a focus on model interpretability.
                     </p>
                 </Card>
             </div>

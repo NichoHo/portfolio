@@ -16,7 +16,6 @@ export function Research() {
           className="space-y-4"
         >
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-            <BookOpen className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
             Research & Publications
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -35,7 +34,7 @@ export function Research() {
                     {/* VISUAL SIDE (Image of Paper) */}
                     <div className="relative h-64 md:h-auto bg-slate-200 dark:bg-slate-800 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 overflow-hidden group-hover:opacity-90 transition-opacity">
                         <img 
-                            src="/research.jpg" 
+                            src="/portfolio/research.jpg" 
                             alt="Research Paper Preview" 
                             className="absolute inset-0 w-full h-full object-cover object-top"
                         />
@@ -56,7 +55,7 @@ export function Research() {
                                     Published Paper
                                 </span>
                                 <span className="text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1.5">
-                                    ICORIS 2024
+                                    ICORIS 2025
                                 </span>
                             </div>
                             
@@ -81,7 +80,7 @@ export function Research() {
 
                         <div className="pt-4 flex flex-wrap gap-4">
                             <a 
-                                href="/research.pdf" 
+                                href="/portfolio/research.pdf" 
                                 target="_blank"
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-medium text-sm hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/20"
                             >
@@ -89,7 +88,7 @@ export function Research() {
                                 Read Full Paper
                             </a>
                             <a 
-                                href="/research.pdf" 
+                                href="/portfolio/research.pdf" 
                                 download="Machine Learning Algorithms for HIV/AIDS.pdf"
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                             >
