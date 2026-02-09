@@ -32,19 +32,12 @@ export function Research() {
                 <div className="grid md:grid-cols-3 gap-0">
                     
                     {/* VISUAL SIDE (Image of Paper) */}
-                    <div className="relative h-64 md:h-auto bg-slate-200 dark:bg-slate-800 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 overflow-hidden group-hover:opacity-90 transition-opacity">
+                    <div className="hidden md:block relative bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 overflow-hidden">
                         <img 
                             src="/portfolio/research.jpg" 
                             alt="Research Paper Preview" 
-                            className="absolute inset-0 w-full h-full object-cover object-top"
+                            className="absolute inset-0 w-full h-full object-contain"
                         />
-                        
-                        {/* Overlay Gradient for readability if image fails or for style */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 md:hidden">
-                            <span className="text-white font-medium text-sm flex items-center gap-2">
-                                <FileText className="w-4 h-4" /> View Paper
-                            </span>
-                        </div>
                     </div>
 
                     {/* CONTENT SIDE */}
