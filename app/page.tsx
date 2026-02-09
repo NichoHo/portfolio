@@ -9,6 +9,7 @@ import Link from "next/link";
 import { ContactSection } from "@/components/ContactSection";
 import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
+import { Research } from "@/components/Research";
 
 export default function Home() {
   return (
@@ -469,13 +470,16 @@ export default function Home() {
         </section>
       </div>
 
-      {/* 8. NEW EDUCATION SECTION */}
+      {/* 7. RESEARCH */}
+      <Research />
+
+      {/* 8. EDUCATION */}
       <Education />
 
-      {/* 9. NEW VOLUNTEERING SECTION */}
+      {/* 9. VOLUNTEERING */}
       <Volunteering />
 
-      {/* 5. CERTIFICATIONS */}
+      {/* 10. CERTIFICATIONS */}
       <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 space-y-24">
         <section className="space-y-12">
                 <motion.div 
@@ -635,10 +639,10 @@ export default function Home() {
         </section>
       </div>
 
-      {/* 8. NEW CONTACT SECTION */}
+      {/* 11. CONTACT */}
       <ContactSection />
 
-      {/* 9. FOOTER */}
+      {/* 12. FOOTER */}
       <Footer />
     </main>
   );
