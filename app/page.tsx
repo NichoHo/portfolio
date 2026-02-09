@@ -217,7 +217,8 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Lead Developer</h3>
-                                    <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded">Present</span>
+                                    {/* UPDATED DATE */}
+                                    <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Nexus Software Agency</span>
                             </div>
@@ -250,7 +251,8 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
-                                    <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded">Present</span>
+                                    {/* UPDATED DATE */}
+                                    <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - Present</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
                             </div>
@@ -288,7 +290,8 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">2023</span>
+                                    {/* UPDATED DATE */}
+                                    <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
                             </div>
@@ -326,7 +329,8 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">2022</span>
+                                    {/* UPDATED DATE */}
+                                    <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
                             </div>
