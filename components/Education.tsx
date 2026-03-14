@@ -39,7 +39,7 @@ export function Education() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium">
                             <Calendar className="w-4 h-4" /> 2023 - Present
                         </div>
-                        <p className="text-sm text-slate-500 mt-2 font-mono">GPA: 3.81</p>
+                        <p className="text-sm text-slate-500 mt-2 font-mono">GPA: 3.83</p>
                     </div>
                 </div>
 
