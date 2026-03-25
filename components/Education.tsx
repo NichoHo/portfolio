@@ -23,6 +23,35 @@ export function Education() {
         </motion.div>
 
         <div className="space-y-8">
+            {/* SEJONG UNIVERSITY */}
+            <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+            >
+                <div className="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-6">
+                    <div>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Sejong University</h3>
+                        <p className="text-emerald-600 dark:text-emerald-400 font-medium">Computer Science (Student Exchange Program)</p>
+                        <p className="text-sm text-slate-500 mt-1 font-mono">Seoul, South Korea</p>
+                    </div>
+                    <div className="text-right">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium">
+                            <Calendar className="w-4 h-4" /> Feb 2026 - Aug 2026
+                        </div>
+                    </div>
+                </div>
+
+                <div className="space-y-8 border-t border-slate-100 dark:border-slate-800 pt-6">
+                    <div className="space-y-2">
+                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Currently participating in a student exchange program, expanding global perspectives and adapting to an international academic environment.
+                        </p>
+                    </div>
+                </div>
+            </motion.div>
+            
             {/* BINUS UNIVERSITY */}
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
