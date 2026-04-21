@@ -400,11 +400,21 @@ export default function Home() {
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
                                       </div>
 
-                                      {/* "VIEW PROJECT" BUTTON */}
-                                      <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
-                                        View Project Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
+                                            View Project Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                        
+                                        <a 
+                                            href="https://signlingo-django.onrender.com" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()} 
+                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
+                                        >
+                                            Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                        </a>
                                       </div>
-                                      <a href="https://signlingo-django.onrender.com" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors">Live Site <ExternalLink className="w-3.5 h-3.5" /></a>
                                     </div>
                                 </div>
                             </div>
