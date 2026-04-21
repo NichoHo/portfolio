@@ -57,9 +57,19 @@ export default function SignlingoPage() {
                 An interactive AI-powered platform designed to make learning sign language accessible through gamification and real-time computer vision feedback.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex gap-6">
+                <a 
+                    href="https://signlingo-django.onrender.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                >
+                    <ExternalLink className="w-5 h-5" /> Live Website
+                </a>
                 <a 
                     href="https://github.com/NichoHo/Signlingo" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source

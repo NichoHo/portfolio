@@ -47,8 +47,18 @@ export default function ProjectsPage() {
                                     <span className="text-[10px] font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Python</span>
                                     <span className="text-[10px] font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">ML/AI</span>
                                 </div>
-                                <div className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:gap-2 transition-all">
-                                    View Project <ArrowRight className="w-4 h-4" />
+                                <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                    <Link href="/projects/signlingo" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                        View Project <ArrowRight className="w-4 h-4" />
+                                    </Link>
+                                    <a 
+                                        href="https://signlingo-django.onrender.com" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                    >
+                                        Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
