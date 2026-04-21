@@ -402,7 +402,7 @@ export default function Home() {
 
                                       <div className="flex flex-col sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
                                         <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
-                                            View Project Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            View Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </div>
                                         
                                         <a 
