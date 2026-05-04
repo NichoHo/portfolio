@@ -449,7 +449,7 @@ export default function Home() {
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">MySQL</span>
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Tailwind CSS</span>
                                 </div>
-                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
+                                <div className="mt-8 flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
                                 </div>
                             </div>
@@ -484,7 +484,7 @@ export default function Home() {
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">React</span>
                                 </div>
-                                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
+                                <div className="mt-8 flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
                                 </div>
                             </div>
