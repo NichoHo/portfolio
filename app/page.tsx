@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
 import { Research } from "@/components/Research";
-import { Organization } from "@/components/Organization";
+import Organization from "@/components/Organization";
 
 export default function Home() {
   return (
