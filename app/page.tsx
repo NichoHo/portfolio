@@ -142,7 +142,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Frontend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "jQuery", "HTML5", "CSS3"].map(tech => (
+                            {["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Figma", "Redux", "Lucide React"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
                                     {tech}
                                 </span>
@@ -159,7 +159,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Backend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["ASP.NET", "Laravel", "Flask", "Node.js", "C#", "PHP", "SQL Server", "REST APIs"].map(tech => (
+                            {["ASP.NET", "C#", "Laravel", "Node.js", "Express", "PHP", "MySQL", "PostgreSQL", "Firebase"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
                                     {tech}
                                 </span>
@@ -176,7 +176,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Artificial Intelligence</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["TensorFlow", "Keras", "OpenCV", "Scikit-learn", "LangChain", "FAISS", "HuggingFace", "SHAP"].map(tech => (
+                            {["TensorFlow", "MediaPipe", "Scikit-learn", "LangChain", "FAISS", "HuggingFace", "SHAP", "GRU"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-300">
                                     {tech}
                                 </span>
@@ -441,6 +441,13 @@ export default function Home() {
                                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
                                     Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
                                 </p>
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {["Next.js", "Laravel", "PHP", "MySQL", "Tailwind CSS"].map((tech) => (
+                                        <span key={tech} className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 text-[10px] font-bold rounded-md uppercase tracking-tight">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                                 <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
                                 </div>
@@ -469,6 +476,13 @@ export default function Home() {
                                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
                                     Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
                                 </p>
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {["LangChain", "Gemini Pro", "FAISS", "Python", "React"].map((tech) => (
+                                        <span key={tech} className="px-2 py-1 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300 text-[10px] font-bold rounded-md uppercase tracking-tight">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                                 <div className="mt-auto flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
                                 </div>
