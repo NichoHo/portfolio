@@ -5,7 +5,7 @@ import { Calendar } from "lucide-react";
 
 export default function Organization() {
   return (
-    <section id="education" className="py-20">
+    <section id="organization" className="py-20 bg-slate-50 dark:bg-slate-950/50 border-y border-slate-200 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
