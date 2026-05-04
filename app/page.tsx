@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
 import { Research } from "@/components/Research";
-import Organizations from "@/components/Organizations";
+import { Organization } from "@/components/Organization";
 
 export default function Home() {
   return (
@@ -503,7 +503,7 @@ export default function Home() {
       <Education />
 
       {/* 9. ORGANIZATIONS SECTION */}
-      <Organizations />
+      <Organization />
 
       {/* 10. VOLUNTEERING */}
       <Volunteering />

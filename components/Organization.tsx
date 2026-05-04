@@ -3,10 +3,9 @@
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 
-export default function Organizations() {
+export default function Organization() {
   return (
     <section className="mb-16">
-      {/* HEADER: Styled to match your "Volunteering" and "Education" sections */}
       <div className="mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
           Organizations
