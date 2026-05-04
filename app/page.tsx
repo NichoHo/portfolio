@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, ExternalLink } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, ExternalLink, Calendar } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
@@ -509,39 +509,43 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
+            className="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
         >
-            <div className="flex justify-between items-start mb-6">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                 <div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white">HIMTI Bina Nusantara</h3>
-                    <p className="text-indigo-600 dark:text-indigo-400 font-medium">Active Member / Activist</p>
+                    <p className="text-md text-indigo-600 dark:text-indigo-400 font-medium mt-1">Activist</p>
                 </div>
-                <span className="text-xs font-mono text-slate-500">2023 - Present</span>
+                {/* PROPER DATE BADGE */}
+                <span className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium rounded-md shrink-0 mt-2 md:mt-0">
+                    <Calendar className="w-4 h-4" />
+                    2023 - Present
+                </span>
             </div>
 
-            <div className="space-y-6">
-                <div className="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
-                    <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">HIMTI KIT & TECHNO 2024</h4>
-                    <p className="text-xs text-slate-500 mb-2 italic font-mono text-[10px]">Staff of KIT Division</p>
+            <div className="space-y-6 mb-8">
+                <div className="relative pl-4 border-l-2 border-slate-200 dark:border-slate-700">
+                    <h4 className="text-md font-bold text-slate-800 dark:text-slate-200">HIMTI KIT & TECHNO 2024</h4>
+                    <p className="text-sm text-slate-500 mb-2 italic">Staff of KIT Division</p>
                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         Collaborated on the development of the official TECHNO 2024 website and authored structured university material notes (HIMTI KIT) to support academic peer success.
                     </p>
                 </div>
 
-                <div className="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
-                    <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">TECHFEST 2024</h4>
-                    <p className="text-xs text-slate-500 mb-2 italic font-mono text-[10px]">Web Development Division</p>
+                <div className="relative pl-4 border-l-2 border-slate-200 dark:border-slate-700">
+                    <h4 className="text-md font-bold text-slate-800 dark:text-slate-200">TECHFEST 2024</h4>
+                    <p className="text-sm text-slate-500 mb-2 italic">Web Development Division</p>
                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         Managed the official digital platform for TECHFEST 2024, focusing on ensuring reliable performance and accessibility for event participants.
                     </p>
                 </div>
             </div>
 
-            {/* SUBTLE TECH TAGS */}
-            <div className="flex flex-wrap gap-2 mt-6">
+            {/* PROPER TECH STACK CARDS */}
+            <div className="flex flex-wrap gap-2">
                 {["HTML5", "CSS3", "JavaScript", "Team Collaboration"].map((tag) => (
-                    <span key={tag} className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
-                        #{tag}
+                    <span key={tag} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-medium rounded-md">
+                        {tag}
                     </span>
                 ))}
             </div>
