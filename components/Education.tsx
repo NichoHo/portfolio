@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Award, Users, Github, Users } from "lucide-react";
+import { Calendar, Award, Users, Github } from "lucide-react";
 
 export function Education() {
   return (

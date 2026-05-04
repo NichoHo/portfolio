@@ -503,49 +503,49 @@ export default function Home() {
 
       {/* 9. ORGANIZATIONS SECTION */}
       <section className="mb-12">
-            <h2 className="text-sm font-bold text-slate-500 uppercase tracking-[0.3em] mb-6 px-1">Organizations</h2>
-            
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
-            >
-                <div className="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">HIMTI Bina Nusantara</h3>
-                        <p className="text-indigo-600 dark:text-indigo-400 font-medium">Active Member / Activist</p>
-                    </div>
-                    <span className="text-xs font-mono text-slate-500">2023 - Present</span>
+        <h2 className="text-sm font-bold text-slate-500 uppercase tracking-[0.3em] mb-6 px-1">Organizations</h2>
+        
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
+        >
+            <div className="flex justify-between items-start mb-6">
+                <div>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">HIMTI Bina Nusantara</h3>
+                    <p className="text-indigo-600 dark:text-indigo-400 font-medium">Active Member / Activist</p>
+                </div>
+                <span className="text-xs font-mono text-slate-500">2023 - Present</span>
+            </div>
+
+            <div className="space-y-6">
+                <div className="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
+                    <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">HIMTI KIT & TECHNO 2024</h4>
+                    <p className="text-xs text-slate-500 mb-2 italic font-mono text-[10px]">Staff of KIT Division</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Collaborated on the development of the official TECHNO 2024 website and authored structured university material notes (HIMTI KIT) to support academic peer success.
+                    </p>
                 </div>
 
-                <div className="space-y-6">
-                    <div className="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
-                        <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">HIMTI KIT & TECHNO 2024</h4>
-                        <p className="text-xs text-slate-500 mb-2 italic font-mono text-[10px]">Staff of KIT Division</p>
-                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Collaborated on the development of the official TECHNO 2024 website and authored structured university material notes (HIMTI KIT) to support academic peer success.
-                        </p>
-                    </div>
-
-                    <div className="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
-                        <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">TECHFEST 2024</h4>
-                        <p className="text-xs text-slate-500 mb-2 italic font-mono text-[10px]">Web Development Division</p>
-                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Managed the official digital platform for TECHFEST 2024, focusing on ensuring reliable performance and accessibility for event participants.
-                        </p>
-                    </div>
+                <div className="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
+                    <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">TECHFEST 2024</h4>
+                    <p className="text-xs text-slate-500 mb-2 italic font-mono text-[10px]">Web Development Division</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Managed the official digital platform for TECHFEST 2024, focusing on ensuring reliable performance and accessibility for event participants.
+                    </p>
                 </div>
+            </div>
 
-                {/* SUBTLE TECH TAGS */}
-                <div className="flex flex-wrap gap-2 mt-6">
-                    {["HTML5", "CSS3", "JavaScript", "Team Collaboration"].map((tag) => (
-                        <span key={tag} className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
-                            #{tag}
-                        </span>
-                    ))}
-                </div>
-            </motion.div>
+            {/* SUBTLE TECH TAGS */}
+            <div className="flex flex-wrap gap-2 mt-6">
+                {["HTML5", "CSS3", "JavaScript", "Team Collaboration"].map((tag) => (
+                    <span key={tag} className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+                        #{tag}
+                    </span>
+                ))}
+            </div>
+        </motion.div>
       </section>
 
       {/* 10. VOLUNTEERING */}
