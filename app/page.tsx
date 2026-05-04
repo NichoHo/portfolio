@@ -477,13 +477,6 @@ export default function Home() {
                                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
                                     Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
                                 </p>
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {["LangChain", "Gemini Pro", "FAISS", "Python", "React"].map((tech) => (
-                                        <span key={tech} className="px-2 py-1 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300 text-[10px] font-bold rounded-md uppercase tracking-tight">
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
                                 <div className="flex flex-wrap gap-2">
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">LangChain</span>
                                           <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Gemini Pro</span>
