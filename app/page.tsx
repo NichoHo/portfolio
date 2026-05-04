@@ -442,12 +442,12 @@ export default function Home() {
                                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
                                     Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
                                 </p>
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {["Next.js", "Laravel", "PHP", "MySQL", "Tailwind CSS"].map((tech) => (
-                                        <span key={tech} className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 text-[10px] font-bold rounded-md uppercase tracking-tight">
-                                            {tech}
-                                        </span>
-                                    ))}
+                                <div className="flex flex-wrap gap-2">
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Next.js</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Laravel</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PHP</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">MySQL</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Tailwind CSS</span>
                                 </div>
                                 <div className="mt-auto flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
@@ -483,6 +483,13 @@ export default function Home() {
                                             {tech}
                                         </span>
                                     ))}
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">LangChain</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Gemini Pro</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">FAISS</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
+                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">React</span>
                                 </div>
                                 <div className="mt-auto flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
