@@ -514,7 +514,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                 <div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white">HIMTI Bina Nusantara</h3>
-                    <p className="text-md text-indigo-600 dark:text-indigo-400 font-medium mt-1">Activist</p>
+                    <p className="text-md text-indigo-600 dark:text-indigo-400 font-medium mt-1">Activist / Web Dev Division</p>
                 </div>
                 {/* PROPER DATE BADGE */}
                 <span className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium rounded-md shrink-0 mt-2 md:mt-0">

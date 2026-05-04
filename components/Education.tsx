@@ -38,7 +38,7 @@ export function Education() {
                     </div>
                     <div className="text-right">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium">
-                            <Calendar className="w-4 h-4" /> Feb 2026 - Aug 2026
+                            <Calendar className="w-4 h-4" /> Feb 2026 - June 2026
                         </div>
                     </div>
                 </div>
