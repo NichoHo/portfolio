@@ -5,7 +5,7 @@ import { Calendar, MapPin } from "lucide-react";
 
 export function Volunteering() {
   return (
-    <section id="volunteering" className="py-20 bg-slate-50 dark:bg-slate-950/50 border-y border-slate-200 dark:border-slate-800">
+    <section id="volunteering">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         
         <motion.div 

@@ -18,8 +18,7 @@ export default function Home() {
       
       {/* 1. NAVBAR */}
       <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        {/* Adjusted: max-w-5xl and px-6 md:px-12 */}
-        <div className="max-w-5xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 h-16 flex items-center justify-between">
           <span className="font-bold text-xl tracking-tight hidden md:block">Nicholas Ho</span>
           <span className="font-bold text-xl tracking-tight md:hidden">NH</span>
           
@@ -47,12 +46,15 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Adjusted: max-w-5xl and px-6 md:px-12 */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-20 space-y-20">
+      {/* 
+        MASTER LAYOUT WRAPPER 
+        We use max-w-6xl for the main content to make it wider, 
+        and wrap ALL sections inside it so they share the exact same padding.
+      */}
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20 space-y-24">
         
         {/* 2. HERO SECTION */}
         <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
-          
           {/* TEXT SIDE */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -126,10 +128,9 @@ export default function Home() {
               className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl"
             />
           </motion.div>
-
         </section>
 
-        {/* 3. TECHNICAL SKILLS (FE, BE, AI) */}
+        {/* 3. TECHNICAL SKILLS */}
         <section className="space-y-8">
             <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -193,7 +194,7 @@ export default function Home() {
             </div>
         </section>
 
-        {/* 4. WORK EXPERIENCE (Responsive Timeline) */}
+        {/* 4. WORK EXPERIENCE */}
         <section id="work" className="space-y-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -204,7 +205,6 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Work Experience</h2>
             </motion.div>
             
-            {/* Timeline Container */}
             <div className="relative space-y-8 md:pl-0 md:before:absolute md:before:inset-0 md:before:left-1/2 md:before:-translate-x-px md:before:h-full md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-transparent md:before:via-slate-300 md:before:to-transparent dark:md:before:via-slate-700">
                 
                 {/* ROLE 1: NEXUS */}
@@ -221,7 +221,6 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Lead Developer</h3>
-                                    {/* UPDATED DATE */}
                                     <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Nexus Software Agency</span>
@@ -255,7 +254,6 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
-                                    {/* UPDATED DATE */}
                                     <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - Present</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
@@ -294,7 +292,6 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    {/* UPDATED DATE */}
                                     <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
@@ -333,7 +330,6 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    {/* UPDATED DATE */}
                                     <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
@@ -372,7 +368,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                {/* PROJECT 1: SIGNLINGO (Featured Large) */}
+                {/* PROJECT 1: SIGNLINGO */}
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -382,11 +378,9 @@ export default function Home() {
                     <Link href="/projects/signlingo">
                         <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
                             <div className="grid md:grid-cols-5 gap-0">
-                                {/* Visual Side (Larger ratio) */}
                                 <div className="md:col-span-3 h-auto md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
                                      <img src="/portfolio/signlingo-2.jpg" alt="Signlingo" className="object-cover w-full h-full"/>
                                 </div>
-                                {/* Content Side */}
                                 <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
                                     <div className="mb-4">
                                         <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-wider font-semibold">AI & Machine Learning</span>
@@ -425,7 +419,7 @@ export default function Home() {
                     </Link>
                 </motion.div>
 
-                {/* PROJECT 2: FLUX (Half Width) */}
+                {/* PROJECT 2: FLUX */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +453,7 @@ export default function Home() {
                     </Link>
                 </motion.div>
 
-                {/* PROJECT 3: FAQ ASSISTANT (Half Width) */}
+                {/* PROJECT 3: FAQ ASSISTANT */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -496,25 +490,22 @@ export default function Home() {
                 
             </div>
         </section>
-      </div>
 
-      {/* 7. RESEARCH */}
-      <Research />
+        {/* 7. RESEARCH */}
+        <Research />
 
-      {/* 8. EDUCATION */}
-      <Education />
+        {/* 8. EDUCATION */}
+        <Education />
 
-      {/* 9. ORGANIZATIONS SECTION */}
-      <Organization />
+        {/* 9. ORGANIZATIONS SECTION */}
+        <Organization />
 
-      {/* 10. VOLUNTEERING */}
-      <Volunteering />
+        {/* 10. VOLUNTEERING */}
+        <Volunteering />
 
-      {/* 11. CERTIFICATIONS */}
-      {/* Adjusted: max-w-5xl and px-6 md:px-12 */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-24 space-y-24">
+        {/* 11. CERTIFICATIONS */}
         <section className="space-y-12">
-                <motion.div 
+            <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -636,8 +627,8 @@ export default function Home() {
                     </Card>
                 </motion.div>
 
-                    {/* 4. AWS CLOUD 101 */}
-                    <motion.div whileHover={{ y: -5 }}>
+                {/* 4. AWS CLOUD 101 */}
+                <motion.div whileHover={{ y: -5 }}>
                     <Card className="h-full flex flex-col group hover:border-[#232F3E] transition-colors">
                         <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
@@ -669,6 +660,8 @@ export default function Home() {
 
             </div>
         </section>
+
+      {/* END MASTER LAYOUT WRAPPER */}
       </div>
 
       {/* 12. CONTACT */}
