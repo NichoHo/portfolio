@@ -70,7 +70,7 @@ export default function Home() {
               <span className="text-slate-400 dark:text-slate-600">Architect.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-lg md:text-slate-600 dark:text-slate-400 leading-relaxed">
               Computer Science Undergraduate engineering complex <strong className="text-slate-900 dark:text-white">Warehouse Management Systems</strong> and modern web solutions. 
               Currently driving technical strategy at <strong className="text-slate-900 dark:text-white">Nexus Software</strong> and <strong className="text-slate-900 dark:text-white">Galva Group</strong>.
             </p>
@@ -231,9 +231,9 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
                             </div>
                         </Card>
                     </div>
@@ -266,13 +266,13 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
                             </div>
                         </Card>
                     </div>
@@ -305,13 +305,13 @@ export default function Home() {
                             </ul>
 
                              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Bootstrap</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Bootstrap</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
                             </div>
                         </Card>
                     </div>
@@ -343,9 +343,9 @@ export default function Home() {
                             </ul>
 
                              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">VB.NET</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-[10px] font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Google Maps API</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">VB.NET</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Google Maps API</span>
                             </div>
                         </Card>
                     </div>
@@ -396,9 +396,9 @@ export default function Home() {
                                     
                                     <div className="space-y-6 mt-auto">
                                       <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">TensorFlow</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">TensorFlow</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
                                       </div>
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
@@ -443,11 +443,11 @@ export default function Home() {
                                     Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
                                 </p>
                                 <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Next.js</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Laravel</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PHP</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">MySQL</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Tailwind CSS</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Next.js</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Laravel</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PHP</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">MySQL</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Tailwind CSS</span>
                                 </div>
                                 <div className="mt-8 flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
@@ -478,11 +478,11 @@ export default function Home() {
                                     Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
                                 </p>
                                 <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">LangChain</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Gemini Pro</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">FAISS</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
-                                          <span className="px-2.5 py-1 text-[11px] font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">React</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">LangChain</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Gemini Pro</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">FAISS</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">React</span>
                                 </div>
                                 <div className="mt-8 flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
                                     View Details <ArrowRight className="w-4 h-4" />
