@@ -14,14 +14,6 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontSize: {
-        sm: ['1rem', { lineHeight: '1.5' }], // 16px
-        base: ['1.125rem', { lineHeight: '1.6' }], // 18px
-        lg: ['1.406rem', { lineHeight: '1.5' }],   // ~22.5px
-        xl: ['1.758rem', { lineHeight: '1.4' }],   // ~28px
-        '2xl': ['2.197rem', { lineHeight: '1.2' }],// ~35px
-        '3xl': ['2.746rem', { lineHeight: '1.2' }],// ~44px
-      },
     },
   },
   plugins: [],

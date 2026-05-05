@@ -18,7 +18,8 @@ export default function Home() {
       
       {/* 1. NAVBAR */}
       <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Adjusted: max-w-5xl and px-6 md:px-12 */}
+        <div className="max-w-5xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           <span className="font-bold text-xl tracking-tight hidden md:block">Nicholas Ho</span>
           <span className="font-bold text-xl tracking-tight md:hidden">NH</span>
           
@@ -46,7 +47,8 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 space-y-20">
+      {/* Adjusted: max-w-5xl and px-6 md:px-12 */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-20 space-y-20">
         
         {/* 2. HERO SECTION */}
         <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
@@ -509,7 +511,8 @@ export default function Home() {
       <Volunteering />
 
       {/* 11. CERTIFICATIONS */}
-      <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 space-y-24">
+      {/* Adjusted: max-w-5xl and px-6 md:px-12 */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-24 space-y-24">
         <section className="space-y-12">
                 <motion.div 
                 initial={{ opacity: 0, y: 20 }}
