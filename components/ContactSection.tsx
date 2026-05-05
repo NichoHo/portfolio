@@ -15,10 +15,10 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4 overflow-hidden">
+    <section id="contact" className="relative py-24 overflow-hidden px-6 md:px-12 lg:px-24">
       
-      {/* 1. REQUESTED BACKGROUND */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030_1px,transparent_1px),linear-gradient(to_bottom,#80808030_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_60%_at_80%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      {/* 1. GRID BACKGROUND */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030_1px,transparent_1px),linear-gradient(to_bottom,#80808030_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_90%_at_80%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Decorative Gradient Blob */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-emerald-500/5 dark:bg-emerald-500/10 blur-[100px] -z-10 rounded-full pointer-events-none" />

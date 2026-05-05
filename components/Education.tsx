@@ -5,7 +5,7 @@ import { Calendar, Award, Github } from "lucide-react";
 
 export function Education() {
   return (
-    <section id="education" className="py-20">
+    <section id="education">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         
         <motion.div 

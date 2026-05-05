@@ -504,7 +504,7 @@ export default function Home() {
         <Volunteering />
 
         {/* 11. CERTIFICATIONS */}
-        <section className="space-y-12">
+        <section className="space-y-12 py-20 border-t border-gray-200 dark:border-gray-800">
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
