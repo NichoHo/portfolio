@@ -34,7 +34,7 @@ export default function FaqPage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white">FaQ Assistant</h1>
             <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-                An intelligent document analysis tool that uses Retrieval-Augmented Generation (RAG) to let users converse with their PDF documents in real-time.
+                An intelligent document analysis tool that uses Retrieval-Augmented Generation (RAG) concepts to let users search their PDF documents in real-time.
             </p>
 
             <div className="flex gap-4">
@@ -67,7 +67,7 @@ export default function FaqPage() {
                 <section>
                     <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Project Overview</h2>
                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        FaQ Assistant bridges the gap between static documents and dynamic information retrieval. By uploading a PDF, the system creates semantic embeddings of the content, allowing users to ask natural language questions. The app retrieves the most relevant context and uses a Large Language Model (Gemini 1.5 Flash) to generate accurate, context-aware answers.
+                        FaQ Assistant bridges the gap between static documents and dynamic information retrieval. By uploading a PDF, the system creates local semantic embeddings of the content, allowing users to ask natural language questions. The app retrieves the most relevant context and deterministically formats the exact source excerpts, ensuring 100% accurate, hallucination-free answers without relying on external cloud APIs.
                     </p>
                 </section>
 
@@ -76,8 +76,8 @@ export default function FaqPage() {
                     <ul className="space-y-3">
                         {[
                             "RAG Pipeline Implementation using LangChain",
-                            "Vector Embeddings with Google Generative AI",
-                            "ChromaDB for Efficient Similarity Search",
+                            "Local Vector Embeddings with HuggingFace (all-MiniLM-L6-v2)",
+                            "FAISS for Efficient In-Memory Similarity Search",
                             "Recursive Character Text Splitting for Context Optimization",
                             "Flask Backend with Asynchronous Processing",
                             "Responsive Chat Interface with Real-time Updates"
@@ -96,7 +96,7 @@ export default function FaqPage() {
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Python", "Flask", "LangChain", "Gemini 1.5 Flash", "ChromaDB", "HTML5", "CSS3"].map(tech => (
+                        {["Python", "Flask", "LangChain", "HuggingFace", "FAISS", "HTML5", "CSS3"].map(tech => (
                             <span key={tech} className="px-2 py-1 text-xs font-mono rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
                                 {tech}
                             </span>
@@ -107,7 +107,7 @@ export default function FaqPage() {
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Key Logic</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
-                        The <code>rag_pipeline.py</code> handles the "Retrieval" by querying the vector store and the "Generation" by prompting the LLM with retrieved chunks.
+                        The <code>rag_pipeline.py</code> handles the "Retrieval" by querying the local FAISS vector store and formats the retrieved chunks deterministically to present exact document excerpts to the user.
                     </p>
                 </div>
             </div>
