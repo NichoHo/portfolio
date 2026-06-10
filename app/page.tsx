@@ -399,7 +399,7 @@ export default function Home() {
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
                                         <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
-                                            View Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            View Details <ArrowRight className="w-4 h-4" />
                                         </div>
                                         
                                         <a 
@@ -484,7 +484,7 @@ export default function Home() {
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
                                         <div className="flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:text-violet-500 transition-colors">
-                                            View Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            View Details <ArrowRight className="w-4 h-4" />
                                         </div>
                                         
                                         <a 
