@@ -459,7 +459,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <Link href="/projects/faq-assistant" className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center block">
-                            <img src="/portfolio/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
+                            <img src="/portfolio/faq-assistant.jpg" alt="FAQ Assistant" className="object-cover"/>
                         </Link>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
