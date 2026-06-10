@@ -37,7 +37,15 @@ export default function FaqPage() {
                 An intelligent document analysis tool that uses Retrieval-Augmented Generation (RAG) concepts to let users search their PDF documents in real-time.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex gap-6">
+                <a 
+                    href="https://faq-assistant.onrender.com/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                >
+                    <ExternalLink className="w-5 h-5" /> Live Website
+                </a>
                 <a 
                     href="https://github.com/NichoHo/faq-assistant" 
                     target="_blank"

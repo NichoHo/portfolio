@@ -97,33 +97,43 @@ export default function ProjectsPage() {
                 </Link>
             </motion.div>
 
-             {/* 3. FAQ ASSISTANT CARD (Standard) */}
+             {/* 3. FAQ ASSISTANT CARD (Dual Action) */}
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-                <Link href="/projects/faq-assistant" className="block h-full">
-                    <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                        <div className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center">
-                            <img src="/portfolio/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <div className="mb-4 flex-1">
+                <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <Link href="/projects/faq-assistant" className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/faq-assistant">
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-500 transition-colors">FaQ Assistant</h3>
-                                <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
-                                    Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
-                                </p>
+                            </Link>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
+                                Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">LangChain</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Gemini</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">ChromaDB</span>
                             </div>
-                            <div className="space-y-6">
-                                <div className="flex flex-wrap gap-2">
-                                    <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">LangChain</span>
-                                    <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Gemini</span>
-                                    <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">ChromaDB</span>
-                                </div>
-                                <div className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:gap-2 transition-all">
+                            <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <Link href="/projects/faq-assistant" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
-                                </div>
+                                </Link>
+                                <a 
+                                    href="https://faq-assistant.onrender.com/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                >
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
                             </div>
                         </div>
                     </div>
-                </Link>
+                </div>
             </motion.div>
 
             {/* 4. F1 UNDERCUT PREDICTOR CARD (Standard) */}
