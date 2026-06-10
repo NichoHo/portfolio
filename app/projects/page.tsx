@@ -32,7 +32,7 @@ export default function ProjectsPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/signlingo" className="h-auto bg-emerald-50 dark:bg-emerald-900/10 relative overflow-hidden flex items-center justify-center block">
-                        <img src="/portfolio/signlingo-2.jpg" alt="Signlingo" className="object-cover"/>
+                        <img src="/portfolio/Signlingo Thumbnail.png" alt="Signlingo" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
                 <Link href="/projects/flux" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center">
-                             <img src="/portfolio/flux.jpg" alt="Flux" className="object-cover"/>
+                             <img src="/portfolio/Flux Thumbnail.png" alt="Flux" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -101,7 +101,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/faq-assistant" className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center block">
-                        <img src="/portfolio/faq-assistant.jpeg" alt="FAQ Assistant" className="object-cover"/>
+                        <img src="/portfolio/FaQ Assistant Thumbnail.png" alt="FAQ Assistant" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -141,7 +141,7 @@ export default function ProjectsPage() {
                 <Link href="/projects/f1-undercut-predictor" className="block h-full">
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <div className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center">
-                             <img src="/portfolio/f1-undercut-predictor.jpg" alt="F1 Undercut Predictor" className="object-cover"/>
+                             <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/nexus" className="h-auto bg-cyan-50 dark:bg-cyan-900/10 relative overflow-hidden flex items-center justify-center block">
-                         <img src="/portfolio/nexus.jpg" alt="Nexus Agency" className="object-cover"/>
+                         <img src="/portfolio/Nexus Development Thumbnail.png" alt="Nexus Agency" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -203,7 +203,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/asia-trading-export" className="h-auto bg-amber-50 dark:bg-amber-900/10 relative overflow-hidden flex items-center justify-center block">
-                         <img src="/portfolio/asia-trading-export.jpg" alt="Asia Trading Export" className="object-cover"/>
+                         <img src="/portfolio/Asia Trading Export Thumbnail.png" alt="Asia Trading Export" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -237,7 +237,7 @@ export default function ProjectsPage() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/hammouda-charcoal" className="h-auto bg-stone-100 dark:bg-stone-900/50 relative overflow-hidden flex items-center justify-center block">
-                         <img src="/portfolio/hammouda-charcoal-2.jpg" alt="Hammouda Charcoal" className="object-cover"/>
+                         <img src="/portfolio/Coco Hamodah Thumbnail.png" alt="Hammouda Charcoal" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">

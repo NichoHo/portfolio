@@ -379,7 +379,7 @@ export default function Home() {
                         <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
                             <div className="grid md:grid-cols-5 gap-0">
                                 <div className="md:col-span-3 h-auto md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
-                                     <img src="/portfolio/signlingo-2.jpg" alt="Signlingo" className="object-cover w-full h-full"/>
+                                     <img src="/portfolio/Signlingo Thumbnail.png" alt="Signlingo" className="object-cover w-full h-full"/>
                                 </div>
                                 <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
                                     <div className="mb-4">
@@ -428,7 +428,7 @@ export default function Home() {
                     <Link href="/projects/flux">
                          <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
                             <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/20 transition-colors">
-                                <img src="/portfolio/flux.jpg" alt="Flux" className="object-cover"/>
+                                <img src="/portfolio/Flux Thumbnail.png" alt="Flux" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
@@ -457,7 +457,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                     <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                         <Link href="/projects/faq-assistant" className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center block">
-                            <img src="/portfolio/faq-assistant.jpg" alt="FAQ Assistant" className="object-cover"/>
+                            <img src="/portfolio/FaQ Assistant Thumbnail.png" alt="FAQ Assistant" className="object-cover"/>
                         </Link>
                         <div className="p-6 flex flex-col flex-1">
                             <div className="mb-4 flex-1">
