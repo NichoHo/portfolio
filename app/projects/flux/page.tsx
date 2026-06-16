@@ -64,7 +64,7 @@ export default function FluxPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
                 >
-                    <ExternalLink className="w-5 h-5" /> Visit Live Website
+                    <ExternalLink className="w-5 h-5" /> Live Website
                 </a>
                 <a 
                     href="https://github.com/NichoHo/Flux_Budget_App"
