@@ -445,8 +445,20 @@ export default function Home() {
                                           <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">MySQL</span>
                                           <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Tailwind CSS</span>
                                 </div>
-                                <div className="mt-8 flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
-                                    View Details <ArrowRight className="w-4 h-4" />
+                                <div className="mt-8 flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6">
+                                    <div className="flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
+                                        View Details <ArrowRight className="w-4 h-4" />
+                                    </div>
+                                    
+                                    <a 
+                                        href="https://flux-budget-app.onrender.com/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()} 
+                                        className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
+                                    >
+                                        Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -57,7 +57,15 @@ export default function FluxPage() {
                 A comprehensive personal finance management system built for scalability, featuring automated recurring billing, multi-currency support, and real-time analytics.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-6">
+                <a 
+                    href="https://flux-budget-app.onrender.com/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                >
+                    <ExternalLink className="w-5 h-5" /> Visit Live Website
+                </a>
                 <a 
                     href="https://github.com/NichoHo/Flux_Budget_App"
                     target="_blank"
