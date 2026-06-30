@@ -36,10 +36,13 @@ export function Education() {
                         <p className="text-emerald-600 dark:text-emerald-400 font-medium">Computer Science (Student Exchange Program)</p>
                         <p className="text-sm text-slate-500 mt-1 font-mono">Seoul, South Korea</p>
                     </div>
-                    <div className="text-right">
+                    <div className="flex flex-col items-start md:items-end gap-1.5 shrink-0 mt-2 md:mt-0">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium">
                             <Calendar className="w-4 h-4" /> Feb 2026 - June 2026
                         </div>
+                        <span className="text-sm font-bold text-slate-500 dark:text-slate-400 px-1">
+                            GPA: 4.40/4.50 (98th percentile)
+                        </span>
                     </div>
                 </div>
 
@@ -74,7 +77,7 @@ export function Education() {
                             2023 - Present
                         </span>
                         <span className="text-sm font-bold text-slate-500 dark:text-slate-400 px-1">
-                            GPA: 3.83
+                            GPA: 3.83/4.00
                         </span>
                     </div>
                 </div>
