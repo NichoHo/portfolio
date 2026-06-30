@@ -28,7 +28,7 @@ export function Research() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
         >
-            <Card className="group overflow-hidden border-l-4 border-l-indigo-600 dark:border-l-indigo-500 hover:shadow-xl transition-all">
+            <Card className="group overflow-hidden border-l-4 border-l-slate-300 dark:border-l-slate-700 group-hover:border-l-indigo-600 dark:group-hover:border-l-indigo-500 hover:shadow-xl transition-all">
                 <div className="grid md:grid-cols-3 gap-0">
                     
                     {/* VISUAL SIDE (Image of Paper) */}
@@ -36,7 +36,7 @@ export function Research() {
                         <img 
                             src="/portfolio/research.jpg" 
                             alt="Research Paper Preview" 
-                            className="absolute inset-0 w-full h-full object-cover object-top"
+                            className="absolute inset-0 w-full h-full object-cover object-center"
                         />
                     </div>
 
@@ -83,6 +83,75 @@ export function Research() {
                             <a 
                                 href="/portfolio/research.pdf" 
                                 download="Machine Learning Algorithms for HIV/AIDS.pdf"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                            >
+                                <Download className="w-4 h-4" />
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </Card>
+        </motion.div>
+
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+        >
+            <Card className="group overflow-hidden border-l-4 border-l-slate-300 dark:border-l-slate-700 group-hover:border-l-emerald-600 dark:group-hover:border-l-emerald-500 hover:shadow-xl transition-all">
+                <div className="grid md:grid-cols-3 gap-0">
+                    
+                    {/* VISUAL SIDE (Image of Paper) */}
+                    <div className="hidden md:block relative bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 overflow-hidden">
+                        <img 
+                            src="/portfolio/research-2.jpg" 
+                            alt="Research Paper Preview" 
+                            className="absolute inset-0 w-full h-full object-cover object-center"
+                        />
+                    </div>
+
+                    {/* CONTENT SIDE */}
+                    <div className="md:col-span-2 p-8 flex flex-col justify-center space-y-6">
+                        <div className="space-y-3">
+                            <div className="flex flex-wrap items-center gap-3 text-sm">
+                                <span className="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-medium">
+                                    Thesis
+                                </span>
+                                <span className="text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1.5">
+                                    2025-ongoing
+                                </span>
+                            </div>
+                            
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                                Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition Integrating Non-Manual Markers in LowResource Environments
+                            </h3>
+                            
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                                This thesis develops a highly efficient Sign Language Recognition (SLR) system for Indonesian Sign Language (BISINDO) targeting low-resource environments. By shifting to a MediaPipe-GRU architecture, the model accurately captures both manual gestures and non-manual signals with minimal computational overhead. The optimized system achieves robust real-time performance on budget devices, promoting greater accessibility in communication technology.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2">
+                            {["Deep Learning", "MediaPipe", "GRU", "Sign Language Recognition", "Low-Resource"].map((tag) => (
+                                <span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+
+                        <div className="pt-4 flex flex-wrap gap-4">
+                            <a 
+                                href="/portfolio/research-2.pdf" 
+                                target="_blank"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 text-white font-medium text-sm hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-500/20"
+                            >
+                                <BookOpen className="w-4 h-4" />
+                                Read Current Version
+                            </a>
+                            <a 
+                                href="/portfolio/research-2.pdf" 
+                                download="Hybrid_MediaPipe_GRU_Architecture.pdf"
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                             >
                                 <Download className="w-4 h-4" />
