@@ -170,7 +170,7 @@ export default function ProjectsPage() {
                                 <Link href="/projects/f1-undercut-predictor" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <a href="https://f1-undercut-predictor.onrender.com/archive" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                                <a href="https://f1-undercut-predictor.onrender.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
