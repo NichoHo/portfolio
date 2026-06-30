@@ -146,33 +146,37 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-            {/* 4. F1 UNDERCUT PREDICTOR CARD (Standard) */}
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-                <Link href="/projects/f1-undercut-predictor" className="block h-full">
-                    <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                        <div className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center">
-                             <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <div className="mb-4 flex-1">
+                <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <Link href="/projects/f1-undercut-predictor" className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center block">
+                         <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/f1-undercut-predictor">
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-500 transition-colors">F1 Undercut Predictor</h3>
-                                <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
-                                    Machine learning model predicting race strategy success probabilities using historical telemetry data.
-                                </p>
+                            </Link>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
+                                Machine learning model predicting race strategy success probabilities using historical telemetry data.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Scikit-Learn</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">FastF1</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Pandas</span>
                             </div>
-                            <div className="space-y-6">
-                                <div className="flex flex-wrap gap-2">
-                                    <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Scikit-Learn</span>
-                                    <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">FastF1</span>
-                                    <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Pandas</span>
-                                </div>
-                                <div className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:gap-2 transition-all">
+                            <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <Link href="/projects/f1-undercut-predictor" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
-                                </div>
+                                </Link>
+                                <a href="https://f1-undercut-predictor.onrender.com/archive" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
                             </div>
                         </div>
                     </div>
-                </Link>
+                </div>
             </motion.div>
 
              {/* 5. NEXUS AGENCY CARD (Dual Action) */}
