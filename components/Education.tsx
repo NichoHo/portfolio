@@ -37,9 +37,9 @@ export function Education() {
                         <p className="text-sm text-slate-500 mt-1 font-mono">Seoul, South Korea</p>
                     </div>
                     <div className="flex flex-col items-start md:items-end gap-1.5 shrink-0 mt-2 md:mt-0">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium">
+                        <span className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium rounded-md">
                             <Calendar className="w-4 h-4" /> Feb 2026 - June 2026
-                        </div>
+                        </span>
                         <span className="text-sm font-bold text-slate-500 dark:text-slate-400 px-1">
                             GPA: 4.40/4.50 (98th percentile)
                         </span>
@@ -105,9 +105,9 @@ export function Education() {
                         <h3 className="text-xl font-bold text-slate-900 dark:text-white">Santa Ursula BSD Highschool</h3>
                         <p className="text-slate-600 dark:text-slate-400">High School Diploma</p>
                     </div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium">
-                        <Calendar className="w-4 h-4" /> 2021 - 2023
-                    </div>
+                    <span className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium rounded-md">
+                            <Calendar className="w-4 h-4" /> 2021 - 2023
+                    </span>
                 </div>
                 
                 <div className="space-y-2">
