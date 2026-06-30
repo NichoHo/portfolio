@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowLeft, Github, ExternalLink, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -80,18 +80,19 @@ export default function AsiaTradingPage() {
             transition={{ delay: 0.2 }}
             className="group relative w-full rounded-2xl overflow-hidden border border-[#dee2e6] dark:border-slate-800 shadow-md"
         >
-             <AnimatePresence mode="wait">
-                <motion.img 
-                    key={currentImageIndex}
-                    src={PROJECT_IMAGES[currentImageIndex]} 
-                    alt={`Asia Trading Export Screenshot ${currentImageIndex + 1}`} 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-full h-auto object-contain block"
-                />
-             </AnimatePresence>
+             {/* Sizer: invisible first image keeps container height stable */}
+             <img src={PROJECT_IMAGES[0]} alt="" aria-hidden className="w-full h-auto object-contain block invisible" />
+             {/* Stacked images crossfade */}
+             {PROJECT_IMAGES.map((src, idx) => (
+                 <img
+                     key={src}
+                     src={src}
+                     alt={`Asia Trading Export Screenshot ${idx + 1}`}
+                     className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
+                         idx === currentImageIndex ? "opacity-100" : "opacity-0"
+                     }`}
+                 />
+             ))}
 
              {/* Carousel Controls */}
              <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
