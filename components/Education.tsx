@@ -102,17 +102,20 @@ export function Education() {
             >
                 <div className="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-4">
                     <div>
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">Santa Ursula BSD Highschool</h3>
-                        <p className="text-slate-600 dark:text-slate-400">High School Diploma</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Santa Ursula BSD Highschool</h3>
+                        <p className="text-emerald-600 dark:text-emerald-400 font-medium">High School Diploma</p>
                     </div>
                     <span className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium rounded-md">
                             <Calendar className="w-4 h-4" /> 2021 - 2023
                     </span>
                 </div>
                 
-                <div className="space-y-2">
-                    <h4 className="font-semibold text-slate-900 dark:text-white text-sm">Student Council (2022-2023)</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                <div className="border-t border-slate-100 dark:border-slate-800 pt-6">
+                    <div className="flex items-center gap-2 mb-1">
+                        <h4 className="text-md font-bold text-slate-900 dark:text-white">Student Council</h4>
+                    </div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-3 font-mono">2022 - 2023 • 4 mos</p>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Managed the Student Council's social media accounts, creating content to increase engagement and inform the student body of upcoming events.
                     </p>
                 </div>
