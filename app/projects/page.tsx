@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 md:py-20 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16 space-y-12">
         <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">All Projects</h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -146,7 +146,48 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+            {/* 4. JET ENGINE HEALTH MONITOR CARD */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+                <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <Link href="/projects/jet-engine-monitor" className="h-auto bg-rose-50 dark:bg-rose-900/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Jet Engine Monitor Thumbnail.png" alt="Jet Engine Health Monitor" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/jet-engine-monitor">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-rose-500 transition-colors">Jet Engine Monitor</h3>
+                            </Link>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
+                                Predictive maintenance dashboard calculating Remaining Useful Life (RUL) of turbofan engines using NASA C-MAPSS data and Explainable AI.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Python</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">XGBoost</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">SHAP</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Streamlit</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <Link href="/projects/jet-engine-monitor" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a 
+                                    href="https://colab.research.google.com/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                >
+                                    Notebook <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* 5. F1 UNDERCUT PREDICTOR CARD */}
+             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/f1-undercut-predictor" className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
@@ -179,8 +220,8 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-             {/* 5. NEXUS AGENCY CARD (Dual Action) */}
-             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+             {/* 6. NEXUS AGENCY CARD (Dual Action) */}
+             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/nexus" className="h-auto bg-cyan-50 dark:bg-cyan-900/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Nexus Development Thumbnail.png" alt="Nexus Agency" className="object-cover"/>
@@ -213,8 +254,8 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-            {/* 6. ASIA TRADING EXPORT CARD (Dual Action) */}
-             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
+            {/* 7. ASIA TRADING EXPORT CARD (Dual Action) */}
+             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/asia-trading-export" className="h-auto bg-amber-50 dark:bg-amber-900/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Asia Trading Export Thumbnail.png" alt="Asia Trading Export" className="object-cover"/>
@@ -247,8 +288,8 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-            {/* 7. HAMMOUDA CHARCOAL CARD (Dual Action) */}
-             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
+            {/* 8. HAMMOUDA CHARCOAL CARD (Dual Action) */}
+             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                     <Link href="/projects/hammouda-charcoal" className="h-auto bg-stone-100 dark:bg-stone-900/50 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Coco Hamodah Thumbnail.png" alt="Hammouda Charcoal" className="object-cover"/>
