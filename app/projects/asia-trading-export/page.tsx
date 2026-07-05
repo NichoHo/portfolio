@@ -139,6 +139,13 @@ export default function AsiaTradingPage() {
                 </section>
 
                 <section>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">My Role</h2>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Serving as the <strong>Lead Developer</strong>, I drove the technical execution of this B2B platform from concept to launch. By personally authoring over 90% of the codebase, I ensured a cohesive, easily maintainable architecture. My focus was on delivering a robust digital storefront with optimized load times for international clients, ensuring seamless UI/UX workflows that actively drive business inquiries.
+                    </p>
+                </section>
+
+                <section>
                     <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Key Features</h2>
                     <ul className="space-y-3">
                         {[
@@ -160,6 +167,13 @@ export default function AsiaTradingPage() {
 
             {/* RIGHT: TECH STACK */}
             <div className="space-y-8">
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-4">Role</h3>
+                    <p className="text-slate-600 dark:text-slate-400 font-medium">
+                        Lead Developer
+                    </p>
+                </div>
+
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">

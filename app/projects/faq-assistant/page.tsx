@@ -80,6 +80,13 @@ export default function FaqPage() {
                 </section>
 
                 <section>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">My Role</h2>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        As the <strong>Technical Lead & Full Stack Developer</strong>, I drove the end-to-end delivery of the application. I spearheaded a team of 3 developers through Agile sprints while taking hands-on ownership of both the frontend and backend architectures. I designed and built the responsive, intuitive user interface, and engineered the core document-ingestion framework using LangChain alongside the local semantic search logic via FAISS vector databases for highly accurate, low-latency retrieval.
+                    </p>
+                </section>
+
+                <section>
                     <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Technical Architecture</h2>
                     <ul className="space-y-3">
                         {[
@@ -99,8 +106,16 @@ export default function FaqPage() {
                 </section>
             </div>
 
-            {/* RIGHT: TECH STACK */}
+            {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
+                
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-4">Role</h3>
+                    <p className="text-slate-600 dark:text-slate-400 font-medium">
+                        Technical Lead & Full Stack Developer
+                    </p>
+                </div>
+
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">

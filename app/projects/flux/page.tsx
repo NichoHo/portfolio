@@ -78,7 +78,6 @@ export default function FluxPage() {
         </motion.div>
 
         {/* HERO VISUAL (CAROUSEL) */}
-        {/* UPDATED: Added border-[#dee2e6], shadow-md, and removed bg-colors */}
         <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -144,6 +143,13 @@ export default function FluxPage() {
                 </section>
 
                 <section>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">My Role</h2>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Serving as the <strong>Technical Lead & Developer</strong>, I coordinated a team of 4 engineers through daily Agile standups. Beyond leadership, I personally architected the backend and frontend, developing the automated background workers needed for recurring bills and writing the logic that powers strict budget-limit enforcement.
+                    </p>
+                </section>
+
+                <section>
                     <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Technical Highlights</h2>
                     <ul className="space-y-3">
                         {[
@@ -163,8 +169,16 @@ export default function FluxPage() {
                 </section>
             </div>
 
-            {/* RIGHT: TECH STACK */}
+            {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
+                
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-4">Role</h3>
+                    <p className="text-slate-600 dark:text-slate-400 font-medium">
+                        Technical Lead & Developer
+                    </p>
+                </div>
+
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">

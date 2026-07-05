@@ -140,6 +140,13 @@ export default function HammoudaPage() {
                 </section>
 
                 <section>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">My Role</h2>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        As the <strong>Lead Developer</strong>, I spearheaded the technical strategy and execution, writing most of the application's code. I engineered a responsive, high-conversion corporate site tailored for global audiences. My work ensured strict adherence to modern web standards and accessibility, resulting in a fast, highly reliable lead-generation tool that aligns directly with the client's business objectives.
+                    </p>
+                </section>
+
+                <section>
                     <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Key Features</h2>
                     <ul className="space-y-3">
                         {[
@@ -161,6 +168,13 @@ export default function HammoudaPage() {
 
             {/* RIGHT: TECH STACK */}
             <div className="space-y-8">
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-4">Role</h3>
+                    <p className="text-slate-600 dark:text-slate-400 font-medium">
+                        Lead Developer
+                    </p>
+                </div>
+
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">

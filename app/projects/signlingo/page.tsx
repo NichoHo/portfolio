@@ -143,10 +143,18 @@ export default function SignlingoPage() {
                 </section>
 
                 <section>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">My Role</h2>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        As the <strong>Full Stack Developer</strong>, I engineered the complete web platform from the ground up, seamlessly bridging the gap between complex machine learning models and user-facing interfaces. I single-handedly built the responsive frontend and the robust server architecture. Furthermore, I authored the critical data extraction code that seamlessly feeds real-time webcam input into our TensorFlow and OpenCV pipelines, ensuring a highly responsive, low-latency gamified learning experience.
+                    </p>
+                </section>
+
+                <section>
                     <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Key Features</h2>
                     <ul className="space-y-3">
                         {[
                             "AI Hand Sign Recognition using TensorFlow & OpenCV",
+                            "Custom-built data extraction pipeline for real-time validation",
                             "Real-time webcam feedback loop",
                             "Gamified learning with streaks and progress tracking",
                             "User Authentication & Secure Profile Management",
@@ -161,8 +169,16 @@ export default function SignlingoPage() {
                 </section>
             </div>
 
-            {/* RIGHT: TECH STACK */}
+            {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
+                
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-4">Role</h3>
+                    <p className="text-slate-600 dark:text-slate-400 font-medium">
+                        Full Stack Developer
+                    </p>
+                </div>
+
                 <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
                     <h3 className="font-bold text-slate-900 dark:text-white mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
