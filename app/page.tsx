@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, ExternalLink, Calendar } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
@@ -368,48 +368,49 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                {/* PROJECT 1: SIGNLINGO */}
+                {/* PROJECT 1: VAULT */}
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     className="md:col-span-2"
                 >
-                    <Link href="/projects/signlingo">
+                    <Link href="/projects/vault">
                         <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
                             <div className="grid md:grid-cols-5 gap-0">
                                 <div className="md:col-span-3 h-auto md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
-                                     <img src="/portfolio/Signlingo Thumbnail.png" alt="Signlingo" className="object-cover w-full h-full"/>
+                                     <img src="/portfolio/Vault Thumbnail.png" alt="Vault" className="object-cover w-full h-full"/>
                                 </div>
                                 <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
                                     <div className="mb-4">
-                                        <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-wider font-semibold">AI & Machine Learning</span>
-                                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-emerald-500 transition-colors">Signlingo</h3>
+                                        <span className="text-blue-600 dark:text-blue-400 font-mono text-xs uppercase tracking-wider font-semibold">Marketplace & Payments</span>
+                                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-blue-500 transition-colors">Vault</h3>
                                     </div>
                                     <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                                        An interactive platform designed to make learning sign language accessible. Features real-time AI hand sign recognition using webcam feedback.
+                                        A marketplace with its own secure sign-in, escrow payments that hold money safely until an order is delivered, and an AI helper that turns a photo into a ready-to-post listing.
                                     </p>
                                     
                                     <div className="space-y-6 mt-auto">
                                       <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">TensorFlow</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Go</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">OAuth 2.0</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PostgreSQL</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Next.js</span>
                                       </div>
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-500 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
                                         
                                         <a 
-                                            href="https://signlingo-django.onrender.com" 
+                                            href="https://github.com/NichoHo/vault"
                                             target="_blank" 
                                             rel="noopener noreferrer"
                                             onClick={(e) => e.stopPropagation()} 
                                             className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
                                         >
-                                            Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                            Source <Github className="w-3.5 h-3.5" />
                                         </a>
                                       </div>
                                     </div>
@@ -419,45 +420,44 @@ export default function Home() {
                     </Link>
                 </motion.div>
 
-                {/* PROJECT 2: FLUX */}
+                {/* PROJECT 2: TALLY */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <Link href="/projects/flux">
+                    <Link href="/projects/tally">
                          <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
-                            <div className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/20 transition-colors">
-                                <img src="/portfolio/Flux Thumbnail.png" alt="Flux" className="object-cover"/>
+                            <div className="h-auto bg-teal-50 dark:bg-teal-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-teal-100 dark:group-hover:bg-teal-900/20 transition-colors">
+                                <img src="/portfolio/Tally Thumbnail.png" alt="Tally" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
-                                    <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs uppercase tracking-wider font-semibold">Fullstack Architecture</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-indigo-500 transition-colors">Flux Budget App</h3>
+                                    <span className="text-teal-600 dark:text-teal-400 font-mono text-xs uppercase tracking-wider font-semibold">Payments Engine</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-teal-500 transition-colors">Tally</h3>
                                 </div>
                                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
-                                    Comprehensive financial tracking with automated recurring billing, multi-currency support, and real-time analytics.
+                                    A payments engine that moves money between accounts so funds never go missing and no payment is charged twice. It also flags suspicious transfers.
                                 </p>
                                 <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Next.js</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Laravel</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PHP</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">MySQL</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Tailwind CSS</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Go</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">gRPC</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Kafka</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PostgreSQL</span>
                                 </div>
                                 <div className="mt-8 flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6">
-                                    <div className="flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 group-hover:gap-3 transition-all">
+                                    <div className="flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 group-hover:gap-3 transition-all">
                                         View Details <ArrowRight className="w-4 h-4" />
                                     </div>
                                     
                                     <a 
-                                        href="https://flux-budget-app.onrender.com/" 
+                                        href="https://github.com/NichoHo/tally"
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()} 
                                         className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
                                     >
-                                        Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                        Source <Github className="w-3.5 h-3.5" />
                                     </a>
                                 </div>
                             </div>
@@ -465,48 +465,48 @@ export default function Home() {
                     </Link>
                 </motion.div>
 
-                {/* PROJECT 3: FAQ ASSISTANT */}
+                {/* PROJECT 3: LOCALIST */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                 >
-                    <Link href="/projects/faq-assistant">
+                    <Link href="/projects/localist">
                          <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
-                            <div className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/20 transition-colors">
-                                <img src="/portfolio/FaQ Assistant Thumbnail.png" alt="FAQ Assistant" className="object-cover"/>
+                            <div className="h-auto bg-fuchsia-50 dark:bg-fuchsia-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-900/20 transition-colors">
+                                <img src="/portfolio/Localist Thumbnail.png" alt="Localist" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
-                                    <span className="text-violet-600 dark:text-violet-400 font-mono text-xs uppercase tracking-wider font-semibold">Generative AI</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-violet-500 transition-colors">FaQ Assistant</h3>
+                                    <span className="text-fuchsia-600 dark:text-fuchsia-400 font-mono text-xs uppercase tracking-wider font-semibold">Directory & Subscriptions</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-fuchsia-500 transition-colors">Localist</h3>
                                 </div>
                                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
-                                    Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
+                                    An online directory of local businesses with about 5,400 pages built to rank on Google. Owners claim their page, edit it, and pay to rank higher.
                                 </p>
 
                                 <div className="space-y-6 mt-auto">
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Langchain</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">FAISS</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Python</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Flask</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Laravel</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Livewire</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Stripe</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Cloudflare</span>
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-violet-600 dark:text-violet-400 group-hover:text-violet-500 transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 group-hover:text-fuchsia-500 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
                                         
                                         <a 
-                                            href="https://faq-assistant.onrender.com/" 
+                                            href="https://github.com/NichoHo/Localist"
                                             target="_blank" 
                                             rel="noopener noreferrer"
                                             onClick={(e) => e.stopPropagation()} 
                                             className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
                                         >
-                                            Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                            Source <Github className="w-3.5 h-3.5" />
                                         </a>
                                     </div>
                                 </div>

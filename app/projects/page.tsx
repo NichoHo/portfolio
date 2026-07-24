@@ -27,7 +27,127 @@ export default function ProjectsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
+            {/* VAULT CARD */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+                <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <Link href="/projects/vault" className="h-auto bg-blue-50 dark:bg-blue-900/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Vault Thumbnail.png" alt="Vault" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/vault">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">Vault</h3>
+                            </Link>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
+                                An online marketplace where people buy and sell to each other. It has its own secure sign-in, holds payments safely until an order arrives, and uses AI to help write listings.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Go</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">OAuth 2.0</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PostgreSQL</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Next.js</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <Link href="/projects/vault" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-blue-500 hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://github.com/NichoHo/vault"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors"
+                                >
+                                    Source <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* TALLY CARD */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+                <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <Link href="/projects/tally" className="h-auto bg-teal-50 dark:bg-teal-900/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Tally Thumbnail.png" alt="Tally" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/tally">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-teal-500 transition-colors">Tally</h3>
+                            </Link>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
+                                The engine that moves money between accounts inside a banking or e-wallet app. Built so money can never go missing and the same payment is never charged twice. It also flags suspicious transfers.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Go</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">gRPC</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Kafka</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PostgreSQL</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <Link href="/projects/tally" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-teal-500 hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://github.com/NichoHo/tally"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-500 transition-colors"
+                                >
+                                    Source <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* LOCALIST CARD */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+                <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <Link href="/projects/localist" className="h-auto bg-fuchsia-50 dark:bg-fuchsia-900/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Localist Thumbnail.png" alt="Localist" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/localist">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-fuchsia-500 transition-colors">Localist</h3>
+                            </Link>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
+                                An online directory of local businesses with about 5,400 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Laravel</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Livewire</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Stripe</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Cloudflare</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <Link href="/projects/localist" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-fuchsia-500 hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://github.com/NichoHo/Localist"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 hover:text-fuchsia-500 transition-colors"
+                                >
+                                    Source <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
             {/* 1. SIGNLINGO CARD (Standard) */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
                 <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
