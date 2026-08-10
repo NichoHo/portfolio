@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/vault">
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">Vault</h3>
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-500 transition-colors">Vault</h3>
                             </Link>
                             <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                                 An online marketplace where people buy and sell to each other. It has its own secure sign-in, holds payments safely until an order arrives, and uses AI to help write listings.
@@ -51,14 +51,14 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Next.js</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/vault" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-blue-500 hover:gap-2 transition-all">
+                                <Link href="/projects/vault" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
                                     href="https://github.com/NichoHo/vault"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
                                     Source <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/tally">
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-teal-500 transition-colors">Tally</h3>
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-500 transition-colors">Tally</h3>
                             </Link>
                             <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                                 The engine that moves money between accounts inside a banking or e-wallet app. Built so money can never go missing and the same payment is never charged twice. It also flags suspicious transfers.
@@ -91,16 +91,16 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PostgreSQL</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/tally" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-teal-500 hover:gap-2 transition-all">
+                                <Link href="/projects/tally" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
-                                    href="https://github.com/NichoHo/tally"
+                                    href="https://tally-three-umber.vercel.app/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
-                                    Source <ExternalLink className="w-3.5 h-3.5" />
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
                         </div>
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/localist">
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-fuchsia-500 transition-colors">Localist</h3>
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-500 transition-colors">Localist</h3>
                             </Link>
                             <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                                 An online directory of local businesses with about 5,400 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
@@ -131,14 +131,14 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Cloudflare</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/localist" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-fuchsia-500 hover:gap-2 transition-all">
+                                <Link href="/projects/localist" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
                                     href="https://github.com/NichoHo/Localist"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 hover:text-fuchsia-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
                                     Source <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
@@ -171,14 +171,14 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">GRU</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/signlingo" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/signlingo" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a 
                                     href="https://signlingo-django.onrender.com" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
@@ -210,14 +210,14 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">MySQL</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/flux" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/flux" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a 
                                     href="https://flux-budget-app.onrender.com/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
@@ -249,14 +249,14 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">ChromaDB</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/faq-assistant" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/faq-assistant" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a 
                                     href="https://faq-assistant.onrender.com/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
@@ -275,7 +275,7 @@ export default function ProjectsPage() {
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/jet-engine-monitor">
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-rose-500 transition-colors">Jet Engine Monitor</h3>
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-500 transition-colors">Jet Engine Monitor</h3>
                             </Link>
                             <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                                 Predictive maintenance dashboard calculating Remaining Useful Life (RUL) of turbofan engines using NASA C-MAPSS data and Explainable AI.
@@ -289,14 +289,14 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Streamlit</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/jet-engine-monitor" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/jet-engine-monitor" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a 
                                     href="https://colab.research.google.com/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                                    className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors"
                                 >
                                     Notebook <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
@@ -328,10 +328,10 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Pandas</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/f1-undercut-predictor" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/f1-undercut-predictor" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <a href="https://f1-undercut-predictor.onrender.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                                <a href="https://f1-undercut-predictor.onrender.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors">
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
@@ -362,10 +362,10 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Tailwind CSS</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/nexus" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/nexus" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <a href="https://www.nexdevsoftware.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                                <a href="https://www.nexdevsoftware.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors">
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
@@ -396,10 +396,10 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Tailwind CSS</span>
                             </div>
                              <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/asia-trading-export" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/asia-trading-export" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <a href="https://www.asiatradingexport.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                                <a href="https://www.asiatradingexport.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors">
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
@@ -429,10 +429,10 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Tailwind CSS</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
-                                <Link href="/projects/hammouda-charcoal" className="flex items-center gap-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-500 hover:gap-2 transition-all">
+                                <Link href="/projects/hammouda-charcoal" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <a href="https://www.hammoudacharcoal.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                                <a href="https://www.hammoudacharcoal.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition-colors">
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>

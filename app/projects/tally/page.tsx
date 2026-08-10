@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Github, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Github, CheckCircle2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ImageCarousel } from "@/components/ImageCarousel";
@@ -46,6 +46,14 @@ export default function TallyPage() {
             </p>
 
             <div className="flex flex-wrap gap-6">
+                <a
+                    href="https://tally-three-umber.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-500 transition-colors"
+                >
+                    <ExternalLink className="w-5 h-5" /> Live Website
+                </a>
                 <a
                     href="https://github.com/NichoHo/tally"
                     target="_blank"

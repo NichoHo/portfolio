@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
@@ -451,13 +451,13 @@ export default function Home() {
                                     </div>
                                     
                                     <a 
-                                        href="https://github.com/NichoHo/tally"
+                                        href="https://tally-three-umber.vercel.app/"
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()} 
                                         className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
                                     >
-                                        Source <Github className="w-3.5 h-3.5" />
+                                        Live Site <ExternalLink className="w-3.5 h-3.5" />
                                     </a>
                                 </div>
                             </div>
