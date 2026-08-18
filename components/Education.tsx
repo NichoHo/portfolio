@@ -86,7 +86,7 @@ export function Education() {
                     <div className="flex items-center gap-2 mb-1">
                         <h4 className="text-md font-bold text-slate-900 dark:text-white">Freshmen Leader & Partner</h4>
                     </div>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-3 font-mono">Sep 2024 - Present • 1 yr 6 mos</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-3 font-mono">Sep 2024 - June 2025 • 10 mos</p>
                     <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Guided freshmen through their first year, delivering presentations and providing ongoing mentorship to help them adapt to university life and academic expectations.
                     </p>

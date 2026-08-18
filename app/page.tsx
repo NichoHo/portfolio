@@ -61,13 +61,6 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             className="flex-1 space-y-6 text-center md:text-left"
           >
-             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              Available for Internships (July)
-            </div>
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white">
               Fullstack <br />
@@ -75,8 +68,8 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-slate-600 dark:text-slate-400 leading-relaxed">
-              Computer Science Undergraduate engineering complex <strong className="text-slate-900 dark:text-white">Warehouse Management Systems</strong> and modern web solutions. 
-              Currently driving technical strategy at <strong className="text-slate-900 dark:text-white">Nexus Software</strong> and <strong className="text-slate-900 dark:text-white">Galva Group</strong>.
+              Computer Science Undergraduate building <strong className="text-slate-900 dark:text-white">distributed backend systems</strong>, <strong className="text-slate-900 dark:text-white">AI/ML pipelines</strong>, and modern web platforms.
+              Currently a Backend Software Engineering Intern at <strong className="text-slate-900 dark:text-white">SIRCLO</strong>, alongside roles at <strong className="text-slate-900 dark:text-white">Nexus Software</strong> and <strong className="text-slate-900 dark:text-white">Galva Group</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
@@ -146,7 +139,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Frontend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Figma", "Redux", "Lucide React"].map(tech => (
+                            {["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "Vue.js", "Bootstrap", "Framer Motion", "Zod", "Figma", "Lucide React"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
                                     {tech}
                                 </span>
@@ -163,7 +156,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Backend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["ASP.NET", "C#", "Laravel", "Node.js", "Express", "PHP", "MySQL", "PostgreSQL", "Firebase"].map(tech => (
+                            {["Go", "Java", "Spring Boot", "C#", "ASP.NET Core", "Node.js", "Express", "PostgreSQL", "Docker", "Kubernetes", "Laravel", "PHP", "Supabase", "MySQL", "SQL Server"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
                                     {tech}
                                 </span>
@@ -171,7 +164,7 @@ export default function Home() {
                         </div>
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Specializing in robust API architectures using C#. Experienced in architecting complex Warehouse Management Systems (WMS), inventory, and tracking systems. Have also built scalable API services using Flask and Laravel.
+                        Specializing in robust API architectures across C#, Go, and Java. Experienced in architecting complex Warehouse Management Systems (WMS), payment ledgers, and inventory tracking systems, with a focus on data correctness, idempotency, and distributed transactions.
                     </p>
                 </Card>
 
@@ -180,7 +173,7 @@ export default function Home() {
                     <div>
                         <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Artificial Intelligence</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["TensorFlow", "MediaPipe", "Scikit-learn", "LangChain", "FAISS", "HuggingFace", "SHAP", "GRU"].map(tech => (
+                            {["LangChain", "HuggingFace", "FAISS", "TensorFlow", "Scikit-learn", "XGBoost", "SHAP", "OpenCV", "MediaPipe", "GRU", "Pandas", "NumPy"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-300">
                                     {tech}
                                 </span>
@@ -207,6 +200,33 @@ export default function Home() {
             
             <div className="relative space-y-8 md:pl-0 md:before:absolute md:before:inset-0 md:before:left-1/2 md:before:-translate-x-px md:before:h-full md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-transparent md:before:via-slate-300 md:before:to-transparent dark:md:before:via-slate-700">
                 
+                {/* ROLE 0: SIRCLO (Intern) */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="relative flex flex-col md:flex-row items-center md:justify-between group"
+                >
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-sky-500 bg-white dark:bg-slate-900 z-10 box-content shadow-[0_0_0_4px_rgba(14,165,233,0.2)]"></div>
+
+                    <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
+                        <Card className="p-6 border-l-4 border-l-sky-500 hover:shadow-lg transition-all hover:-translate-y-1">
+                            <div className="flex flex-col gap-1 mb-3">
+                                <div className="flex justify-between items-start">
+                                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
+                                    <span className="font-mono text-sky-600 dark:text-sky-400 text-xs bg-sky-50 dark:bg-sky-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
+                                </div>
+                                <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">SIRCLO</span>
+                            </div>
+
+                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                <li>Selected for a <strong className="text-slate-900 dark:text-white">6-month, end-to-end</strong> project, collaborating with a cross-functional team (PM, Frontend, QA) from spec through delivery</li>
+                                <li>Project scope and tech stack to be confirmed</li>
+                            </ul>
+                        </Card>
+                    </div>
+                </motion.div>
+
                 {/* ROLE 1: NEXUS */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -215,7 +235,7 @@ export default function Home() {
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-emerald-500 bg-white dark:bg-slate-900 z-10 box-content shadow-[0_0_0_4px_rgba(16,185,129,0.2)]"></div>
-                    
+
                     <div className="w-full md:w-[calc(50%-2rem)] md:mr-auto md:pr-0">
                         <Card className="p-6 border-l-4 border-l-emerald-500 hover:shadow-lg transition-all hover:-translate-y-1">
                             <div className="flex flex-col gap-1 mb-3">
@@ -254,7 +274,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
-                                    <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - Present</span>
+                                    <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
                                 </div>
                                 <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
                             </div>
@@ -262,7 +282,7 @@ export default function Home() {
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                                 <li>Architected a comprehensive <strong className="text-slate-900 dark:text-white">Warehouse Management System (WMS)</strong> using ASP.NET.</li>
                                 <li>Developed a comprehensive <strong className="text-slate-900 dark:text-white">Transport Tracker</strong> system using React for the frontend and C# Web API for the backend to monitor product logistics in real-time.</li>
-                                <li>Optimized database queries and frontend performance using jQuery.</li>
+                                <li>Engineered a comprehensive <strong className="text-slate-900 dark:text-white">Project Management System</strong> (PMS) using Next.js, Tailwind CSS, Supabase, and AWS S3.</li>
                             </ul>
 
                             <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
@@ -273,6 +293,10 @@ export default function Home() {
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Supabase</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">AWS S3</span>
                             </div>
                         </Card>
                     </div>
@@ -298,19 +322,19 @@ export default function Home() {
                             </div>
                             
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Developed responsive internal sales dashboards using <strong className="text-slate-900 dark:text-white">ASP.NET & Bootstrap</strong></li>
-                                <li>Architected scalable Backend services using C# and ASP.NET Core.</li>
-                                <li>Designed complex backend logic to handle sales data processing.</li>
+                                <li>Built the <strong className="text-slate-900 dark:text-white">Inventory Project</strong>, an API-driven finance module automating balanced double-entry General Ledger postings for multi-currency cash & bank disbursements</li>
+                                <li>Architected a <strong className="text-slate-900 dark:text-white">C# ASP.NET Web API 2</strong> backend using the Repository Pattern, Dapper, and TransactionScope-managed cross-database transactions with custom token authentication</li>
+                                <li>Migrated the frontend to a decoupled <strong className="text-slate-900 dark:text-white">Vue.js 3 SPA</strong> styled with Bootstrap 5</li>
                             </ul>
 
                              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Bootstrap</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET Web API</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Vue.js</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Dapper</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Bootstrap 5</span>
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">DataTables.net</span>
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
                             </div>
                         </Card>
                     </div>
@@ -336,14 +360,16 @@ export default function Home() {
                             </div>
                             
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Engineered a location-tracking CRUD application integrating <strong className="text-slate-900 dark:text-white">Google Maps API</strong></li>
-                                <li>Built real-time chat features using VB.NET.</li>
+                                <li>Engineered a <strong className="text-slate-900 dark:text-white">geofencing access-control system</strong>, applying the Haversine formula to restrict app access to users within a set radius of office coordinates</li>
+                                <li>Built <strong className="text-slate-900 dark:text-white">real-time chat</strong> via SignalR/WebSockets for instant bi-directional messaging between field users</li>
+                                <li>Integrated <strong className="text-slate-900 dark:text-white">Google Maps API</strong> to visualize geotagged CRUD tracking data for supervisors</li>
                             </ul>
 
                              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">VB.NET</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SignalR</span>
                                 <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Google Maps API</span>
+                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
                             </div>
                         </Card>
                     </div>

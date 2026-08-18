@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nicholas Ho - Portfolio",
-  description: "Portfolio of Nicholas Ho, a Fullstack Developer at Galva Group, Lead Developer at Nexus Software, and CS Undergraduate at Binus University.",
+  description: "Portfolio of Nicholas Ho, a Fullstack Developer building backend systems, AI/ML pipelines, and web platforms — Backend SE Intern at SIRCLO, Lead Developer at Nexus Software.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
