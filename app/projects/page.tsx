@@ -4,19 +4,20 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 font-sans">
-      <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
+      <Navbar>
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-sm font-medium hover:text-emerald-500 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
           <ThemeToggle />
         </div>
-      </nav>
+      </Navbar>
 
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16 space-y-12">
         <div className="space-y-4">

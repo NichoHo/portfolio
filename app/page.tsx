@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
@@ -17,7 +18,7 @@ export default function Home() {
     <main className="min-h-screen transition-colors duration-300 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 font-sans selection:bg-emerald-500/20 dark:selection:bg-emerald-500/30">
       
       {/* 1. NAVBAR */}
-      <nav className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
+      <Navbar>
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 h-16 flex items-center justify-between">
           <span className="font-bold text-xl tracking-tight hidden md:block">Nicholas Ho</span>
           <span className="font-bold text-xl tracking-tight md:hidden">NH</span>
@@ -44,7 +45,7 @@ export default function Home() {
             <ThemeToggle />
           </div>
         </div>
-      </nav>
+      </Navbar>
 
       {/* 
         MASTER LAYOUT WRAPPER 
