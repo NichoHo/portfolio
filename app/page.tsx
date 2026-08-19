@@ -380,61 +380,60 @@ export default function Home() {
 
         {/* 6. SELECTED PROJECTS */}
         <section id="projects" className="space-y-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <motion.div
+              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
               className="flex items-center justify-between"
             >
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Selected Projects</h2>
-                <Link href="/projects" className="group flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors">
+                <h2 className="text-3xl font-bold text-[var(--text-primary)]">Selected Projects</h2>
+                <Link href="/projects" className="group flex items-center gap-2 text-sm font-medium text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors">
                     View All Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
+            <motion.div
+              variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+
                 {/* PROJECT 1: VAULT */}
-                <motion.div 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                <motion.div
+                    variants={fadeUp}
                     className="md:col-span-2"
                 >
                     <Link href="/projects/vault">
-                        <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+                        <div className="group relative rounded-2xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 cursor-pointer">
                             <div className="grid md:grid-cols-5 gap-0">
-                                <div className="md:col-span-3 h-auto md:h-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
+                                <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
                                      <img src="/portfolio/Vault Thumbnail.png" alt="Vault" className="object-cover w-full h-full"/>
                                 </div>
-                                <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-slate-200 dark:border-slate-800 relative">
+                                <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-[var(--border)] relative">
                                     <div className="mb-4">
                                         <span className="text-blue-600 dark:text-blue-400 font-mono text-xs uppercase tracking-wider font-semibold">Marketplace & Payments</span>
-                                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-blue-500 transition-colors">Vault</h3>
+                                        <h3 className="text-3xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-blue-500 transition-colors">Vault</h3>
                                     </div>
-                                    <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                    <p className="text-[var(--text-secondary)] mb-8 leading-relaxed">
                                         A marketplace with its own secure sign-in, escrow payments that hold money safely until an order is delivered, and an AI helper that turns a photo into a ready-to-post listing.
                                     </p>
-                                    
+
                                     <div className="space-y-6 mt-auto">
                                       <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Go</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">OAuth 2.0</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PostgreSQL</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Next.js</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Go</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">OAuth 2.0</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">PostgreSQL</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Next.js</span>
                                       </div>
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
                                         <div className="flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-500 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
-                                        
-                                        <a 
+
+                                        <a
                                             href="https://github.com/NichoHo/vault"
-                                            target="_blank" 
+                                            target="_blank"
                                             rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()} 
-                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                         >
                                             Source <Github className="w-3.5 h-3.5" />
                                         </a>
@@ -447,41 +446,37 @@ export default function Home() {
                 </motion.div>
 
                 {/* PROJECT 2: TALLY */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
+                <motion.div variants={fadeUp}>
                     <Link href="/projects/tally">
-                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+                         <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
                             <div className="h-auto bg-teal-50 dark:bg-teal-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-teal-100 dark:group-hover:bg-teal-900/20 transition-colors">
                                 <img src="/portfolio/Tally Thumbnail.png" alt="Tally" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
                                     <span className="text-teal-600 dark:text-teal-400 font-mono text-xs uppercase tracking-wider font-semibold">Payments Engine</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-teal-500 transition-colors">Tally</h3>
+                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-teal-500 transition-colors">Tally</h3>
                                 </div>
-                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
+                                <p className="text-[var(--text-secondary)] mb-6 leading-relaxed text-sm">
                                     A payments engine that moves money between accounts so funds never go missing and no payment is charged twice. It also flags suspicious transfers.
                                 </p>
                                 <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Go</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">gRPC</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Kafka</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">PostgreSQL</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Go</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">gRPC</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Kafka</span>
+                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">PostgreSQL</span>
                                 </div>
                                 <div className="mt-8 flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6">
                                     <div className="flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 group-hover:gap-3 transition-all">
                                         View Details <ArrowRight className="w-4 h-4" />
                                     </div>
-                                    
-                                    <a 
+
+                                    <a
                                         href="https://tally-three-umber.vercel.app/"
-                                        target="_blank" 
+                                        target="_blank"
                                         rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()} 
-                                        className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                     >
                                         Live Site <ExternalLink className="w-3.5 h-3.5" />
                                     </a>
@@ -492,45 +487,40 @@ export default function Home() {
                 </motion.div>
 
                 {/* PROJECT 3: LOCALIST */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                >
+                <motion.div variants={fadeUp}>
                     <Link href="/projects/localist">
-                         <div className="group h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
+                         <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
                             <div className="h-auto bg-fuchsia-50 dark:bg-fuchsia-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-900/20 transition-colors">
                                 <img src="/portfolio/Localist Thumbnail.png" alt="Localist" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
                                     <span className="text-fuchsia-600 dark:text-fuchsia-400 font-mono text-xs uppercase tracking-wider font-semibold">Directory & Subscriptions</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-2 group-hover:text-fuchsia-500 transition-colors">Localist</h3>
+                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-fuchsia-500 transition-colors">Localist</h3>
                                 </div>
-                                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-sm">
+                                <p className="text-[var(--text-secondary)] mb-6 leading-relaxed text-sm">
                                     An online directory of local businesses with about 5,400 pages built to rank on Google. Owners claim their page, edit it, and pay to rank higher.
                                 </p>
 
                                 <div className="space-y-6 mt-auto">
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Laravel</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Livewire</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Stripe</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">Cloudflare</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Laravel</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Livewire</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Stripe</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Cloudflare</span>
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
                                         <div className="flex items-center gap-2 text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 group-hover:text-fuchsia-500 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
-                                        
-                                        <a 
+
+                                        <a
                                             href="https://github.com/NichoHo/Localist"
-                                            target="_blank" 
+                                            target="_blank"
                                             rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()} 
-                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors sm:ml-auto"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                         >
                                             Source <Github className="w-3.5 h-3.5" />
                                         </a>
@@ -540,7 +530,7 @@ export default function Home() {
                         </div>
                     </Link>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
 
         {/* 7. RESEARCH */}
@@ -556,161 +546,101 @@ export default function Home() {
         <Volunteering />
 
         {/* 11. CERTIFICATIONS */}
-        <section className="space-y-12 py-20 border-t border-gray-200 dark:border-gray-800">
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+        <section className="space-y-8 py-20 border-t border-[var(--border)]">
+            <motion.div
+                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
             >
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Certifications</h2>
+                <h2 className="text-3xl font-bold text-[var(--text-primary)]">Certifications</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
+            <motion.div
+                variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+                className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] divide-y divide-[var(--border)] overflow-hidden"
+            >
                 {/* 1. ALIBABA CLOUD */}
-                <motion.div whileHover={{ y: -5 }}>
-                    <Card className="h-full flex flex-col group hover:border-orange-500/50 transition-colors">
-                        <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/portfolio/alibaba-logo.png" alt="Alibaba" className="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-slate-900 dark:text-white">Alibaba Cloud Associate</h3>
-                                <p className="text-xs text-slate-500">Cloud Engineer</p>
-                            </div>
-                        </div>
-                        
-                        <div className="p-4 flex-1 flex flex-col justify-between gap-6">
-                            <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                <div className="flex justify-between">
-                                    <span>Issued</span>
-                                    <span className="font-mono text-slate-700 dark:text-slate-200">May 2025</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>ID</span>
-                                    <span className="font-mono text-slate-700 dark:text-slate-200 text-xs">IACA13250500210461L</span>
-                                </div>
-                            </div>
-                            
-                            <a 
-                                href="/portfolio/alibaba-certificate.jpg" 
-                                download="Alibaba_Certificate.jpg"
-                                className="block w-full text-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
-                            >
-                                Download Certificate
-                            </a>
-                        </div>
-                    </Card>
+                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <img src="/portfolio/alibaba-logo.png" alt="Alibaba" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Alibaba Cloud Associate</p>
+                        <p className="text-xs text-[var(--text-tertiary)] truncate">Cloud Engineer · Issued May 2025 · ID IACA13250500210461L</p>
+                    </div>
+                    <a
+                        href="/portfolio/alibaba-certificate.jpg"
+                        download="Alibaba_Certificate.jpg"
+                        aria-label="Download Certificate"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <Download className="w-4 h-4" />
+                    </a>
                 </motion.div>
 
                 {/* 2. NVIDIA */}
-                <motion.div whileHover={{ y: -5 }}>
-                    <Card className="h-full flex flex-col group hover:border-green-500/50 transition-colors">
-                        <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/portfolio/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-slate-900 dark:text-white">Conversational AI</h3>
-                                <p className="text-xs text-slate-500">NVIDIA Deep Learning Institute</p>
-                            </div>
-                        </div>
-                        
-                        <div className="p-4 flex-1 flex flex-col justify-between gap-6">
-                            <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                <div className="flex justify-between">
-                                    <span>Issued</span>
-                                    <span className="font-mono text-slate-700 dark:text-slate-200">Aug 2025</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>ID</span>
-                                    <span className="font-mono text-slate-700 dark:text-slate-200 text-xs truncate max-w-[120px]">C8GNGRZhTAicYiL42FWjVw</span>
-                                </div>
-                            </div>
-                            
-                            <div className="flex gap-2">
-                                <a 
-                                    href="/portfolio/nvidia-certificate.pdf" 
-                                    download="NVIDIA_Certificate.pdf"
-                                    className="flex-1 flex items-center justify-center gap-2 py-2 rounded border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
-                                >
-                                    PDF
-                                </a>
-                                <a 
-                                    href="https://learn.nvidia.com/certificates?id=zMTLXpF7RrCNjBoxDcKf5A" 
-                                    target="_blank"
-                                    className="flex-1 flex items-center justify-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
-                                >
-                                    Verify
-                                </a>
-                            </div>
-                        </div>
-                    </Card>
+                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <img src="/portfolio/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Conversational AI</p>
+                        <p className="text-xs text-[var(--text-tertiary)] truncate">NVIDIA Deep Learning Institute · Issued Aug 2025 · ID C8GNGRZhTAicYiL42FWjVw</p>
+                    </div>
+                    <a
+                        href="/portfolio/nvidia-certificate.pdf"
+                        download="NVIDIA_Certificate.pdf"
+                        aria-label="PDF"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <Download className="w-4 h-4" />
+                    </a>
+                    <a
+                        href="https://learn.nvidia.com/certificates?id=zMTLXpF7RrCNjBoxDcKf5A"
+                        target="_blank"
+                        aria-label="Verify"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <ExternalLink className="w-4 h-4" />
+                    </a>
                 </motion.div>
 
                 {/* 3. AWS COMPUTE */}
-                <motion.div whileHover={{ y: -5 }}>
-                    <Card className="h-full flex flex-col group hover:border-[#232F3E] transition-colors">
-                        <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-slate-900 dark:text-white">Getting Started with Compute</h3>
-                                <p className="text-xs text-slate-500">AWS Educate</p>
-                            </div>
-                        </div>
-                        
-                        <div className="p-4 flex-1 flex flex-col justify-between gap-6">
-                            <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                <div className="flex justify-between">
-                                    <span>Issued</span>
-                                    <span className="font-mono text-slate-700 dark:text-slate-200">Oct 2024</span>
-                                </div>
-                            </div>
-                                <a 
-                                href="https://www.credly.com/badges/2f074998-a38b-4769-9bbc-14503a42893d/linked_in_profile" 
-                                target="_blank"
-                                className="block w-full text-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:border-[#232F3E] hover:text-[#232F3E] dark:hover:text-white transition-colors"
-                            >
-                                Verify on Credly
-                            </a>
-                        </div>
-                    </Card>
+                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Getting Started with Compute</p>
+                        <p className="text-xs text-[var(--text-tertiary)] truncate">AWS Educate · Issued Oct 2024</p>
+                    </div>
+                    <a
+                        href="https://www.credly.com/badges/2f074998-a38b-4769-9bbc-14503a42893d/linked_in_profile"
+                        target="_blank"
+                        aria-label="Verify on Credly"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <ExternalLink className="w-4 h-4" />
+                    </a>
                 </motion.div>
 
                 {/* 4. AWS CLOUD 101 */}
-                <motion.div whileHover={{ y: -5 }}>
-                    <Card className="h-full flex flex-col group hover:border-[#232F3E] transition-colors">
-                        <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-slate-200 dark:border-slate-700">
-                                <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-slate-900 dark:text-white">Introduction to Cloud 101</h3>
-                                <p className="text-xs text-slate-500">AWS Educate</p>
-                            </div>
-                        </div>
-                        
-                        <div className="p-4 flex-1 flex flex-col justify-between gap-6">
-                                <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                <div className="flex justify-between">
-                                    <span>Issued</span>
-                                    <span className="font-mono text-slate-700 dark:text-slate-200">Oct 2024</span>
-                                </div>
-                            </div>
-                                <a 
-                                href="https://www.credly.com/badges/8bc28ca2-d1db-49e0-802a-f78b4ad922f8/linked_in_profile" 
-                                target="_blank"
-                                className="block w-full text-center py-2 rounded border border-slate-200 dark:border-slate-700 text-xs font-medium hover:border-[#232F3E] hover:text-[#232F3E] dark:hover:text-white transition-colors"
-                            >
-                                Verify on Credly
-                            </a>
-                        </div>
-                    </Card>
+                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Introduction to Cloud 101</p>
+                        <p className="text-xs text-[var(--text-tertiary)] truncate">AWS Educate · Issued Oct 2024</p>
+                    </div>
+                    <a
+                        href="https://www.credly.com/badges/8bc28ca2-d1db-49e0-802a-f78b4ad922f8/linked_in_profile"
+                        target="_blank"
+                        aria-label="Verify on Credly"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <ExternalLink className="w-4 h-4" />
+                    </a>
                 </motion.div>
-
-            </div>
+            </motion.div>
         </section>
 
       {/* END MASTER LAYOUT WRAPPER */}
