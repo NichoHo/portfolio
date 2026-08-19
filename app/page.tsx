@@ -58,7 +58,7 @@ export default function Home() {
         
         {/* 2. HERO SECTION */}
         <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
-          <AmbientGlow className="w-96 h-96 -top-20 right-0 bg-[var(--accent)] opacity-50" />
+          <AmbientGlow className="w-96 h-96 -top-20 right-0 bg-gradient-to-br from-violet-500 to-indigo-500 opacity-50" />
           {/* TEXT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -351,7 +351,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    <span className="font-mono text-[var(--text-tertiary)] text-xs bg-[var(--border)] px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
+                                    <span className="font-mono text-violet-600 dark:text-violet-400 text-xs bg-violet-50 dark:bg-violet-900/30 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -387,7 +387,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    <span className="font-mono text-[var(--text-tertiary)] text-xs bg-[var(--border)] px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
+                                    <span className="font-mono text-violet-600 dark:text-violet-400 text-xs bg-violet-50 dark:bg-violet-900/30 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
