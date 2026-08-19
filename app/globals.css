@@ -38,8 +38,17 @@ body {
 .glow-ambient {
   animation: glow-drift 12s ease-in-out infinite;
 }
+
+@keyframes ring-spin {
+  to { transform: rotate(360deg); }
+}
+.ring-spin {
+  animation: ring-spin 10s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .glow-ambient {
+  .glow-ambient,
+  .ring-spin {
     animation: none;
   }
 }
