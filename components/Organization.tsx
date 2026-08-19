@@ -26,7 +26,7 @@ export default function Organization() {
                 <h3 className="text-xl font-bold text-[var(--text-primary)]">
                 HIMTI Bina Nusantara
                 </h3>
-                <p className="text-md text-indigo-600 dark:text-indigo-400 font-medium mt-1">
+                <p className="text-md text-sky-600 dark:text-sky-400 font-medium mt-1">
                 Activist / Web Development Division
                 </p>
             </div>

@@ -27,13 +27,13 @@ export function Research() {
         >
             <Card className="group hover:shadow-xl transition-all">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                    <div className="w-14 h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0">
-                        <FileText className="w-7 h-7 text-indigo-500" />
+                    <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                        <FileText className="w-7 h-7 text-blue-500" />
                     </div>
 
                     <div className="space-y-3 flex-1">
                         <div className="flex flex-wrap items-center gap-3 text-sm">
-                            <span className="px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 font-medium">
+                            <span className="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 font-medium">
                                 Published Paper
                             </span>
                             <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
@@ -41,7 +41,7 @@ export function Research() {
                             </span>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             Machine Learning Algorithms for HIV/AIDS Prediction using Explainable AI
                         </h3>
 
@@ -63,7 +63,7 @@ export function Research() {
                             <a
                                 href="/portfolio/research.pdf"
                                 target="_blank"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-medium text-sm hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/20"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20"
                             >
                                 <BookOpen className="w-4 h-4" />
                                 Read Full Paper
@@ -87,13 +87,13 @@ export function Research() {
         >
             <Card className="group hover:shadow-xl transition-all">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                    <div className="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0">
-                        <GraduationCap className="w-7 h-7 text-emerald-500" />
+                    <div className="w-14 h-14 rounded-xl bg-teal-500/10 flex items-center justify-center shrink-0">
+                        <GraduationCap className="w-7 h-7 text-teal-500" />
                     </div>
 
                     <div className="space-y-3 flex-1">
                         <div className="flex flex-wrap items-center gap-3 text-sm">
-                            <span className="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-medium">
+                            <span className="px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300 font-medium">
                                 Thesis
                             </span>
                             <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
@@ -101,7 +101,7 @@ export function Research() {
                             </span>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                             Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition Integrating Non-Manual Markers in LowResource Environments
                         </h3>
 
@@ -121,7 +121,7 @@ export function Research() {
                             <a
                                 href="/portfolio/research-2.pdf"
                                 target="_blank"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 text-white font-medium text-sm hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-500/20"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal-600 text-white font-medium text-sm hover:bg-teal-700 transition-colors shadow-lg shadow-teal-500/20"
                             >
                                 <BookOpen className="w-4 h-4" />
                                 Read Current Version

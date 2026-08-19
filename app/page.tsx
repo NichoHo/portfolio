@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Code2, Server, Brain } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Code2, Server, Brain, Languages } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
@@ -144,14 +144,14 @@ export default function Home() {
                 <Card className="flex flex-col justify-between h-full">
                     <div>
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0">
-                                <Code2 className="w-5 h-5 text-emerald-500" />
+                            <div className="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center shrink-0">
+                                <Code2 className="w-5 h-5 text-sky-500" />
                             </div>
                             <h3 className="font-bold text-lg text-[var(--text-primary)]">Frontend Development</h3>
                         </div>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "Vue.js", "Bootstrap", "Framer Motion", "Zod", "Figma", "Lucide React"].map(tech => (
-                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
+                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-sky-100 dark:bg-sky-500/10 text-sky-700 dark:text-sky-300">
                                     {tech}
                                 </span>
                             ))}
@@ -168,14 +168,14 @@ export default function Home() {
                 <Card className="flex flex-col justify-between h-full">
                     <div>
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0">
-                                <Server className="w-5 h-5 text-indigo-500" />
+                            <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+                                <Server className="w-5 h-5 text-amber-500" />
                             </div>
                             <h3 className="font-bold text-lg text-[var(--text-primary)]">Backend Development</h3>
                         </div>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["Go", "Java", "Spring Boot", "C#", "ASP.NET Core", "Node.js", "Express", "PostgreSQL", "Docker", "Kubernetes", "Laravel", "PHP", "Supabase", "MySQL", "SQL Server"].map(tech => (
-                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
+                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-amber-100 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300">
                                     {tech}
                                 </span>
                             ))}
@@ -237,7 +237,7 @@ export default function Home() {
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
                                     <div className="flex flex-col items-end gap-1.5 shrink-0">
-                                        <span className="font-mono text-sky-600 dark:text-sky-400 text-xs bg-sky-50 dark:bg-sky-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
+                                        <span className="font-mono text-cyan-600 dark:text-cyan-400 text-xs bg-cyan-50 dark:bg-cyan-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
                                         <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)]">
                                             <span className="relative flex h-1.5 w-1.5">
                                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
@@ -271,7 +271,7 @@ export default function Home() {
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
                                     <div className="flex flex-col items-end gap-1.5 shrink-0">
-                                        <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
+                                        <span className="font-mono text-rose-600 dark:text-rose-400 text-xs bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
                                         <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)]">
                                             <span className="relative flex h-1.5 w-1.5">
                                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
@@ -310,7 +310,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
-                                    <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
+                                    <span className="font-mono text-amber-600 dark:text-amber-400 text-xs bg-amber-50 dark:bg-amber-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -350,7 +350,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-violet-50 dark:bg-violet-900/30 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
+                                    <span className="font-mono text-teal-600 dark:text-teal-400 text-xs bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -386,7 +386,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    <span className="font-mono text-violet-600 dark:text-violet-400 text-xs bg-violet-50 dark:bg-violet-900/30 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
+                                    <span className="font-mono text-fuchsia-600 dark:text-fuchsia-400 text-xs bg-fuchsia-50 dark:bg-fuchsia-900/30 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -608,7 +608,26 @@ export default function Home() {
                     </a>
                 </motion.div>
 
-                {/* 2. NVIDIA */}
+                {/* 2. IELTS */}
+                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-[var(--border)] flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <Languages className="w-5 h-5 text-[var(--text-secondary)]" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">IELTS Academic — Band 7.5</p>
+                        <p className="text-xs text-[var(--text-tertiary)] truncate">British Council / IDP / Cambridge English · Issued Jun 2025 · ID 25ID500396HON161A</p>
+                    </div>
+                    <a
+                        href="/portfolio/IELTS.pdf"
+                        download="IELTS.pdf"
+                        aria-label="Download Certificate"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <Download className="w-4 h-4" />
+                    </a>
+                </motion.div>
+
+                {/* 3. NVIDIA */}
                 <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
                     <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
                         <img src="/portfolio/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
@@ -635,7 +654,7 @@ export default function Home() {
                     </a>
                 </motion.div>
 
-                {/* 3. AWS COMPUTE */}
+                {/* 4. AWS COMPUTE */}
                 <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
                     <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
                         <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
@@ -654,7 +673,7 @@ export default function Home() {
                     </a>
                 </motion.div>
 
-                {/* 4. AWS CLOUD 101 */}
+                {/* 5. AWS CLOUD 101 */}
                 <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
                     <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
                         <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
