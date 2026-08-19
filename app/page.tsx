@@ -118,7 +118,7 @@ export default function Home() {
              transition={{ delay: 0.2, duration: 0.6, ease: easeOut }}
              className="relative"
           >
-            <div className="absolute -inset-2 rounded-full bg-[conic-gradient(from_0deg,#8b5cf6,#6366f1,#8b5cf6)] ring-spin" />
+            <div className="absolute -inset-2 rounded-full bg-[conic-gradient(from_0deg,#10b981,#34d399,#10b981)] ring-spin" />
             <img
               src="/portfolio/photo.jpg"
               alt="Nicholas Ho"
