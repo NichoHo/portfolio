@@ -15,15 +15,9 @@ export const Card = ({
   return (
     <div
       className={cn(
-        // BASE STYLES
         "relative overflow-hidden rounded-2xl p-6 transition-all duration-300",
-        
-        // LIGHT MODE (Clean, subtle grey border)
-        "bg-white border border-slate-200 shadow-sm hover:shadow-md",
-        
-        // DARK MODE (Glassy, slate border)
-        "dark:bg-slate-900/50 dark:border-slate-800 dark:hover:border-slate-700 dark:hover:shadow-slate-900/50",
-        
+        "bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md hover:-translate-y-0.5",
+        "dark:shadow-none dark:hover:border-[var(--border-hover)] dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:hover:-translate-y-1",
         className
       )}
     >
