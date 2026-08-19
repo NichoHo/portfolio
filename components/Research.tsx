@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Download } from "lucide-react";
+import { FileText, GraduationCap, BookOpen, Download } from "lucide-react";
 import { Card } from "@/components/Card";
 import { fadeUp } from "@/lib/motion";
 
@@ -25,40 +25,31 @@ export function Research() {
         <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
         >
-            <Card className="group overflow-hidden border-l-4 border-l-[var(--border-hover)] group-hover:border-l-indigo-600 dark:group-hover:border-l-indigo-500 hover:shadow-xl transition-all">
-                <div className="grid md:grid-cols-3 gap-0">
-
-                    {/* VISUAL SIDE (Image of Paper) */}
-                    <div className="hidden md:block relative bg-[var(--surface)] border-r border-[var(--border)] overflow-hidden">
-                        <img
-                            src="/portfolio/research.jpg"
-                            alt="Research Paper Preview"
-                            className="absolute inset-0 w-full h-full object-cover object-center"
-                        />
+            <Card className="group hover:shadow-xl transition-all">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                    <div className="w-14 h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0">
+                        <FileText className="w-7 h-7 text-indigo-500" />
                     </div>
 
-                    {/* CONTENT SIDE */}
-                    <div className="md:col-span-2 p-8 flex flex-col justify-center space-y-6">
-                        <div className="space-y-3">
-                            <div className="flex flex-wrap items-center gap-3 text-sm">
-                                <span className="px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 font-medium">
-                                    Published Paper
-                                </span>
-                                <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
-                                    ICORIS 2025
-                                </span>
-                            </div>
-
-                            <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                                Machine Learning Algorithms for HIV/AIDS Prediction using Explainable AI
-                            </h3>
-
-                            <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
-                                Conducted in-depth research on applying Explainable Artificial Intelligence (XAI) to medical diagnostics.
-                                The study evaluates various ML models to predict HIV/AIDS susceptibility based on socio-behavioral data, using <strong>SHAP (SHapley Additive exPlanations)</strong> to provide transparent, interpretable reasoning for model decisions.
-                                This work aims to bridge the trust gap between AI systems and medical practitioners.
-                            </p>
+                    <div className="space-y-3 flex-1">
+                        <div className="flex flex-wrap items-center gap-3 text-sm">
+                            <span className="px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 font-medium">
+                                Published Paper
+                            </span>
+                            <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
+                                ICORIS 2025
+                            </span>
                         </div>
+
+                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                            Machine Learning Algorithms for HIV/AIDS Prediction using Explainable AI
+                        </h3>
+
+                        <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
+                            Conducted in-depth research on applying Explainable Artificial Intelligence (XAI) to medical diagnostics.
+                            The study evaluates various ML models to predict HIV/AIDS susceptibility based on socio-behavioral data, using <strong>SHAP (SHapley Additive exPlanations)</strong> to provide transparent, interpretable reasoning for model decisions.
+                            This work aims to bridge the trust gap between AI systems and medical practitioners.
+                        </p>
 
                         <div className="flex flex-wrap gap-2">
                             {["Explainable AI (XAI)", "Healthcare Informatics", "SHAP Analysis", "Python", "Machine Learning"].map((tag) => (
@@ -94,38 +85,29 @@ export function Research() {
         <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
         >
-            <Card className="group overflow-hidden border-l-4 border-l-[var(--border-hover)] group-hover:border-l-emerald-600 dark:group-hover:border-l-emerald-500 hover:shadow-xl transition-all">
-                <div className="grid md:grid-cols-3 gap-0">
-
-                    {/* VISUAL SIDE (Image of Paper) */}
-                    <div className="hidden md:block relative bg-[var(--surface)] border-r border-[var(--border)] overflow-hidden">
-                        <img
-                            src="/portfolio/research-2.jpg"
-                            alt="Research Paper Preview"
-                            className="absolute inset-0 w-full h-full object-cover object-center"
-                        />
+            <Card className="group hover:shadow-xl transition-all">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                    <div className="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0">
+                        <GraduationCap className="w-7 h-7 text-emerald-500" />
                     </div>
 
-                    {/* CONTENT SIDE */}
-                    <div className="md:col-span-2 p-8 flex flex-col justify-center space-y-6">
-                        <div className="space-y-3">
-                            <div className="flex flex-wrap items-center gap-3 text-sm">
-                                <span className="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-medium">
-                                    Thesis
-                                </span>
-                                <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
-                                    2025-ongoing
-                                </span>
-                            </div>
-
-                            <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                                Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition Integrating Non-Manual Markers in LowResource Environments
-                            </h3>
-
-                            <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
-                                This thesis develops a highly efficient Sign Language Recognition (SLR) system for Indonesian Sign Language (BISINDO) targeting low-resource environments. By shifting to a MediaPipe-GRU architecture, the model accurately captures both manual gestures and non-manual signals with minimal computational overhead. The optimized system achieves robust real-time performance on budget devices, promoting greater accessibility in communication technology.
-                            </p>
+                    <div className="space-y-3 flex-1">
+                        <div className="flex flex-wrap items-center gap-3 text-sm">
+                            <span className="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-medium">
+                                Thesis
+                            </span>
+                            <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
+                                2025-ongoing
+                            </span>
                         </div>
+
+                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                            Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition Integrating Non-Manual Markers in LowResource Environments
+                        </h3>
+
+                        <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
+                            This thesis develops a highly efficient Sign Language Recognition (SLR) system for Indonesian Sign Language (BISINDO) targeting low-resource environments. By shifting to a MediaPipe-GRU architecture, the model accurately captures both manual gestures and non-manual signals with minimal computational overhead. The optimized system achieves robust real-time performance on budget devices, promoting greater accessibility in communication technology.
+                        </p>
 
                         <div className="flex flex-wrap gap-2">
                             {["Deep Learning", "MediaPipe", "GRU", "Sign Language Recognition", "Low-Resource"].map((tag) => (
