@@ -17,7 +17,7 @@ export function ImageCarousel({
   const prev = () => setCurrent((p) => (p - 1 + images.length) % images.length);
 
   return (
-    <div className="group relative w-full rounded-2xl overflow-hidden border border-[#dee2e6] dark:border-slate-800 shadow-md">
+    <div className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-md">
       {/* Sizer: invisible first image keeps container height stable */}
       <img src={images[0]} alt="" aria-hidden className="w-full h-auto object-contain block invisible" />
       {/* Stacked images crossfade */}
@@ -36,13 +36,13 @@ export function ImageCarousel({
       <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         <button
           onClick={prev}
-          className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-slate-900 dark:text-white hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-slate-200 dark:border-slate-700"
+          className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-[var(--text-primary)] hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-[var(--border)]"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={next}
-          className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-slate-900 dark:text-white hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-slate-200 dark:border-slate-700"
+          className="pointer-events-auto p-2 rounded-full bg-white/90 dark:bg-black/60 text-[var(--text-primary)] hover:scale-110 transition-transform backdrop-blur-sm shadow-lg border border-[var(--border)]"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
