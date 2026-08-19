@@ -21,7 +21,7 @@ export function ContactSection() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030_1px,transparent_1px),linear-gradient(to_bottom,#80808030_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_90%_at_80%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Decorative Gradient Blob */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-emerald-500/5 dark:bg-emerald-500/10 blur-[100px] -z-10 rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-emerald-500/5 dark:bg-emerald-500/10 blur-[100px] -z-10 rounded-full pointer-events-none glow-ambient motion-reduce:animate-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-end mb-12">
@@ -34,31 +34,31 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div className="space-y-6">
-              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 dark:text-white leading-[1.1]">
+              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-[var(--text-primary)] leading-[1.1]">
                 Let's work <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">
                   together.
                 </span>
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
+              <p className="text-lg text-[var(--text-secondary)] max-w-md leading-relaxed">
                 Currently open to new opportunities. Let's build polished UIs and robust backends for your next ambitious project.
               </p>
             </div>
 
             {/* Status Indicators */}
-            <div className="flex flex-wrap gap-4 text-sm font-medium text-slate-600 dark:text-slate-400">
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+            <div className="flex flex-wrap gap-4 text-sm font-medium text-[var(--text-secondary)]">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--border)]/60 border border-[var(--border)]">
                     <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
                     Available for work
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--border)]/60 border border-[var(--border)]">
                     <MapPin className="w-3.5 h-3.5" />
                     Tangerang, Indonesia
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--border)]/60 border border-[var(--border)]">
                     <Clock className="w-3.5 h-3.5" />
                     GMT+7
                 </div>
@@ -76,15 +76,15 @@ export function ContactSection() {
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
                 <a
                   href={`mailto:${email}`}
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-slate-900 dark:bg-white dark:text-slate-900 rounded-full hover:bg-emerald-600 dark:hover:bg-emerald-400 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-[var(--bg)] bg-[var(--text-primary)] rounded-full hover:bg-emerald-600 dark:hover:bg-emerald-400 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20"
                 >
                   Get in touch
                   <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>
-                
+
                 <button
                   onClick={handleCopy}
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-medium text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-medium text-[var(--text-secondary)] bg-[var(--surface)] border border-[var(--border)] rounded-full hover:bg-[var(--border)] transition-all active:scale-95"
                 >
                   {copied ? <Check className="w-5 h-5 text-emerald-500" /> : <Copy className="w-5 h-5" />}
                   {copied ? "Copied!" : "Copy Email"}
@@ -93,23 +93,23 @@ export function ContactSection() {
 
             {/* Social Pills */}
             <div className="grid grid-cols-2 gap-4 w-full md:w-auto mt-4">
-                <a 
-                    href="https://www.linkedin.com/in/nichoho/" 
-                    target="_blank" 
+                <a
+                    href="https://www.linkedin.com/in/nichoho/"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800/50 hover:bg-[#0A66C2] hover:text-white dark:hover:bg-[#0A66C2] dark:hover:text-white transition-colors duration-300 group"
+                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-[var(--border)]/60 hover:bg-[#0A66C2] hover:text-white transition-colors duration-300 group"
                 >
                     <Linkedin className="w-5 h-5 text-[#0A66C2] group-hover:text-white transition-colors" />
                     <span className="font-medium text-sm">LinkedIn</span>
                 </a>
-                
-                <a 
-                    href="https://github.com/NichoHo" 
-                    target="_blank" 
+
+                <a
+                    href="https://github.com/NichoHo"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-colors duration-300 group"
+                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-[var(--border)]/60 hover:bg-[var(--text-primary)] hover:text-[var(--bg)] transition-colors duration-300 group"
                 >
-                    <Github className="w-5 h-5 text-slate-900 dark:text-white group-hover:text-white dark:group-hover:text-slate-900 transition-colors" />
+                    <Github className="w-5 h-5 text-[var(--text-primary)] group-hover:text-[var(--bg)] transition-colors" />
                     <span className="font-medium text-sm">GitHub</span>
                 </a>
             </div>
