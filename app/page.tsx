@@ -12,10 +12,12 @@ import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
 import { Research } from "@/components/Research";
 import Organization from "@/components/Organization";
+import { fadeUp, staggerContainer } from "@/lib/motion";
+import { AmbientGlow } from "@/components/AmbientGlow";
 
 export default function Home() {
   return (
-    <main className="min-h-screen transition-colors duration-300 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 font-sans selection:bg-emerald-500/20 dark:selection:bg-emerald-500/30">
+    <main className="min-h-screen transition-colors duration-300 bg-[var(--bg)] text-[var(--text-primary)] font-sans selection:bg-[var(--accent)]/20">
       
       {/* 1. NAVBAR */}
       <Navbar>
@@ -55,90 +57,94 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20 space-y-24">
         
         {/* 2. HERO SECTION */}
-        <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
+        <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
+          <AmbientGlow className="w-96 h-96 -top-20 right-0 bg-[var(--accent)] opacity-50" />
           {/* TEXT SIDE */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex-1 space-y-6 text-center md:text-left"
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="relative flex-1 space-y-6 text-center md:text-left"
           >
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[var(--text-primary)]">
               Fullstack <br />
-              <span className="text-slate-400 dark:text-slate-600">Architect.</span>
+              <span className="text-[var(--text-tertiary)]">Architect.</span>
             </h1>
-            
-            <p className="text-lg md:text-slate-600 dark:text-slate-400 leading-relaxed">
-              Computer Science Undergraduate building <strong className="text-slate-900 dark:text-white">distributed backend systems</strong>, <strong className="text-slate-900 dark:text-white">AI/ML pipelines</strong>, and modern web platforms.
-              Currently a Backend Software Engineering Intern at <strong className="text-slate-900 dark:text-white">SIRCLO</strong>, alongside roles at <strong className="text-slate-900 dark:text-white">Nexus Software</strong> and <strong className="text-slate-900 dark:text-white">Galva Group</strong>.
+
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+              Computer Science Undergraduate building <strong className="text-[var(--text-primary)]">distributed backend systems</strong>, <strong className="text-[var(--text-primary)]">AI/ML pipelines</strong>, and modern web platforms.
+              Currently a Backend Software Engineering Intern at <strong className="text-[var(--text-primary)]">SIRCLO</strong>, alongside roles at <strong className="text-[var(--text-primary)]">Nexus Software</strong> and <strong className="text-[var(--text-primary)]">Galva Group</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
               {/* CONTACT BUTTON -> Mailto */}
-              <a 
-                href="mailto:nikko150905@gmail.com" 
-                className="inline-flex items-center justify-center rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 text-sm font-semibold transition-transform hover:scale-105"
+              <a
+                href="mailto:nikko150905@gmail.com"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--text-primary)] text-[var(--bg)] px-8 py-3 text-sm font-semibold transition-transform hover:scale-105"
               >
                 Contact Me <ArrowRight className="ml-2 w-4 h-4" />
               </a>
 
               {/* CV BUTTON -> Opens in New Tab */}
-              <a 
-                href="/portfolio/CV.pdf" 
-                target="_blank" 
+              <a
+                href="/portfolio/CV.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 px-8 py-3 text-sm font-medium transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--border)] px-8 py-3 text-sm font-medium transition-colors hover:bg-[var(--border)]"
               >
                 CV <Download className="ml-2 w-4 h-4" />
               </a>
             </div>
-            
-            <div className="flex gap-6 pt-2 text-slate-500 dark:text-slate-400 justify-center md:justify-start">
+
+            <div className="flex gap-6 pt-2 text-[var(--text-tertiary)] justify-center md:justify-start">
               {/* GITHUB */}
               <a href="https://github.com/NichoHo" target="_blank" rel="noopener noreferrer">
-                <Github className="w-6 h-6 hover:text-slate-900 dark:hover:text-white cursor-pointer transition-colors" />
+                <Github className="w-6 h-6 hover:text-[var(--text-primary)] cursor-pointer transition-colors" />
               </a>
               {/* LINKEDIN */}
               <a href="https://www.linkedin.com/in/nichoho/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-6 h-6 hover:text-emerald-500 cursor-pointer transition-colors" />
+                <Linkedin className="w-6 h-6 hover:text-[var(--accent)] cursor-pointer transition-colors" />
               </a>
               {/* EMAIL */}
               <a href="mailto:nikko150905@gmail.com">
-                <Mail className="w-6 h-6 hover:text-slate-900 dark:hover:text-white cursor-pointer transition-colors" />
+                <Mail className="w-6 h-6 hover:text-[var(--text-primary)] cursor-pointer transition-colors" />
               </a>
             </div>
           </motion.div>
 
           {/* IMAGE SIDE */}
-          <motion.div 
+          <motion.div
              initial={{ opacity: 0, scale: 0.9 }}
              animate={{ opacity: 1, scale: 1 }}
-             transition={{ delay: 0.2 }}
+             transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
              className="relative"
           >
-            <img 
+            <img
               src="/portfolio/photo.jpg"
-              alt="Nicholas Ho" 
-              className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl"
+              alt="Nicholas Ho"
+              className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-[var(--surface)] shadow-xl"
             />
           </motion.div>
         </section>
 
         {/* 3. TECHNICAL SKILLS */}
         <section className="space-y-8">
-            <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            <motion.div
+            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
             >
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Technical Skills</h2>
+                <h2 className="text-3xl font-bold text-[var(--text-primary)]">Technical Skills</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <motion.div
+              variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4"
+            >
                 {/* Frontend Development */}
-                <Card className="p-6 border-t-4 border-t-emerald-500 hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <motion.div variants={fadeUp}>
+                <Card className="p-6 border-t-4 border-t-emerald-500 flex flex-col justify-between h-full">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Frontend Development</h3>
+                        <h3 className="font-bold text-lg mb-4 text-[var(--text-primary)]">Frontend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "Vue.js", "Bootstrap", "Framer Motion", "Zod", "Figma", "Lucide React"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
@@ -147,15 +153,17 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                         Specializing in building modern, responsive web interfaces and high-performance landing pages. Focus on creating seamless user experiences using the latest frontend frameworks.
                     </p>
                 </Card>
+                </motion.div>
 
                 {/* Backend Development */}
-                <Card className="p-6 border-t-4 border-t-indigo-500 hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <motion.div variants={fadeUp}>
+                <Card className="p-6 border-t-4 border-t-indigo-500 flex flex-col justify-between h-full">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Backend Development</h3>
+                        <h3 className="font-bold text-lg mb-4 text-[var(--text-primary)]">Backend Development</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["Go", "Java", "Spring Boot", "C#", "ASP.NET Core", "Node.js", "Express", "PostgreSQL", "Docker", "Kubernetes", "Laravel", "PHP", "Supabase", "MySQL", "SQL Server"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
@@ -164,15 +172,17 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                         Specializing in robust API architectures across C#, Go, and Java. Experienced in architecting complex Warehouse Management Systems (WMS), payment ledgers, and inventory tracking systems, with a focus on data correctness, idempotency, and distributed transactions.
                     </p>
                 </Card>
+                </motion.div>
 
                 {/* Artificial Intelligence */}
-                <Card className="p-6 border-t-4 border-t-orange-500 hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <motion.div variants={fadeUp}>
+                <Card className="p-6 border-t-4 border-t-orange-500 flex flex-col justify-between h-full">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-slate-900 dark:text-white">Artificial Intelligence</h3>
+                        <h3 className="font-bold text-lg mb-4 text-[var(--text-primary)]">Artificial Intelligence</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["LangChain", "HuggingFace", "FAISS", "TensorFlow", "Scikit-learn", "XGBoost", "SHAP", "OpenCV", "MediaPipe", "GRU", "Pandas", "NumPy"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-300">
@@ -181,47 +191,44 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                         Engineering intelligent systems including RAG pipelines for document retrieval, real-time Computer Vision for sign language recognition, and predictive modeling for sports analytics. Published researcher in Explainable AI, applying predictive modeling to healthcare diagnostics with a focus on model interpretability.
                     </p>
                 </Card>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
 
         {/* 4. WORK EXPERIENCE */}
         <section id="work" className="space-y-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <motion.div
+              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
               className="flex items-center justify-between"
             >
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Work Experience</h2>
+                <h2 className="text-3xl font-bold text-[var(--text-primary)]">Work Experience</h2>
             </motion.div>
-            
-            <div className="relative space-y-8 md:pl-0 md:before:absolute md:before:inset-0 md:before:left-1/2 md:before:-translate-x-px md:before:h-full md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-transparent md:before:via-slate-300 md:before:to-transparent dark:md:before:via-slate-700">
-                
+
+            <div className="relative space-y-8 md:pl-0 md:before:absolute md:before:inset-0 md:before:left-1/2 md:before:-translate-x-px md:before:h-full md:before:w-px md:before:bg-[var(--border)]">
+
                 {/* ROLE 0: SIRCLO (Intern) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-sky-500 bg-white dark:bg-slate-900 z-10 box-content shadow-[0_0_0_4px_rgba(14,165,233,0.2)]"></div>
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-sky-500 z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
-                        <Card className="p-6 border-l-4 border-l-sky-500 hover:shadow-lg transition-all hover:-translate-y-1">
+                        <Card className="p-6 border-l-4 border-l-sky-500">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
+                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
                                     <span className="font-mono text-sky-600 dark:text-sky-400 text-xs bg-sky-50 dark:bg-sky-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
                                 </div>
-                                <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">SIRCLO</span>
+                                <span className="text-[var(--text-secondary)] font-medium text-sm">SIRCLO</span>
                             </div>
 
-                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Selected for a <strong className="text-slate-900 dark:text-white">6-month, end-to-end</strong> project, collaborating with a cross-functional team (PM, Frontend, QA) from spec through delivery</li>
+                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                                <li>Selected for a <strong className="text-[var(--text-primary)]">6-month, end-to-end</strong> project, collaborating with a cross-functional team (PM, Frontend, QA) from spec through delivery</li>
                                 <li>Project scope and tech stack to be confirmed</li>
                             </ul>
                         </Card>
@@ -230,32 +237,30 @@ export default function Home() {
 
                 {/* ROLE 1: NEXUS */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-emerald-500 bg-white dark:bg-slate-900 z-10 box-content shadow-[0_0_0_4px_rgba(16,185,129,0.2)]"></div>
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-emerald-500 z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:mr-auto md:pr-0">
-                        <Card className="p-6 border-l-4 border-l-emerald-500 hover:shadow-lg transition-all hover:-translate-y-1">
+                        <Card className="p-6 border-l-4 border-l-emerald-500">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">Lead Developer</h3>
+                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
                                     <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
                                 </div>
-                                <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Nexus Software Agency</span>
+                                <span className="text-[var(--text-secondary)] font-medium text-sm">Nexus Software Agency</span>
                             </div>
-                            
-                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Spearheaded the development of high-performance landing pages for diverse clients using <strong className="text-slate-900 dark:text-white">Next.js</strong></li>
+
+                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                                <li>Spearheaded the development of high-performance landing pages for diverse clients using <strong className="text-[var(--text-primary)]">Next.js</strong></li>
                                 <li>Translated business requirements into modern, scalable frontend code</li>
                             </ul>
 
-                            <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
+                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
                             </div>
                         </Card>
                     </div>
@@ -263,41 +268,39 @@ export default function Home() {
 
                 {/* ROLE 2: GALVA (Part-Time) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-indigo-500 bg-white dark:bg-slate-900 z-10 box-content shadow-[0_0_0_4px_rgba(99,102,241,0.2)]"></div>
-                    
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-indigo-500 z-10"></div>
+
                     <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
-                        <Card className="p-6 border-l-4 border-l-indigo-500 hover:shadow-lg transition-all hover:-translate-y-1">
+                        <Card className="p-6 border-l-4 border-l-indigo-500">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
+                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
                                     <span className="font-mono text-indigo-600 dark:text-indigo-400 text-xs bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
                                 </div>
-                                <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
+                                <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
-                            
-                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Architected a comprehensive <strong className="text-slate-900 dark:text-white">Warehouse Management System (WMS)</strong> using ASP.NET.</li>
-                                <li>Developed a comprehensive <strong className="text-slate-900 dark:text-white">Transport Tracker</strong> system using React for the frontend and C# Web API for the backend to monitor product logistics in real-time.</li>
-                                <li>Engineered a comprehensive <strong className="text-slate-900 dark:text-white">Project Management System</strong> (PMS) using Next.js, Tailwind CSS, Supabase, and AWS S3.</li>
+
+                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                                <li>Architected a comprehensive <strong className="text-[var(--text-primary)]">Warehouse Management System (WMS)</strong> using ASP.NET.</li>
+                                <li>Developed a comprehensive <strong className="text-[var(--text-primary)]">Transport Tracker</strong> system using React for the frontend and C# Web API for the backend to monitor product logistics in real-time.</li>
+                                <li>Engineered a comprehensive <strong className="text-[var(--text-primary)]">Project Management System</strong> (PMS) using Next.js, Tailwind CSS, Supabase, and AWS S3.</li>
                             </ul>
 
-                            <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">React</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">HTML</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">CSS</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">jQuery</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Supabase</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">AWS S3</span>
+                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">HTML</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">CSS</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">jQuery</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Supabase</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">AWS S3</span>
                             </div>
                         </Card>
                     </div>
@@ -305,37 +308,35 @@ export default function Home() {
 
                 {/* ROLE 3: GALVA (Freelance) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-600 z-10 box-content border-4 border-slate-50 dark:border-slate-950"></div>
-                    
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
+
                     <div className="w-full md:w-[calc(50%-2rem)] md:mr-auto md:pr-0">
-                        <Card className="p-6 opacity-90 hover:opacity-100 hover:shadow-md transition-all">
+                        <Card className="p-6 opacity-90 hover:opacity-100">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
+                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
+                                    <span className="font-mono text-[var(--text-tertiary)] text-xs bg-[var(--border)] px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
-                                <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
+                                <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
-                            
-                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Built the <strong className="text-slate-900 dark:text-white">Inventory Project</strong>, an API-driven finance module automating balanced double-entry General Ledger postings for multi-currency cash & bank disbursements</li>
-                                <li>Architected a <strong className="text-slate-900 dark:text-white">C# ASP.NET Web API 2</strong> backend using the Repository Pattern, Dapper, and TransactionScope-managed cross-database transactions with custom token authentication</li>
-                                <li>Migrated the frontend to a decoupled <strong className="text-slate-900 dark:text-white">Vue.js 3 SPA</strong> styled with Bootstrap 5</li>
+
+                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                                <li>Built the <strong className="text-[var(--text-primary)]">Inventory Project</strong>, an API-driven finance module automating balanced double-entry General Ledger postings for multi-currency cash & bank disbursements</li>
+                                <li>Architected a <strong className="text-[var(--text-primary)]">C# ASP.NET Web API 2</strong> backend using the Repository Pattern, Dapper, and TransactionScope-managed cross-database transactions with custom token authentication</li>
+                                <li>Migrated the frontend to a decoupled <strong className="text-[var(--text-primary)]">Vue.js 3 SPA</strong> styled with Bootstrap 5</li>
                             </ul>
 
-                             <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">C# ASP.NET Web API</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Vue.js</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Dapper</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Bootstrap 5</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">DataTables.net</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">JavaScript</span>
+                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET Web API</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Vue.js</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Dapper</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Bootstrap 5</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">DataTables.net</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
                             </div>
                         </Card>
                     </div>
@@ -343,34 +344,32 @@ export default function Home() {
 
                  {/* ROLE 4: GALVA (Intern) */}
                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-600 z-10 box-content border-4 border-slate-50 dark:border-slate-950"></div>
-                    
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
+
                     <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
-                        <Card className="p-6 opacity-90 hover:opacity-100 hover:shadow-md transition-all">
+                        <Card className="p-6 opacity-90 hover:opacity-100">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    <span className="font-mono text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
+                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
+                                    <span className="font-mono text-[var(--text-tertiary)] text-xs bg-[var(--border)] px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
-                                <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">Galva Group</span>
+                                <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
-                            
-                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                <li>Engineered a <strong className="text-slate-900 dark:text-white">geofencing access-control system</strong>, applying the Haversine formula to restrict app access to users within a set radius of office coordinates</li>
-                                <li>Built <strong className="text-slate-900 dark:text-white">real-time chat</strong> via SignalR/WebSockets for instant bi-directional messaging between field users</li>
-                                <li>Integrated <strong className="text-slate-900 dark:text-white">Google Maps API</strong> to visualize geotagged CRUD tracking data for supervisors</li>
+
+                            <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                                <li>Engineered a <strong className="text-[var(--text-primary)]">geofencing access-control system</strong>, applying the Haversine formula to restrict app access to users within a set radius of office coordinates</li>
+                                <li>Built <strong className="text-[var(--text-primary)]">real-time chat</strong> via SignalR/WebSockets for instant bi-directional messaging between field users</li>
+                                <li>Integrated <strong className="text-[var(--text-primary)]">Google Maps API</strong> to visualize geotagged CRUD tracking data for supervisors</li>
                             </ul>
 
-                             <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">VB.NET</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SignalR</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">Google Maps API</span>
-                                <span className="text-xs font-mono text-slate-500 border border-slate-200 dark:border-slate-700 px-1.5 py-0.5 rounded">SQL Server</span>
+                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">VB.NET</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SignalR</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Google Maps API</span>
+                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
                             </div>
                         </Card>
                     </div>
