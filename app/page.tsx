@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Code2, Server, Brain, Languages } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Code2, Server, Brain } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
@@ -610,8 +610,8 @@ export default function Home() {
 
                 {/* 2. IELTS */}
                 <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-[var(--border)] flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <Languages className="w-5 h-5 text-[var(--text-secondary)]" />
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <img src="/portfolio/ielts.webp" alt="IELTS" className="w-full h-full object-cover" />
                     </div>
                     <div className="min-w-0 flex-1">
                         <p className="font-bold text-[var(--text-primary)] text-sm truncate">IELTS Academic — Band 7.5</p>
