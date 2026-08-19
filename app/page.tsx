@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Code2, Server, Brain } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
@@ -142,9 +142,14 @@ export default function Home() {
             >
                 {/* Frontend Development */}
                 <motion.div variants={fadeUp}>
-                <Card className="p-6 border-t-4 border-t-emerald-500 flex flex-col justify-between h-full">
+                <Card className="flex flex-col justify-between h-full">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-[var(--text-primary)]">Frontend Development</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0">
+                                <Code2 className="w-5 h-5 text-emerald-500" />
+                            </div>
+                            <h3 className="font-bold text-lg text-[var(--text-primary)]">Frontend Development</h3>
+                        </div>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "Vue.js", "Bootstrap", "Framer Motion", "Zod", "Figma", "Lucide React"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
@@ -161,9 +166,14 @@ export default function Home() {
 
                 {/* Backend Development */}
                 <motion.div variants={fadeUp}>
-                <Card className="p-6 border-t-4 border-t-indigo-500 flex flex-col justify-between h-full">
+                <Card className="flex flex-col justify-between h-full">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-[var(--text-primary)]">Backend Development</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0">
+                                <Server className="w-5 h-5 text-indigo-500" />
+                            </div>
+                            <h3 className="font-bold text-lg text-[var(--text-primary)]">Backend Development</h3>
+                        </div>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["Go", "Java", "Spring Boot", "C#", "ASP.NET Core", "Node.js", "Express", "PostgreSQL", "Docker", "Kubernetes", "Laravel", "PHP", "Supabase", "MySQL", "SQL Server"].map(tech => (
                                 <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
@@ -180,12 +190,17 @@ export default function Home() {
 
                 {/* Artificial Intelligence */}
                 <motion.div variants={fadeUp}>
-                <Card className="p-6 border-t-4 border-t-orange-500 flex flex-col justify-between h-full">
+                <Card className="flex flex-col justify-between h-full">
                     <div>
-                        <h3 className="font-bold text-lg mb-4 text-[var(--text-primary)]">Artificial Intelligence</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center shrink-0">
+                                <Brain className="w-5 h-5 text-violet-500" />
+                            </div>
+                            <h3 className="font-bold text-lg text-[var(--text-primary)]">Artificial Intelligence</h3>
+                        </div>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["LangChain", "HuggingFace", "FAISS", "TensorFlow", "Scikit-learn", "XGBoost", "SHAP", "OpenCV", "MediaPipe", "GRU", "Pandas", "NumPy"].map(tech => (
-                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-300">
+                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-violet-100 dark:bg-violet-500/10 text-violet-700 dark:text-violet-300">
                                     {tech}
                                 </span>
                             ))}
@@ -215,14 +230,23 @@ export default function Home() {
                     variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-sky-500 z-10"></div>
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--accent)] z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
-                        <Card className="p-6 border-l-4 border-l-sky-500">
+                        <Card>
                             <div className="flex flex-col gap-1 mb-3">
-                                <div className="flex justify-between items-start">
+                                <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
-                                    <span className="font-mono text-sky-600 dark:text-sky-400 text-xs bg-sky-50 dark:bg-sky-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
+                                    <div className="flex flex-col items-end gap-1.5 shrink-0">
+                                        <span className="font-mono text-sky-600 dark:text-sky-400 text-xs bg-sky-50 dark:bg-sky-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
+                                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)]">
+                                            <span className="relative flex h-1.5 w-1.5">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
+                                            </span>
+                                            Current
+                                        </span>
+                                    </div>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">SIRCLO</span>
                             </div>
@@ -240,14 +264,23 @@ export default function Home() {
                     variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-emerald-500 z-10"></div>
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--accent)] z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:mr-auto md:pr-0">
-                        <Card className="p-6 border-l-4 border-l-emerald-500">
+                        <Card>
                             <div className="flex flex-col gap-1 mb-3">
-                                <div className="flex justify-between items-start">
+                                <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
-                                    <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
+                                    <div className="flex flex-col items-end gap-1.5 shrink-0">
+                                        <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
+                                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)]">
+                                            <span className="relative flex h-1.5 w-1.5">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
+                                            </span>
+                                            Current
+                                        </span>
+                                    </div>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Nexus Software Agency</span>
                             </div>
@@ -271,10 +304,10 @@ export default function Home() {
                     variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-indigo-500 z-10"></div>
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
-                        <Card className="p-6 border-l-4 border-l-indigo-500">
+                        <Card>
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
