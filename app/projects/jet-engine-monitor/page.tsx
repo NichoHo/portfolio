@@ -6,6 +6,8 @@ import { ArrowLeft, ExternalLink, CheckCircle2, ChevronLeft, ChevronRight, FileC
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Card } from "@/components/Card";
+import { easeOut } from "@/lib/motion";
 
 const PROJECT_IMAGES = [
   "/portfolio/jet-engine-monitor.jpg",
@@ -45,7 +47,7 @@ export default function JetEnginePage() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400 text-xs font-medium">
@@ -72,7 +74,7 @@ export default function JetEnginePage() {
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
             className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-md bg-[var(--border)] flex justify-center items-center"
         >
              {/* Sizer: Removed 'aspect-video' and 'object-cover' to let the natural aspect ratio dictate container height */}
@@ -163,14 +165,14 @@ export default function JetEnginePage() {
 
             {/* RIGHT: TECH STACK */}
             <div className="space-y-8">
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Role</h3>
                     <p className="text-[var(--text-secondary)] font-medium">
                         Team Lead & ML Developer
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Python", "XGBoost", "Optuna", "SHAP", "Streamlit", "Pandas", "Plotly", "Scikit-Learn"].map(tech => (
@@ -179,14 +181,14 @@ export default function JetEnginePage() {
                             </span>
                         ))}
                     </div>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Performance</h3>
                     <p className="text-sm text-[var(--text-secondary)] mb-4">
                         The model was strictly evaluated against the <strong>NASA Safety Score</strong>, penalizing over-predictions (late maintenance) more heavily than under-predictions.
                     </p>
-                </div>
+                </Card>
             </div>
         </div>
       </div>

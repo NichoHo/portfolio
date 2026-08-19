@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { Card } from "@/components/Card";
+import { easeOut } from "@/lib/motion";
 
 const LOCALIST_IMAGES = [
   "/portfolio/localist.jpg",
@@ -38,7 +40,7 @@ export default function LocalistPage() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-100 dark:bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 text-xs font-medium">
@@ -65,7 +67,7 @@ export default function LocalistPage() {
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
         >
             <ImageCarousel images={LOCALIST_IMAGES} alt="Localist" accentClass="bg-fuchsia-500" />
         </motion.div>
@@ -113,14 +115,14 @@ export default function LocalistPage() {
             {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Role</h3>
                     <p className="text-[var(--text-secondary)] font-medium">
                         Full Stack Developer (Built Alone)
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["PHP 8.3", "Laravel 12", "Livewire 3", "Alpine.js", "Blade", "Tailwind CSS 4", "Vite", "MySQL/MariaDB", "Stripe (Cashier)", "Cloudflare", "Docker", "PHPUnit"].map(tech => (
@@ -129,21 +131,21 @@ export default function LocalistPage() {
                             </span>
                         ))}
                     </div>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">How It Fits Together</h3>
                     <p className="text-sm text-[var(--text-secondary)] mb-4">
                         It is one web app that serves two things, a fast public directory that anyone can browse, and a private area where signed-in owners manage their listing. Paying for a plan changes where a business appears in the rankings, and editing or approving a listing instantly refreshes that page for visitors. Public pages are made fast for everyone, while owner pages always stay private and up to date.
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Good to Know</h3>
                     <p className="text-sm text-[var(--text-secondary)]">
                         This is a showcase project. The business data in it is made up, using 5,000 sample listings in Malaysia. To put it online for real, it would still need payment keys, an account with the caching service, and web hosting.
                     </p>
-                </div>
+                </Card>
             </div>
 
         </div>

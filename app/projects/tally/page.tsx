@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { Card } from "@/components/Card";
+import { easeOut } from "@/lib/motion";
 
 const TALLY_IMAGES = [
   "/portfolio/tally.jpg",
@@ -36,7 +38,7 @@ export default function TallyPage() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs font-medium">
@@ -71,7 +73,7 @@ export default function TallyPage() {
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
         >
             <ImageCarousel images={TALLY_IMAGES} alt="Tally" accentClass="bg-teal-500" />
         </motion.div>
@@ -119,14 +121,14 @@ export default function TallyPage() {
             {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Role</h3>
                     <p className="text-[var(--text-secondary)] font-medium">
                         Full Stack Developer (Built Alone)
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Go", "gRPC", "Protocol Buffers", "chi", "pgx", "PostgreSQL", "Redpanda", "Python", "scikit-learn", "Next.js", "TypeScript", "Tailwind CSS", "Docker", "Kubernetes", "Terraform", "GitHub Actions"].map(tech => (
@@ -135,21 +137,21 @@ export default function TallyPage() {
                             </span>
                         ))}
                     </div>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">How It Fits Together</h3>
                     <p className="text-sm text-[var(--text-secondary)] mb-4">
                         A person uses the dashboard, which sends requests to the payment engine, which safely records everything in the database. Whenever a transfer finishes, the system passes it to a separate fraud-checking service. Nothing is announced to the rest of the system until the money has actually been saved, so the records and reality always match.
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Proven Correct</h3>
                     <p className="text-sm text-[var(--text-secondary)]">
                         A set of automated tests proves the important promises hold. All the money in the system always adds up (nothing appears or disappears), stored balances match a fresh recount, a payment sent twice only moves money once, and 50 transfers happening at the exact same time never lose track of a single one.
                     </p>
-                </div>
+                </Card>
             </div>
 
         </div>

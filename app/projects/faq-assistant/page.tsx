@@ -5,6 +5,8 @@ import { ArrowLeft, Github, ExternalLink, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Card } from "@/components/Card";
+import { easeOut } from "@/lib/motion";
 
 export default function FaqPage() {
   return (
@@ -28,7 +30,7 @@ export default function FaqPage() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-500/10 text-violet-600 dark:text-violet-400 text-xs font-medium">
@@ -63,7 +65,7 @@ export default function FaqPage() {
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
             className="w-full h-auto md:bg-violet-50 dark:bg-[var(--surface)] rounded-2xl flex items-center justify-center border border-[var(--border)] overflow-hidden relative"
         >
              <img src="/portfolio/faq-assistant.jpg" alt="FaQ Assistant" className="object-cover"/>
@@ -111,14 +113,14 @@ export default function FaqPage() {
             {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Role</h3>
                     <p className="text-[var(--text-secondary)] font-medium">
                         Technical Lead & Full Stack Developer
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Python", "Flask", "LangChain", "HuggingFace", "FAISS", "HTML5", "CSS3"].map(tech => (
@@ -127,14 +129,14 @@ export default function FaqPage() {
                             </span>
                         ))}
                     </div>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Key Logic</h3>
                     <p className="text-sm text-[var(--text-secondary)] mb-4">
                         The <code>rag_pipeline.py</code> handles the "Retrieval" by querying the local FAISS vector store and formats the retrieved chunks deterministically to present exact document excerpts to the user.
                     </p>
-                </div>
+                </Card>
             </div>
 
         </div>

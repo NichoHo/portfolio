@@ -6,6 +6,8 @@ import { ArrowLeft, Github, ExternalLink, CheckCircle2, ChevronLeft, ChevronRigh
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Card } from "@/components/Card";
+import { easeOut } from "@/lib/motion";
 
 const PROJECT_IMAGES = [
   "/portfolio/flux.jpg",
@@ -48,7 +50,7 @@ export default function FluxPage() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-medium">
@@ -83,7 +85,7 @@ export default function FluxPage() {
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
             className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-md"
         >
              {/* Sizer: invisible first image keeps container height stable */}
@@ -174,14 +176,14 @@ export default function FluxPage() {
             {/* RIGHT: TECH STACK & ROLE */}
             <div className="space-y-8">
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Role</h3>
                     <p className="text-[var(--text-secondary)] font-medium">
                         Technical Lead & Developer
                     </p>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Laravel 10", "PHP 8.2", "MySQL", "Tailwind CSS", "Blade Templates", "Docker", "Nginx", "Vite"].map(tech => (
@@ -190,14 +192,14 @@ export default function FluxPage() {
                             </span>
                         ))}
                     </div>
-                </div>
+                </Card>
 
-                <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300">
+                <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Architecture</h3>
                     <p className="text-sm text-[var(--text-secondary)] mb-4">
                         MVC Architecture with Service Repository pattern for currency logic. Background workers handle scheduled billing tasks.
                     </p>
-                </div>
+                </Card>
             </div>
 
         </div>

@@ -21,7 +21,7 @@ export function ContactSection() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030_1px,transparent_1px),linear-gradient(to_bottom,#80808030_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_90%_at_80%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Decorative Gradient Blob */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-emerald-500/5 dark:bg-emerald-500/10 blur-[100px] -z-10 rounded-full pointer-events-none glow-ambient motion-reduce:animate-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-emerald-500/5 dark:bg-emerald-500/10 blur-[100px] -z-10 rounded-full pointer-events-none glow-ambient" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-end mb-12">

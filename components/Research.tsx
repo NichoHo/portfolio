@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, ExternalLink, BookOpen, Download } from "lucide-react";
+import { BookOpen, Download } from "lucide-react";
 import { Card } from "@/components/Card";
 import { fadeUp } from "@/lib/motion";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Award, Github } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { fadeUp } from "@/lib/motion";
 
 export function Education() {

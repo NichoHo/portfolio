@@ -12,7 +12,7 @@ import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
 import { Research } from "@/components/Research";
 import Organization from "@/components/Organization";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { fadeUp, staggerContainer, easeOut } from "@/lib/motion";
 import { AmbientGlow } from "@/components/AmbientGlow";
 
 export default function Home() {
@@ -63,7 +63,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: easeOut }}
             className="relative flex-1 space-y-6 text-center md:text-left"
           >
 
@@ -117,7 +117,7 @@ export default function Home() {
           <motion.div
              initial={{ opacity: 0, scale: 0.9 }}
              animate={{ opacity: 1, scale: 1 }}
-             transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+             transition={{ delay: 0.2, duration: 0.6, ease: easeOut }}
              className="relative"
           >
             <img
