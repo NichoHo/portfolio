@@ -633,7 +633,7 @@ export default function Home() {
                         <img src="/portfolio/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
                     </div>
                     <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Conversational AI</p>
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Building Conversational AI Applications</p>
                         <p className="text-xs text-[var(--text-tertiary)] truncate">NVIDIA Deep Learning Institute · Issued Aug 2025 · ID C8GNGRZhTAicYiL42FWjVw</p>
                     </div>
                     <a
