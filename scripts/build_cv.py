@@ -47,7 +47,7 @@ story += [
 section("SUMMARY")
 story.append(Paragraph(
     "Computer Science student (Binus University Global Class, GPA 3.83) and backend-focused full-stack engineer, "
-    "shipping production software since 2022. Currently a Backend Software Engineering Intern at SIRCLO. "
+    "shipping production software since 2023. Currently a Backend Software Engineering Intern at SIRCLO. "
     "Built enterprise logistics and finance systems in C#/.NET at Galva Group, and solo-built payment and marketplace "
     "systems in Go and Java with idempotency, double-entry ledgers, and event-driven services, proven by "
     "concurrency tests. Published ML researcher; led student teams of up to 6 engineers.", body))
@@ -60,7 +60,9 @@ bullets(
     "Docker Compose, and Caddy.",
     "Gathered requirements with the VP, Engineering and QA Managers, and PMs; co-authored the technical spec and ERD.",
     "Built a GitHub GraphQL sync job and an org webhook receiver that logs every status change and its author, plus "
-    "Google sign-in, per-menu access control, and At Risk email alerts.")
+    "Google sign-in, per-menu access control, and At Risk email alerts.",
+    "Computed delivery metrics as SQL rollups in Postgres: weighted epic progress, At Risk schedule flags, "
+    "time-in-status bottlenecks, and QA rejection cycles.")
 row("Lead Developer | Nexus Software Agency", "Oct 2025 - Present")
 bullets("Lead development of client landing pages in Next.js and Tailwind CSS, from business requirements to release.")
 row("Full Stack Developer (Part-time) | Galva Group", "Apr 2024 - Jul 2026")
@@ -72,11 +74,11 @@ bullets(
     "(Redux Toolkit, Zod, MUI) over a .NET 8 Web API using the Repository and Unit of Work patterns with Dapper.",
     "Built a Project Management System with Next.js, Tailwind CSS, Supabase, and AWS S3.")
 row("Full Stack Developer (Freelance) | Galva Group", "May 2023 - Aug 2023")
-bullets("Built a finance module that posts balanced double-entry General Ledger journals for multi-currency cash and "
-        "bank disbursements: C# ASP.NET Web API with Dapper, TransactionScope cross-database transactions, and token "
-        "auth, plus a Vue.js 3 SPA frontend.")
-row("Software Developer Intern | Galva Group", "Jun 2022 - Jul 2022")
-bullets("Built a field-tracking app with geofenced access (Haversine), SignalR real-time chat, and Google Maps views.")
+bullets(
+    "Built the Inventory finance module, which posts balanced double-entry General Ledger journals for multi-currency "
+    "cash and bank disbursements.",
+    "Designed an API-first C# ASP.NET Web API backend (Repository pattern, Dapper) with TransactionScope "
+    "cross-database transactions and token auth, and moved the frontend to a Vue.js 3 SPA.")
 
 section("PROJECTS")
 row("Agora | C2C Marketplace &amp; Payments Platform (solo build)", "Go, Python, Next.js")
@@ -98,8 +100,8 @@ row("FaQ Assistant | RAG Document Q&amp;A (Technical Lead, team of 3)", "Python,
 bullets("Led Agile sprints and built a local RAG pipeline (LangChain, HuggingFace embeddings, FAISS) that answers "
         "questions about uploaded PDFs with exact source excerpts and no external LLM API.")
 section("EDUCATION")
-row("B.Sc. Computer Science (Global Class) | Binus University | GPA 3.83 / 4.00", "2023 - Present")
-row("Exchange Student, CS | Sejong University, Seoul | GPA 4.40 / 4.50 (98th percentile)", "Feb 2026 - Jun 2026")
+row("Computer Science (Global Class) | Binus University | GPA 3.83 / 4.00", "2023 - Present")
+row("Student Exchange, Computer Science | Sejong University, Seoul | GPA 4.40 / 4.50 (top 2%)", "Feb 2026 - Jun 2026")
 
 section("RESEARCH")
 row("Machine Learning Algorithms for HIV/AIDS Prediction using Explainable AI", "ICORIS 2025, published")
@@ -107,12 +109,7 @@ bullets("Co-authored; 97% accuracy with Random Forest and XGBoost, with SHAP mak
 row("Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition", "Thesis, ongoing")
 bullets("Lightweight sign-language recognition for budget devices; applied in Signlingo, a gamified web app (Flask, TensorFlow).")
 
-section("CERTIFICATIONS")
-story.append(Paragraph(
-    "Alibaba Cloud Associate: Cloud Engineer (2025) | NVIDIA DLI: Conversational AI Applications (2025) | "
-    "Azure AI Fundamentals course (2025) | AWS Educate: Compute (2024)", body))
-
-section("SKILLS")
+section("SKILLS &amp; CERTIFICATIONS")
 for k, v in [
     ("Languages", "Go, Java, Python, TypeScript, JavaScript, C#, SQL, PHP, VB.NET, C | <b>Spoken:</b> English (IELTS 7.5), Indonesian (native)"),
     ("Backend", "Spring Boot, ASP.NET Core / .NET 8, Node.js, Express, FastAPI, Flask, Laravel, REST, OAuth 2.0 / OIDC"),
@@ -120,6 +117,7 @@ for k, v in [
     ("DevOps &amp; Testing", "Docker, Terraform, GitHub Actions (CI/CD), AWS S3, Cloudflare, OpenTelemetry, JUnit 5, Testcontainers, Playwright, k6"),
     ("Frontend", "React, Next.js, Redux Toolkit, Tailwind CSS, Vue.js, Livewire"),
     ("AI / ML", "Scikit-learn, XGBoost, TensorFlow, LangChain, FAISS, RAG, SHAP, OpenCV, MediaPipe, Pandas"),
+    ("Certifications", "Alibaba Cloud Associate: Cloud Engineer (2025), NVIDIA DLI: Building Conversational AI Applications (2025)"),
 ]:
     story.append(Paragraph(f"<b>{k}:</b> {v}", body))
 
