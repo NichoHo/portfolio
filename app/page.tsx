@@ -65,14 +65,12 @@ export default function Home() {
             className="relative flex-1 space-y-6 text-center md:text-left"
           >
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[var(--text-primary)]">
-              Fullstack <br />
-              <span className="text-[var(--text-tertiary)]">Architect.</span>
+            <h1 className="text-5xl md:text-[3.25rem] lg:text-[3.6rem] font-extrabold tracking-tighter leading-[1.05] text-balance text-[var(--text-primary)]">
+              I build <span className="text-emerald-500">full stack</span> apps and AI.
             </h1>
 
-            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-              Computer Science Undergraduate building <strong className="text-[var(--text-primary)]">distributed backend systems</strong>, <strong className="text-[var(--text-primary)]">AI/ML pipelines</strong>, and modern web platforms.
-              Currently a Backend Software Engineering Intern at <strong className="text-[var(--text-primary)]">SIRCLO</strong>, alongside roles at <strong className="text-[var(--text-primary)]">Nexus Software</strong> and <strong className="text-[var(--text-primary)]">Galva Group</strong>.
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-[48ch] mx-auto md:mx-0">
+              Computer Science undergraduate. Backend intern at <strong className="text-[var(--text-primary)]">SIRCLO</strong>, lead developer at <strong className="text-[var(--text-primary)]">Nexus</strong>, previously full stack at <strong className="text-[var(--text-primary)]">Galva Group</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
@@ -89,7 +87,7 @@ export default function Home() {
                 href="/portfolio/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-[var(--border)] px-8 py-3 text-sm font-medium transition-colors hover:bg-[var(--border)]"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--border)] px-8 py-3 text-sm font-bold transition-colors hover:bg-[var(--border)]"
               >
                 CV <Download className="ml-2 w-4 h-4" />
               </a>
@@ -97,32 +95,32 @@ export default function Home() {
 
             <div className="flex gap-6 pt-2 text-[var(--text-tertiary)] justify-center md:justify-start">
               {/* GITHUB */}
-              <a href="https://github.com/NichoHo" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/NichoHo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="w-6 h-6 hover:text-[var(--text-primary)] cursor-pointer transition-colors" />
               </a>
               {/* LINKEDIN */}
-              <a href="https://www.linkedin.com/in/nichoho/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/nichoho/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="w-6 h-6 hover:text-[var(--accent)] cursor-pointer transition-colors" />
               </a>
               {/* EMAIL */}
-              <a href="mailto:nikko150905@gmail.com">
+              <a href="mailto:nikko150905@gmail.com" aria-label="Email">
                 <Mail className="w-6 h-6 hover:text-[var(--text-primary)] cursor-pointer transition-colors" />
               </a>
             </div>
           </motion.div>
 
-          {/* IMAGE SIDE */}
+          {/* IMAGE SIDE: top of the photo is empty backdrop, so crop it with a 6:7 box anchored to the bottom */}
           <motion.div
-             initial={{ opacity: 0, scale: 0.9 }}
-             animate={{ opacity: 1, scale: 1 }}
-             transition={{ delay: 0.2, duration: 0.6, ease: easeOut }}
+             initial={{ opacity: 0, y: 16 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ delay: 0.15, duration: 0.6, ease: easeOut }}
              className="relative"
           >
-            <div className="absolute -inset-2 rounded-full bg-[conic-gradient(from_0deg,#10b981,#34d399,#10b981)] ring-spin" />
+            <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-emerald-500/50" />
             <img
-              src="/portfolio/photo.jpg"
-              alt="Nicholas Ho"
-              className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-[var(--surface)] shadow-xl"
+              src="/portfolio/photo-full.jpg"
+              alt="Nicholas Ho sitting on a white block, smiling"
+              className="relative aspect-[6/7] h-[min(62dvh,30rem)] w-auto rounded-2xl object-cover object-bottom"
             />
           </motion.div>
         </section>
@@ -237,8 +235,8 @@ export default function Home() {
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
                                     <div className="flex flex-col items-end gap-1.5 shrink-0">
-                                        <span className="font-mono text-cyan-600 dark:text-cyan-400 text-xs bg-cyan-50 dark:bg-cyan-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
-                                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)]">
+                                        <span className="text-cyan-600 dark:text-cyan-400 text-xs font-bold bg-cyan-50 dark:bg-cyan-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
+                                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent)]">
                                             <span className="relative flex h-1.5 w-1.5">
                                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
                                                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
@@ -271,8 +269,8 @@ export default function Home() {
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
                                     <div className="flex flex-col items-end gap-1.5 shrink-0">
-                                        <span className="font-mono text-rose-600 dark:text-rose-400 text-xs bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
-                                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)]">
+                                        <span className="text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
+                                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent)]">
                                             <span className="relative flex h-1.5 w-1.5">
                                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
                                                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
@@ -290,9 +288,9 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
                             </div>
                         </Card>
                     </div>
@@ -310,7 +308,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
-                                    <span className="font-mono text-amber-600 dark:text-amber-400 text-xs bg-amber-50 dark:bg-amber-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
+                                    <span className="text-amber-600 dark:text-amber-400 text-xs font-bold bg-amber-50 dark:bg-amber-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -322,17 +320,17 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">HTML</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">CSS</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">jQuery</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Supabase</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">AWS S3</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">HTML</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">CSS</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">jQuery</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Supabase</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">AWS S3</span>
                             </div>
                         </Card>
                     </div>
@@ -350,7 +348,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    <span className="font-mono text-teal-600 dark:text-teal-400 text-xs bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
+                                    <span className="text-teal-600 dark:text-teal-400 text-xs font-bold bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -362,13 +360,13 @@ export default function Home() {
                             </ul>
 
                              <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET Web API</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Vue.js</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Dapper</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Bootstrap 5</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">DataTables.net</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET Web API</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Vue.js</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Dapper</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Bootstrap 5</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">DataTables.net</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
                             </div>
                         </Card>
                     </div>
@@ -386,7 +384,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    <span className="font-mono text-fuchsia-600 dark:text-fuchsia-400 text-xs bg-fuchsia-50 dark:bg-fuchsia-900/30 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
+                                    <span className="text-fuchsia-600 dark:text-fuchsia-400 text-xs font-bold bg-fuchsia-50 dark:bg-fuchsia-900/30 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -398,10 +396,10 @@ export default function Home() {
                             </ul>
 
                              <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">VB.NET</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SignalR</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Google Maps API</span>
-                                <span className="text-xs font-mono text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">VB.NET</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SignalR</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Google Maps API</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
                             </div>
                         </Card>
                     </div>
@@ -417,7 +415,7 @@ export default function Home() {
               className="flex items-center justify-between"
             >
                 <h2 className="text-3xl font-bold text-[var(--text-primary)]">Selected Projects</h2>
-                <Link href="/projects" className="group flex items-center gap-2 text-sm font-medium text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors">
+                <Link href="/projects" className="group flex items-center gap-2 text-sm font-bold text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors">
                     View All Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
             </motion.div>
@@ -658,7 +656,26 @@ export default function Home() {
                     </a>
                 </motion.div>
 
-                {/* 4. AWS COMPUTE */}
+                {/* 4. MICROSOFT AZURE AI */}
+                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
+                        <img src="/portfolio/azure-logo.jpg" alt="Microsoft Azure" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Azure AI Fundamentals (AI-900T00-A)</p>
+                        <p className="text-xs text-[var(--text-tertiary)] truncate">Microsoft elevAIte Indonesia · Issued Apr 2025 · ID 69a03d23-9008-4c0a-ae46-96afc813dc8c</p>
+                    </div>
+                    <a
+                        href="/portfolio/azure-certificate.pdf"
+                        download="Azure_AI_Fundamentals_Certificate.pdf"
+                        aria-label="Download Certificate"
+                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
+                    >
+                        <Download className="w-4 h-4" />
+                    </a>
+                </motion.div>
+
+                {/* 5. AWS COMPUTE */}
                 <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
                     <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
                         <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
@@ -677,24 +694,6 @@ export default function Home() {
                     </a>
                 </motion.div>
 
-                {/* 5. AWS CLOUD 101 */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Introduction to Cloud 101</p>
-                        <p className="text-xs text-[var(--text-tertiary)] truncate">AWS Educate · Issued Oct 2024</p>
-                    </div>
-                    <a
-                        href="https://www.credly.com/badges/8bc28ca2-d1db-49e0-802a-f78b4ad922f8/linked_in_profile"
-                        target="_blank"
-                        aria-label="Verify on Credly"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <ExternalLink className="w-4 h-4" />
-                    </a>
-                </motion.div>
             </motion.div>
         </section>
 
