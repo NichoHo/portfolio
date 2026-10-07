@@ -33,7 +33,7 @@ export default function FaqPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-500/10 text-violet-600 dark:text-violet-400 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-medium">
                 Generative AI & RAG
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">FaQ Assistant</h1>
@@ -46,7 +46,7 @@ export default function FaqPage() {
                     href="https://faq-assistant.onrender.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-rose-600 dark:text-rose-400 hover:text-rose-500 transition-colors"
                 >
                     <ExternalLink className="w-5 h-5" /> Live Website
                 </a>
@@ -54,7 +54,7 @@ export default function FaqPage() {
                     href="https://github.com/NichoHo/faq-assistant"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-rose-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -66,7 +66,7 @@ export default function FaqPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
-            className="w-full h-auto md:bg-violet-50 dark:bg-[var(--surface)] rounded-2xl flex items-center justify-center border border-[var(--border)] overflow-hidden relative"
+            className="w-full h-auto md:bg-rose-50 dark:bg-[var(--surface)] rounded-2xl flex items-center justify-center border border-[var(--border)] overflow-hidden relative"
         >
              <img src="/portfolio/faq-assistant.jpg" alt="FaQ Assistant" className="object-cover"/>
         </motion.div>
@@ -102,7 +102,7 @@ export default function FaqPage() {
                             "Responsive Chat Interface with Real-time Updates"
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-violet-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}

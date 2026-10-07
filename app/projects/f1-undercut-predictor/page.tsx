@@ -63,7 +63,7 @@ export default function F1PredictorPage() {
                     href="https://f1-undercut-predictor.onrender.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 hover:text-red-500 transition-colors"
                 >
                     <ExternalLink className="w-5 h-5" /> Live Website
                 </a>
@@ -71,7 +71,7 @@ export default function F1PredictorPage() {
                     href="https://github.com/NichoHo/f1-undercut-predictor"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-red-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>

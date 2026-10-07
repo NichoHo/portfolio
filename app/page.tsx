@@ -427,24 +427,24 @@ export default function Home() {
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
             >
 
-                {/* PROJECT 1: VAULT */}
+                {/* PROJECT 1: AGORA */}
                 <motion.div
                     variants={fadeUp}
                     className="md:col-span-2"
                 >
-                    <Link href="/projects/vault">
+                    <Link href="/projects/agora">
                         <div className="group relative rounded-2xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 cursor-pointer">
                             <div className="grid md:grid-cols-5 gap-0">
                                 <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
-                                     <img src="/portfolio/Vault Thumbnail.png" alt="Vault" className="object-cover w-full h-full"/>
+                                     <img src="/portfolio/Agora Thumbnail.jpg" alt="Agora" className="object-cover w-full h-full"/>
                                 </div>
                                 <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-[var(--border)] relative">
                                     <div className="mb-4">
-                                        <span className="text-blue-600 dark:text-blue-400 font-mono text-xs uppercase tracking-wider font-semibold">Marketplace & Payments</span>
-                                        <h3 className="text-3xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-blue-500 transition-colors">Vault</h3>
+                                        <span className="text-orange-600 dark:text-orange-400 font-mono text-xs uppercase tracking-wider font-semibold">Marketplace & Payments</span>
+                                        <h3 className="text-3xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-orange-500 transition-colors">Agora</h3>
                                     </div>
                                     <p className="text-[var(--text-secondary)] mb-8 leading-relaxed">
-                                        A marketplace with its own secure sign-in, escrow payments that hold money safely until an order is delivered, and an AI helper that turns a photo into a ready-to-post listing.
+                                        A marketplace platform built around the hard parts: its own secure sign-in, escrow payments that never lose a cent, and limited-stock sales that stay fair when thousands of people hit buy at once. Every purchase is also checked for fraud.
                                     </p>
 
                                     <div className="space-y-6 mt-auto">
@@ -456,12 +456,12 @@ export default function Home() {
                                       </div>
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-500 transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
 
                                         <a
-                                            href="https://github.com/NichoHo/vault"
+                                            href="https://github.com/NichoHo/agora"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             onClick={(e) => e.stopPropagation()}
@@ -477,41 +477,45 @@ export default function Home() {
                     </Link>
                 </motion.div>
 
-                {/* PROJECT 2: TALLY */}
+                {/* PROJECT 2: SWITCH */}
                 <motion.div variants={fadeUp}>
-                    <Link href="/projects/tally">
+                    <Link href="/projects/switch">
                          <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
-                            <div className="h-auto bg-teal-50 dark:bg-teal-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-teal-100 dark:group-hover:bg-teal-900/20 transition-colors">
-                                <img src="/portfolio/Tally Thumbnail.png" alt="Tally" className="object-cover"/>
+                            <div className="h-auto bg-[#d4ff3a]/10 relative overflow-hidden flex items-center justify-center group-hover:bg-[#d4ff3a]/20 transition-colors">
+                                <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
-                                    <span className="text-teal-600 dark:text-teal-400 font-mono text-xs uppercase tracking-wider font-semibold">Payments Engine</span>
-                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-teal-500 transition-colors">Tally</h3>
+                                    <span className="text-[#5a6b00] dark:text-[#d4ff3a] font-mono text-xs uppercase tracking-wider font-semibold">Payment Gateway</span>
+                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-[#b8e000] transition-colors">Switch</h3>
                                 </div>
                                 <p className="text-[var(--text-secondary)] mb-6 leading-relaxed text-sm">
-                                    A payments engine that moves money between accounts so funds never go missing and no payment is charged twice. It also flags suspicious transfers.
+                                    A card-payment switch that sits between a merchant and the banks behind it: checks the card, screens the transaction for fraud, picks which bank to route it to, and keeps a ledger that always balances.
                                 </p>
-                                <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Go</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">gRPC</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Kafka</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">PostgreSQL</span>
-                                </div>
-                                <div className="mt-8 flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6">
-                                    <div className="flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 group-hover:gap-3 transition-all">
-                                        View Details <ArrowRight className="w-4 h-4" />
+
+                                <div className="space-y-6 mt-auto">
+                                    <div className="flex flex-wrap gap-2">
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Java</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Spring Boot</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">PostgreSQL</span>
+                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Docker</span>
                                     </div>
 
-                                    <a
-                                        href="https://tally-three-umber.vercel.app/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
-                                        className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
-                                    >
-                                        Live Site <ExternalLink className="w-3.5 h-3.5" />
-                                    </a>
+                                    <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-[#5a6b00] dark:text-[#d4ff3a] group-hover:text-[#b8e000] transition-colors">
+                                            View Details <ArrowRight className="w-4 h-4" />
+                                        </div>
+
+                                        <a
+                                            href="https://switch-gateway.onrender.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
+                                        >
+                                            Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -522,16 +526,16 @@ export default function Home() {
                 <motion.div variants={fadeUp}>
                     <Link href="/projects/localist">
                          <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
-                            <div className="h-auto bg-fuchsia-50 dark:bg-fuchsia-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-900/20 transition-colors">
-                                <img src="/portfolio/Localist Thumbnail.png" alt="Localist" className="object-cover"/>
+                            <div className="h-auto bg-yellow-50 dark:bg-yellow-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900/20 transition-colors">
+                                <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
-                                    <span className="text-fuchsia-600 dark:text-fuchsia-400 font-mono text-xs uppercase tracking-wider font-semibold">Directory & Subscriptions</span>
-                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-fuchsia-500 transition-colors">Localist</h3>
+                                    <span className="text-yellow-700 dark:text-yellow-400 font-mono text-xs uppercase tracking-wider font-semibold">Directory & Subscriptions</span>
+                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-yellow-500 transition-colors">Localist</h3>
                                 </div>
                                 <p className="text-[var(--text-secondary)] mb-6 leading-relaxed text-sm">
-                                    An online directory of local businesses with about 5,400 pages built to rank on Google. Owners claim their page, edit it, and pay to rank higher.
+                                    An online directory of local businesses with about 6,100 pages built to rank on Google. Owners claim their page, edit it, and pay to rank higher.
                                 </p>
 
                                 <div className="space-y-6 mt-auto">
@@ -543,18 +547,18 @@ export default function Home() {
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 group-hover:text-fuchsia-500 transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-yellow-700 dark:text-yellow-400 group-hover:text-yellow-500 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
 
                                         <a
-                                            href="https://github.com/NichoHo/Localist"
+                                            href="https://localist-0mlt.onrender.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             onClick={(e) => e.stopPropagation()}
                                             className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                         >
-                                            Source <Github className="w-3.5 h-3.5" />
+                                            Live Site <ExternalLink className="w-3.5 h-3.5" />
                                         </a>
                                     </div>
                                 </div>

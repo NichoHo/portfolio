@@ -9,14 +9,16 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card } from "@/components/Card";
 import { easeOut } from "@/lib/motion";
 
-const VAULT_IMAGES = [
-  "/portfolio/vault.jpg",
-  "/portfolio/vault-2.jpg",
-  "/portfolio/vault-3.jpg",
-  "/portfolio/vault-4.jpg",
+const AGORA_IMAGES = [
+  "/portfolio/agora.jpg",
+  "/portfolio/agora-2.jpg",
+  "/portfolio/agora-3.jpg",
+  "/portfolio/agora-4.jpg",
+  "/portfolio/agora-5.jpg",
+  "/portfolio/agora-6.jpg",
 ];
 
-export default function VaultPage() {
+export default function AgoraPage() {
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] font-sans selection:bg-[var(--accent)]/20">
 
@@ -41,20 +43,20 @@ export default function VaultPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium">
-                Login, Payments & Marketplace
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-medium">
+                Marketplace, Payments & Scale
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Vault</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Agora</h1>
             <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
-                A small online marketplace where people buy and sell to each other. I built the three hardest parts from scratch: a secure sign-in system, a payment system that holds money safely until an order is delivered, and an AI helper that writes item listings.
+                A marketplace platform that tackles three hard problems as separate services: secure sign-in, money that can never go missing, and selling limited stock when thousands of people click buy at the same moment. Every purchase is also checked for fraud.
             </p>
 
             <div className="flex flex-wrap gap-6">
                 <a
-                    href="https://github.com/NichoHo/vault"
+                    href="https://github.com/NichoHo/agora"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-blue-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-orange-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -67,7 +69,7 @@ export default function VaultPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
         >
-            <ImageCarousel images={VAULT_IMAGES} alt="Vault" accentClass="bg-blue-500" />
+            <ImageCarousel images={AGORA_IMAGES} alt="Agora" accentClass="bg-orange-500" />
         </motion.div>
 
         {/* CONTENT GRID */}
@@ -78,14 +80,14 @@ export default function VaultPage() {
                 <section>
                     <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Project Overview</h2>
                     <p className="text-[var(--text-secondary)] leading-relaxed">
-                        Vault recreates the three parts of a real online marketplace that are the hardest to get right. The <strong>sign-in</strong> is its own secure login system. People log in safely, can switch on two-step verification using a phone app for extra protection, and get backup codes in case they lose their phone. The <strong>payments</strong> use escrow, which means a buyer&apos;s money is held safely in the middle and only released to the seller once the order is delivered. The accounting is done so carefully that money can never quietly go missing or be counted twice. The <strong>AI helper</strong> lets a seller take a photo of an item and instantly get a suggested title, description, category, and fair price range. Behind the scenes, every action and the record of it are saved together, so nothing can ever get out of sync even if part of the system restarts.
+                        Agora models the parts of a marketplace that are genuinely difficult to get right. The <strong>sign-in</strong> is its own secure login system, with two-step verification through a phone app and backup codes. The <strong>payments</strong> use escrow: a buyer&apos;s money is held safely in the middle and only released to the seller once the order is delivered, and the accounting guarantees money is never lost or counted twice. The <strong>limited-stock sales</strong> (&quot;drops&quot;) put buyers in a fair queue and hand out exactly as many items as exist, never one more, even under a rush of traffic. Card payments are passed to a separate payment switch written in Java. A <strong>fraud checker</strong> scores every important event, such as logins, reservations and payments, and shows suspicious ones on a review console. Every action and its record are saved together, so nothing gets out of sync even if part of the system restarts.
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">My Role</h2>
                     <p className="text-[var(--text-secondary)] leading-relaxed">
-                        I built the whole thing on my own, from start to finish. That includes the sign-in system, the marketplace, the payment handling, the AI helper, the website people see, the automated tests that prove it all works, and the setup to run it in the cloud. I also turned one reusable piece of it (the part that reliably passes messages between the different services) into its own open-source tool called <strong>outboxkit</strong>.
+                        I built the whole thing on my own, from start to finish. That includes the sign-in system, the marketplace, the payment handling, the limited-stock sales service, the fraud checker and its review console, the website people see, the automated tests that prove it all works, and the setup to run it in the cloud. I also turned one reusable piece of it (the part that reliably passes messages between services) into its own open-source tool called <strong>outboxkit</strong>.
                     </p>
                 </section>
 
@@ -93,16 +95,16 @@ export default function VaultPage() {
                     <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Key Features</h2>
                     <ul className="space-y-3">
                         {[
-                            "Its own secure sign-in system, built to the same standards used by large companies",
-                            "Two-step verification with a phone authenticator app, plus one-time backup codes",
-                            "Automatically detects and shuts down stolen login sessions",
+                            "Its own secure sign-in system, built to the same standards used by large companies, with two-step verification and one-time backup codes",
                             "Escrow payments, where money is held safely and only released to the seller once the buyer confirms delivery, and the books always balance",
-                            "Orders move through clear stages (waiting for payment, paid, shipped, delivered), and unpaid orders are released automatically after 15 minutes",
+                            "Limited-stock sales with a fair waiting queue that sells exactly the number of items available, never more",
+                            "Card payments handled by a separate payment switch, including the tricky case where the bank's answer gets lost on the way",
+                            "A fraud checker that scores logins, reservations and payments and flags suspicious ones on a review console",
                             "Reliable behind-the-scenes messaging, so no action is ever lost or accidentally repeated",
                             "An AI assistant that turns a photo of an item into a ready-to-post listing with a suggested price",
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}
@@ -123,7 +125,7 @@ export default function VaultPage() {
                 <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Go", "PostgreSQL 17", "pgx", "Python", "FastAPI", "Anthropic API", "Redpanda", "Next.js", "TypeScript", "Tailwind CSS", "Docker", "Terraform", "GitHub Actions", "Playwright"].map(tech => (
+                        {["Go", "PostgreSQL 17", "Redis", "Python", "FastAPI", "scikit-learn", "Anthropic API", "Redpanda", "Java", "OpenTelemetry", "k6", "Next.js", "TypeScript", "Tailwind CSS", "Docker", "Terraform", "GitHub Actions", "Playwright"].map(tech => (
                             <span key={tech} className="px-2 py-1 text-xs font-mono rounded bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
                                 {tech}
                             </span>
@@ -134,14 +136,14 @@ export default function VaultPage() {
                 <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">How It Fits Together</h3>
                     <p className="text-sm text-[var(--text-secondary)] mb-4">
-                        The website talks to three separate services, one for logging in, one for the marketplace and orders, and one for handling money. Each keeps its own records. Whenever something important happens, a message is sent reliably to the other parts that need to know, including an AI service that checks listings for trust and safety.
+                        The website talks to separate services for logging in, the marketplace and orders, limited-stock sales, and handling money. Each keeps its own records. Whenever something important happens, a message is sent reliably to the other parts that need to know, including a fraud checker that scores it. Card payments go out to a separate payment switch.
                     </p>
                 </Card>
 
                 <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Good to Know</h3>
                     <p className="text-sm text-[var(--text-secondary)]">
-                        This is a learning project. In the real world, companies should use trusted, ready-made login systems. Building one from scratch was the whole point here, to show how it works underneath. It uses pretend deliveries and made-up data, and no real money is involved.
+                        This is a simulation and a learning project. In the real world, companies should use trusted, ready-made login systems. Building one from scratch was the whole point here, to show how it works underneath. It uses pretend deliveries and made-up data, and no real money is involved.
                     </p>
                 </Card>
             </div>

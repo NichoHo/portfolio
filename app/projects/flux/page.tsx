@@ -53,7 +53,7 @@ export default function FluxPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5a9a8c]/15 dark:bg-[#5a9a8c]/10 text-[#3d7a6c] dark:text-[#7fc0b0] text-xs font-medium">
                 Fullstack Engineering
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Flux Budget App</h1>
@@ -66,7 +66,7 @@ export default function FluxPage() {
                     href="https://flux-budget-app.onrender.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#3d7a6c] dark:text-[#7fc0b0] hover:text-[#5a9a8c] transition-colors"
                 >
                     <ExternalLink className="w-5 h-5" /> Live Website
                 </a>
@@ -74,7 +74,7 @@ export default function FluxPage() {
                     href="https://github.com/NichoHo/Flux_Budget_App"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-[#5a9a8c] transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -126,7 +126,7 @@ export default function FluxPage() {
                         onClick={() => setCurrentImageIndex(idx)}
                         className={`h-2 rounded-full transition-all duration-300 shadow-sm border border-black/10 ${
                             idx === currentImageIndex
-                            ? "w-6 bg-indigo-500"
+                            ? "w-6 bg-[#5a9a8c]"
                             : "w-2 bg-white/70 hover:bg-white"
                         }`}
                     />
@@ -165,7 +165,7 @@ export default function FluxPage() {
                             "Containerized Deployment with Docker & Nginx"
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-[#5a9a8c] shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}

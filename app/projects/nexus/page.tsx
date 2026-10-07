@@ -50,7 +50,7 @@ export default function NexusPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#98f5a0]/30 dark:bg-[#98f5a0]/10 text-[#1f8a3a] dark:text-[#98f5a0] text-xs font-medium">
                 Frontend Architecture & UX
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Nexus Agency</h1>
@@ -63,7 +63,7 @@ export default function NexusPage() {
                     href="https://www.nexdevsoftware.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#1f8a3a] dark:text-[#98f5a0] hover:text-[#4fd36a] transition-colors"
                 >
                     <ExternalLink className="w-5 h-5" /> Visit Live Website
                 </a>
@@ -71,7 +71,7 @@ export default function NexusPage() {
                     href="https://github.com/NichoHo/nexus-agency"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-[#4fd36a] transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -123,7 +123,7 @@ export default function NexusPage() {
                         onClick={() => setCurrentImageIndex(idx)}
                         className={`h-2 rounded-full transition-all duration-300 shadow-sm border border-black/10 ${
                             idx === currentImageIndex
-                            ? "w-6 bg-cyan-500"
+                            ? "w-6 bg-[#98f5a0]"
                             : "w-2 bg-white/70 hover:bg-white"
                         }`}
                     />
@@ -162,7 +162,7 @@ export default function NexusPage() {
                             "Interactive Service & Portfolio Sections"
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-cyan-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-[#4fd36a] shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}

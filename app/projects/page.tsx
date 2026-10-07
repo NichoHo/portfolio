@@ -36,19 +36,19 @@ export default function ProjectsPage() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
 
-            {/* VAULT CARD */}
+            {/* AGORA CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/vault" className="h-auto bg-blue-50 dark:bg-blue-900/10 relative overflow-hidden flex items-center justify-center block">
-                        <img src="/portfolio/Vault Thumbnail.png" alt="Vault" className="object-cover"/>
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#f97316" } as React.CSSProperties}>
+                    <Link href="/projects/agora" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Agora Thumbnail.jpg" alt="Agora" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
-                            <Link href="/projects/vault">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Vault</h3>
+                            <Link href="/projects/agora">
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Agora</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
-                                An online marketplace where people buy and sell to each other. It has its own secure sign-in, holds payments safely until an order arrives, and uses AI to help write listings.
+                                A marketplace platform with its own secure sign-in, escrow payments that never lose a cent, fair limited-stock sales under heavy traffic, and fraud checks on every purchase.
                             </p>
                         </div>
                         <div className="space-y-6">
@@ -59,11 +59,11 @@ export default function ProjectsPage() {
                                 <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Next.js</span>
                             </div>
                             <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
-                                <Link href="/projects/vault" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
+                                <Link href="/projects/agora" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
-                                    href="https://github.com/NichoHo/vault"
+                                    href="https://github.com/NichoHo/agora"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
@@ -76,51 +76,11 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-            {/* TALLY CARD */}
-            <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/tally" className="h-auto bg-teal-50 dark:bg-teal-900/10 relative overflow-hidden flex items-center justify-center block">
-                        <img src="/portfolio/Tally Thumbnail.png" alt="Tally" className="object-cover"/>
-                    </Link>
-                    <div className="p-6 flex flex-col flex-1">
-                        <div className="mb-4 flex-1">
-                            <Link href="/projects/tally">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Tally</h3>
-                            </Link>
-                            <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
-                                The engine that moves money between accounts inside a banking or e-wallet app. Built so money can never go missing and the same payment is never charged twice. It also flags suspicious transfers.
-                            </p>
-                        </div>
-                        <div className="space-y-6">
-                            <div className="flex flex-wrap gap-2">
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Go</span>
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">gRPC</span>
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Kafka</span>
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">PostgreSQL</span>
-                            </div>
-                            <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
-                                <Link href="/projects/tally" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
-                                    View Project <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <a
-                                    href="https://tally-three-umber.vercel.app/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
-                                >
-                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-
             {/* LOCALIST CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/localist" className="h-auto bg-fuchsia-50 dark:bg-fuchsia-900/10 relative overflow-hidden flex items-center justify-center block">
-                        <img src="/portfolio/Localist Thumbnail.png" alt="Localist" className="object-cover"/>
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
+                    <Link href="/projects/localist" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
@@ -128,7 +88,7 @@ export default function ProjectsPage() {
                                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Localist</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
-                                An online directory of local businesses with about 5,400 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
+                                An online directory of local businesses with about 6,100 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
                             </p>
                         </div>
                         <div className="space-y-6">
@@ -143,7 +103,87 @@ export default function ProjectsPage() {
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
-                                    href="https://github.com/NichoHo/Localist"
+                                    href="https://localist-0mlt.onrender.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
+                                >
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* SWITCH CARD */}
+            <motion.div variants={fadeUp}>
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#a3c400" } as React.CSSProperties}>
+                    <Link href="/projects/switch" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/switch">
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Switch</h3>
+                            </Link>
+                            <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
+                                The authorization engine that sits between a merchant and the banks: checks the card, screens for fraud, picks a bank to route the payment to, and keeps a ledger that balances.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Java</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Spring Boot</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">PostgreSQL</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Docker</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+                                <Link href="/projects/switch" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://switch-gateway.onrender.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
+                                >
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* ORBIT CARD */}
+            <motion.div variants={fadeUp}>
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
+                    <Link href="/projects/orbit" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Orbit Thumbnail.jpg" alt="Orbit" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/orbit">
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Orbit</h3>
+                            </Link>
+                            <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
+                                A cross-platform, offline-first task and habit tracking engine. Built with React Native and Supabase, featuring instant optimistic writes, background synchronization, and native iOS widgets.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">React Native</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Expo</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Supabase</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">TanStack Query</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+                                <Link href="/projects/orbit" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://github.com/NichoHo/Orbit"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
@@ -158,8 +198,8 @@ export default function ProjectsPage() {
 
             {/* 1. SIGNLINGO CARD (Standard) */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/signlingo" className="h-auto bg-emerald-50 dark:bg-emerald-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#10b981" } as React.CSSProperties}>
+                    <Link href="/projects/signlingo" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Signlingo Thumbnail.png" alt="Signlingo" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -198,8 +238,8 @@ export default function ProjectsPage() {
 
             {/* 2. FLUX CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/flux" className="h-auto bg-indigo-50 dark:bg-indigo-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#5a9a8c" } as React.CSSProperties}>
+                    <Link href="/projects/flux" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Flux Thumbnail.png" alt="Flux" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -237,8 +277,8 @@ export default function ProjectsPage() {
 
              {/* 3. FAQ ASSISTANT CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/faq-assistant" className="h-auto bg-violet-50 dark:bg-violet-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
+                    <Link href="/projects/faq-assistant" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/FaQ Assistant Thumbnail.png" alt="FAQ Assistant" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -276,8 +316,8 @@ export default function ProjectsPage() {
 
             {/* 4. JET ENGINE HEALTH MONITOR CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/jet-engine-monitor" className="h-auto bg-rose-50 dark:bg-rose-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
+                    <Link href="/projects/jet-engine-monitor" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Jet Engine Monitor Thumbnail.png" alt="Jet Engine Health Monitor" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -316,8 +356,8 @@ export default function ProjectsPage() {
 
             {/* 5. F1 UNDERCUT PREDICTOR CARD */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/f1-undercut-predictor" className="h-auto bg-red-50 dark:bg-red-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#ef4444" } as React.CSSProperties}>
+                    <Link href="/projects/f1-undercut-predictor" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -350,8 +390,8 @@ export default function ProjectsPage() {
 
              {/* 6. NEXUS AGENCY CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/nexus" className="h-auto bg-cyan-50 dark:bg-cyan-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#4fd36a" } as React.CSSProperties}>
+                    <Link href="/projects/nexus" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Nexus Development Thumbnail.png" alt="Nexus Agency" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -384,8 +424,8 @@ export default function ProjectsPage() {
 
             {/* 7. ASIA TRADING EXPORT CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/asia-trading-export" className="h-auto bg-amber-50 dark:bg-amber-900/10 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
+                    <Link href="/projects/asia-trading-export" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Asia Trading Export Thumbnail.png" alt="Asia Trading Export" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -418,8 +458,8 @@ export default function ProjectsPage() {
 
             {/* 8. HAMMOUDA CHARCOAL CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col">
-                    <Link href="/projects/hammouda-charcoal" className="h-auto bg-stone-100 dark:bg-stone-900/50 relative overflow-hidden flex items-center justify-center block">
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#5b8def" } as React.CSSProperties}>
+                    <Link href="/projects/hammouda-charcoal" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Coco Hamodah Thumbnail.png" alt="Hammouda Charcoal" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
@@ -441,6 +481,45 @@ export default function ProjectsPage() {
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a href="https://www.hammoudacharcoal.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* 9. MARA VELLANTE CARD */}
+            <motion.div variants={fadeUp}>
+                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#2563eb" } as React.CSSProperties}>
+                    <Link href="/projects/maravellante" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Maravellante Thumbnail.jpg" alt="Mara Vellante" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/maravellante">
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Mara Vellante</h3>
+                            </Link>
+                            <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
+                                Editorial portfolio and artwork catalogue for a contemporary painter, engineered with zero build-step dependencies, interactive series filtering, and physics-driven micro-interactions.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">HTML5 / CSS3</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">JavaScript</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Design System</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+                                <Link href="/projects/maravellante" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://maravellante.vercel.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
+                                >
                                     Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>

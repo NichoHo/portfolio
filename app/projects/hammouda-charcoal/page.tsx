@@ -50,7 +50,7 @@ export default function HammoudaPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 dark:bg-stone-500/10 text-stone-700 dark:text-stone-400 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5b8def]/15 dark:bg-[#5b8def]/10 text-[#2f5fc4] dark:text-[#8fb0f5] text-xs font-medium">
                 Manufacturing & Export
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Hammouda Charcoal</h1>
@@ -63,7 +63,7 @@ export default function HammoudaPage() {
                     href="https://www.hammoudacharcoal.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#2f5fc4] dark:text-[#8fb0f5] hover:text-[#5b8def] transition-colors"
                 >
                     <ExternalLink className="w-5 h-5" /> Visit Live Website
                 </a>
@@ -71,7 +71,7 @@ export default function HammoudaPage() {
                     href="https://github.com/NichoHo/coco-hamooda"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-[#5b8def] transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -123,7 +123,7 @@ export default function HammoudaPage() {
                         onClick={() => setCurrentImageIndex(idx)}
                         className={`h-2 rounded-full transition-all duration-300 shadow-sm border border-black/10 ${
                             idx === currentImageIndex
-                            ? "w-6 bg-stone-500"
+                            ? "w-6 bg-[#5b8def]"
                             : "w-2 bg-white/70 hover:bg-white"
                         }`}
                     />
@@ -162,7 +162,7 @@ export default function HammoudaPage() {
                             "Direct WhatsApp/Inquiry Integration"
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-stone-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-[#5b8def] shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}

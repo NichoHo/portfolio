@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Github, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Github, CheckCircle2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -16,6 +16,8 @@ const LOCALIST_IMAGES = [
   "/portfolio/localist-4.jpg",
   "/portfolio/localist-5.jpg",
   "/portfolio/localist-6.jpg",
+  "/portfolio/localist-7.jpg",
+  "/portfolio/localist-8.jpg",
 ];
 
 export default function LocalistPage() {
@@ -43,20 +45,28 @@ export default function LocalistPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-100 dark:bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-500/15 text-yellow-800 dark:text-yellow-300 text-xs font-medium">
                 Business Directory & Subscriptions
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Localist</h1>
             <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
-                An online directory of local businesses, a bit like Yelp or Yellow Pages. It automatically creates about 5,400 pages designed to show up well on Google. Business owners can claim their own page, edit it, and pay a subscription to appear higher in the listings.
+                An online directory of local businesses, a bit like Yelp or Yellow Pages. It automatically creates about 6,100 pages designed to show up well on Google. Business owners can claim their own page, edit it, and pay a subscription to appear higher in the listings.
             </p>
 
             <div className="flex flex-wrap gap-6">
                 <a
+                    href="https://localist-0mlt.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-yellow-700 dark:text-yellow-400 hover:text-yellow-600 transition-colors"
+                >
+                    <ExternalLink className="w-5 h-5" /> Live Website
+                </a>
+                <a
                     href="https://github.com/NichoHo/Localist"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-fuchsia-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-yellow-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -69,7 +79,7 @@ export default function LocalistPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
         >
-            <ImageCarousel images={LOCALIST_IMAGES} alt="Localist" accentClass="bg-fuchsia-500" />
+            <ImageCarousel images={LOCALIST_IMAGES} alt="Localist" accentClass="bg-yellow-500" />
         </motion.div>
 
         {/* CONTENT GRID */}
@@ -87,7 +97,7 @@ export default function LocalistPage() {
                 <section>
                     <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">My Role</h2>
                     <p className="text-[var(--text-secondary)] leading-relaxed">
-                        I built the whole platform on my own, from start to finish. That covers the public directory and how listings are ranked, the area where owners claim and manage their page, the payments and subscription plans, everything needed to rank on Google, the system that keeps pages loading fast, an admin area to approve listings, and the setup to run it all. I also wrote 48 automated tests to prove it works.
+                        I built the whole platform on my own, from start to finish. That covers the public directory and how listings are ranked, the area where owners claim and manage their page, the payments and subscription plans, everything needed to rank on Google, the system that keeps pages loading fast, an admin area to approve listings, and the setup to run it all. I also wrote 60 automated tests to prove it works.
                     </p>
                 </section>
 
@@ -95,16 +105,16 @@ export default function LocalistPage() {
                     <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Key Features</h2>
                     <ul className="space-y-3">
                         {[
-                            "About 5,400 pages created automatically, grouped by business, category, and city, with paying members shown first",
+                            "About 6,100 pages created automatically, grouped by business, category, and city, with paying members shown first",
                             "An owner area where businesses claim their page with a private link, edit it live, reorder photos, and read customer enquiries",
-                            "Paid subscriptions through Stripe, where businesses upgrade to Featured or Premium and move higher in the listings",
+                            "Paid subscriptions through Stripe in Malaysian ringgit, where businesses upgrade to Featured or Premium and move higher in the listings, and changing plan updates the existing subscription instead of billing twice",
                             "Built to rank on Google, with the right behind-the-scenes tags, an automatic site map, and clean web addresses",
                             "If a business changes its name, its old web address automatically forwards to the new one, so search rankings are never lost",
                             "Pages are cached so they load fast, and a page refreshes the moment its owner edits it",
                             "An admin area to review, approve, and manage listings",
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-fuchsia-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}
@@ -143,7 +153,7 @@ export default function LocalistPage() {
                 <Card>
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Good to Know</h3>
                     <p className="text-sm text-[var(--text-secondary)]">
-                        This is a showcase project. The business data in it is made up, using 5,000 sample listings in Malaysia. To put it online for real, it would still need payment keys, an account with the caching service, and web hosting.
+                        This is a showcase project. The listings are real, not made up: about 5,800 Malaysian businesses from Foursquare's open Places dataset, so most are unclaimed until an owner steps in. Payments run in Stripe's test mode, so no real money moves.
                     </p>
                 </Card>
             </div>

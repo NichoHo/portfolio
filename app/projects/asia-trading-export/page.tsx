@@ -49,7 +49,7 @@ export default function AsiaTradingPage() {
             transition={{ duration: 0.5, ease: easeOut }}
             className="space-y-6"
         >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-500/10 text-amber-700 dark:text-amber-500 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium">
                 Corporate & Data Visualization
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)]">Asia Trading Export</h1>
@@ -62,7 +62,7 @@ export default function AsiaTradingPage() {
                     href="https://www.asiatradingexport.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors"
                 >
                     <ExternalLink className="w-5 h-5" /> Visit Live Website
                 </a>
@@ -70,7 +70,7 @@ export default function AsiaTradingPage() {
                     href="https://github.com/NichoHo/asia-trading-export"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-emerald-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-blue-500 transition-colors"
                 >
                     <Github className="w-5 h-5" /> View Source
                 </a>
@@ -122,7 +122,7 @@ export default function AsiaTradingPage() {
                         onClick={() => setCurrentImageIndex(idx)}
                         className={`h-2 rounded-full transition-all duration-300 shadow-sm border border-black/10 ${
                             idx === currentImageIndex
-                            ? "w-6 bg-amber-500"
+                            ? "w-6 bg-blue-500"
                             : "w-2 bg-white/70 hover:bg-white"
                         }`}
                     />
@@ -161,7 +161,7 @@ export default function AsiaTradingPage() {
                             "Contact & Inquiry Lead Funnels"
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                                 <span>{item}</span>
                             </li>
                         ))}

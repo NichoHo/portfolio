@@ -255,99 +255,70 @@ A machine learning model designed to predict the success probability of undercut
 
 ---
 
-### 6. Tally — *Backend Engineering & Distributed Systems*
-A payments ledger backend that simulates the engine moving money between accounts in a banking or e-wallet app, built with correctness of the money math as the top priority. Includes a small fraud-scoring service and a web dashboard.
+### 6. Agora — *Marketplace, Payments & Distributed Systems*
+A C2C marketplace platform that solves identity, money movement, and inventory contention as separate services with real boundaries between them: a from-the-RFCs OAuth 2.0 / OIDC identity provider, an escrow checkout on a double-entry ledger, a limited-inventory "drop" service built for heavy concurrency, an AI listing assistant, and a risk plane that scores events from the platform's own stream. Card authorization routes through an external payment switch written in Java.
 
-**Links:** [Source](https://github.com/NichoHo/tally) *(live demo URL pending deployment)*
+**Links:** [Source](https://github.com/NichoHo/agora) *(repo URL inferred; live demo pending deployment)*
 
-**Overview:** Models the core of a real payments system: double-entry money movement, idempotent transfers, event-driven fraud scoring, and a demoable dashboard. Every money operation is engineered so funds can never silently drift, and the same payment sent twice never moves money twice.
+**Overview:** Models the parts of a marketplace that are genuinely difficult to get right. **Identity:** its own OIDC provider with Authorization Code + PKCE, RS256 JWT/JWKS, argon2id credentials, TOTP MFA with recovery codes, and rotating refresh tokens that revoke the whole family on reuse. **Money:** escrow on a double-entry ledger where fund/release/refund are idempotent and money can never silently drift. **Inventory under contention:** drops sell exactly N units with queue-based admission control, a sharded Redis Lua reservation (Redis as hot-path authority, PostgreSQL as durable source of truth), TTL-based release, and payment-ambiguity handling when the switch reports `AUTH_UNKNOWN`. **Risk:** an IsolationForest anomaly model blended with explainable rules scores login, reservation, order and payment events into allow / review / block, shown on a risk console. State changes and events commit together via the transactional outbox, relayed at-least-once to a Kafka-compatible bus and consumed idempotently.
 
-**Role — Full Stack Developer (solo build):** Designed and built the entire system end to end across three services and a frontend: the Go ledger core, the REST/gRPC gateway, the Python fraud service, and the Next.js dashboard, plus the deployment and CI tooling.
-
-**Key Features:**
-- Double-entry ledger: every transfer writes a matching debit and credit in one atomic database transaction, so the books always balance
-- Money stored only as integer minor units (`int64` / `BIGINT`), never floats, to guarantee precision
-- Idempotent transfers via client `Idempotency-Key`: a retried request never double-moves money
-- Consistent account lock ordering (`SELECT ... FOR UPDATE`) so concurrent transfers cannot corrupt balances
-- Event-driven fraud pipeline: the ledger publishes `transfers.completed` to Kafka (Redpanda) only after commit; the Python service scores each transfer, writes a `fraud_scores` row, and publishes `fraud.scored`, with idempotent consumers (no duplicate scores)
-- IsolationForest anomaly model blended with explainable rules, mapping scores to allow/review/block decisions (trained on synthetic data, documented honestly as illustrative)
-- Next.js dashboard: stat cards, a 7-day volume chart, account and transfer browsing with running balances, a client-side idempotency-key transfer form, and a transfer detail view showing the two ledger entries side by side
-
-**Invariant test suite (the correctness proof):** debits equal credits equal the transfer amount per transfer; cached balances equal balances recomputed from ledger entries; the signed sum of every ledger entry system-wide is exactly zero (money is conserved); duplicate keys move money once; 50 concurrent transfers never lose an update, run under the Go race detector.
-
-**Tech Stack:** Go, gRPC, Protocol Buffers, chi, pgx, PostgreSQL, golang-migrate, Kafka/Redpanda (franz-go), Python, scikit-learn (IsolationForest), Next.js, TypeScript, Tailwind CSS, recharts, Docker, docker-compose, Kubernetes, Terraform, GitHub Actions
-
-**Architecture:** Browser → Next.js dashboard → Go REST gateway → (gRPC) → Go ledger service → Postgres, with the ledger publishing events to Redpanda that a Python fraud service consumes. All money rules live in the ledger service; events are published only after the DB transaction commits, so a transfer is never announced unless it actually happened.
-
-**Run:** `make up` starts everything in Docker (no local Go, Node, or Postgres needed); dashboard at `http://localhost:3000`, API at `http://localhost:8080`.
-
-> **Note:** This is a backend-correctness showcase built to demonstrate fintech fundamentals (double-entry accounting, idempotency, transactional integrity, distributed transactions) for backend/full-stack roles at fintech and marketplace companies. It is a simulation, not a real bank: no real money, KYC, or compliance.
-
----
-
-### 7. Vault — *Identity, Payments & Distributed Systems*
-A compact C2C marketplace (a "micro-Mercari") built around three deliberately hard subsystems written from scratch: a from-the-RFCs OAuth 2.0 / OIDC identity provider, an escrow checkout on a double-entry ledger, and an AI listing assistant. Everything is invariant-tested, event-driven, and runs with one command.
-
-**Links:** [Source](https://github.com/NichoHo/vault) *(repo URL inferred — no git remote set locally; live demo pending deployment)*
-
-**Overview:** Models the three parts of a real marketplace that are genuinely hard to get right. **Identity:** its own OIDC provider — Authorization Code + PKCE, RS256 JWT/JWKS, argon2id credentials, TOTP MFA with recovery codes, and rotating refresh tokens that revoke the entire token family on reuse. **Money:** escrow checkout on a double-entry ledger where funds are fund/release/refunded idempotently and can never silently drift. **AI:** photograph an item and get a suggested title, description, category, and price band. State changes and their events are committed in one database transaction via the transactional outbox pattern, then relayed at-least-once to a Kafka-compatible bus where idempotent consumers give exactly-once effects.
-
-**Role — Full Stack Developer (solo build):** Designed and built the entire system end to end — three Go services (identity, marketplace, payments), a Python/FastAPI AI service, a Next.js storefront and IdP UI, the event bus and outbox relay, the invariant test suites, CI, and a Terraform single-instance AWS deploy. Also extracted the outbox relay + idempotent-consumer guard into `outboxkit`, a standalone, independently versioned Go module with its own tests, CI, and MIT license.
+**Role — Full Stack Developer (solo build):** Designed and built the entire system end to end: the Go services (identity, marketplace, payments, sale), the Python services (AI listing assistant, risk scoring), the Next.js storefront, IdP screens and risk console, the event bus and outbox relay, the integration with the Java payment switch, the invariant, chaos and load test suites, CI, and Terraform. Also extracted the outbox relay and idempotent-consumer guard into `outboxkit`, a standalone, independently versioned Go module with its own tests, CI, and MIT license.
 
 **Key Features:**
-- OAuth 2.0 / OIDC provider built from the RFCs: Authorization Code + mandatory PKCE (constant-time S256), RS256 JWT signing with published JWKS, consent screen, append-only audit log
-- TOTP MFA (RFC 4226/6238) with single-use recovery codes and pending-MFA step-up sessions; refresh-token rotation with family revocation and `refresh.reuse_detected` on replay
-- Double-entry escrow ledger: idempotent fund/release/refund with a 10% platform fee, money stored as integer minor units, DB CHECK refusing negative balances
+- OAuth 2.0 / OIDC provider built from the RFCs: mandatory PKCE (constant-time S256), RS256 JWT signing with published JWKS, consent screen, append-only audit log
+- TOTP MFA (RFC 4226/6238) with single-use recovery codes and step-up sessions; refresh-token rotation with family revocation and `refresh.reuse_detected` on replay
+- Double-entry escrow ledger: idempotent fund/release/refund with a 10% platform fee, money as integer minor units, DB CHECK refusing negative balances
 - Order state machine (`pending_payment → funded → shipped → completed`, cancel/refund) with 15-minute reservations and an auto-release timer
-- Transactional outbox → `outboxkit` relay (`FOR UPDATE SKIP LOCKED`, publish-before-commit) → Redpanda, with idempotent consumers for exactly-once effects
-- AI listing assistant: Anthropic vision + structured outputs with a heuristic fallback, price bands from comparable sold history, Kafka-driven trust scoring + admin review queue
-- Next.js storefront: checkout with an escrow timeline, wallet reconciliation, AI-assisted `/sell`, MFA enrollment/step-up screens, admin dashboard
+- Limited-stock drops: Redis-sorted-set admission queue, sharded Lua stock decrement to avoid a hot key, reservation TTLs enforced by Redis expiry, and shadow-queueing of suspicious buyers
+- Cross-language card authorization via the Switch service, with `AUTH_UNKNOWN` resolved by a status-probe job so a lost bank response never double-charges or leaks inventory
+- Risk service: IsolationForest plus explainable rules, a review queue, and a live console
+- Transactional outbox, `outboxkit` relay (`FOR UPDATE SKIP LOCKED`), Redpanda, idempotent consumers; OpenTelemetry tracing across hops
+- AI listing assistant: Anthropic vision + structured outputs with a heuristic fallback and price bands from comparable sold history
 
-**Invariant & correctness test suite:** replayed authorization codes fail (atomic single-claim `UPDATE`); wrong/absent PKCE verifiers fail; `alg:none` and tampered JWTs are rejected; TOTP matches the RFC test vectors and recovery codes work exactly once; refresh-token reuse burns the whole family. On money: every transfer's entries sum to zero globally and per account (`balance == SUM(entries)`); 20 goroutines racing a 10k balance yield exactly 10 successes and a final balance of 0; release/refund are mutually exclusive even when raced; the auto-release sweeper and a manual confirm release exactly once; concurrent buys of one listing produce exactly one order (`SELECT … FOR UPDATE`). On distributed systems: a chaos test kills the relay mid-flow and proves no lost or duplicated events (redelivery happened, deduplication held). A single Playwright e2e runs the full happy path: register → MFA enroll → TOTP step-up login → AI-assisted listing → escrow buy → ship → confirm receipt → wallet reconciles.
+**Invariant & correctness test suite:** replayed authorization codes fail; wrong or absent PKCE verifiers fail; `alg:none` and tampered JWTs are rejected; TOTP matches the RFC vectors; refresh-token reuse burns the family. On money: every transfer's entries sum to zero globally and per account; 20 goroutines racing a 10k balance yield exactly 10 successes; release and refund are mutually exclusive under race; the sweeper and manual confirm release exactly once; concurrent buys of one listing produce one order. On drops: no oversell under heavy concurrent reservation attempts, a per-user unit cap that holds when a user races themselves, and exactly-once release on TTL expiry. On distributed systems: chaos tests kill the relay mid-flow (no lost or duplicated events) and force `AUTH_UNKNOWN` (no double charge, no leaked inventory). A Playwright e2e runs register → MFA enroll → TOTP step-up → AI-assisted listing → escrow buy → ship → confirm receipt → wallet reconciles.
 
-**Tech Stack:** Go, PostgreSQL 17, pgx, Python, FastAPI, Anthropic API (vision + structured outputs), Redpanda (Kafka-compatible, franz-go), Next.js, TypeScript, Tailwind CSS, Docker, docker-compose, Terraform, GitHub Actions, Playwright, argon2id, TOTP (RFC 4226/6238), OAuth 2.0 / OIDC + PKCE
+**Tech Stack:** Go, PostgreSQL 17, pgx, Redis (Lua), Python, FastAPI, scikit-learn (IsolationForest), Anthropic API, Redpanda (Kafka-compatible, franz-go), Java (Switch integration), OpenTelemetry, k6, Next.js, TypeScript, Tailwind CSS, Docker, docker-compose, Terraform, GitHub Actions, Playwright, argon2id, OAuth 2.0 / OIDC + PKCE
 
-**Architecture:** Next.js storefront + IdP screens → `id` (Go OIDC provider) / `market` (Go listings + order state machine) / `pay` (Go double-entry ledger) → PostgreSQL (schema per service), with `market` and `pay` writing to a transactional outbox that an `outboxkit` relay publishes to Redpanda; a Python/FastAPI `assist` service consumes those events for trust scoring and serves AI listing suggestions. Internal money endpoints are shared-token gated; services verify each other's JWTs via JWKS.
+**Architecture:** Next.js storefront + IdP screens → `id` (OIDC provider) / `market` (listings + order state machine) / `sale` (drops and admission) / `pay` (double-entry escrow ledger) / `assist` (AI listings) → PostgreSQL (schema per service), with services writing to a transactional outbox that the `outboxkit` relay publishes to Redpanda; `risk` consumes those events and emits allow / review / block decisions. `pay` calls the separate Java Switch service for card authorization. Services verify each other's JWTs via JWKS.
 
-**Run:** `make up` starts the whole stack in Docker (no local Go, Node, or Postgres needed); storefront at `http://localhost:3000`. Signing in is a full OAuth 2.0 Authorization Code + PKCE round trip against the project's own IdP.
+**Run:** `make up` starts the whole stack in Docker; storefront at `http://localhost:3000`. Signing in is a full OAuth 2.0 Authorization Code + PKCE round trip against the project's own IdP.
 
-> **Note:** Honest framing per the project's own README — this is an *educational* identity provider (production systems should use vetted libraries; building one from the RFCs is the point), with simulated deliveries, synthetic data, and no real money. No dark mode by design. Deploy Terraform is single-instance and not applied (needs AWS credentials); `outboxkit` currently lives as a monorepo submodule via a `replace` directive, with mirror-publishing to its own repo as the next step.
+> **Note:** Honest framing: Agora is a simulation, with no real money, KYC, or compliance posture. The identity provider is an *educational* build from the RFCs (production systems should use vetted libraries). Data is synthetic and the Switch service accepts only documented test BINs.
 
 ---
 
-### 8. Localist — *Fullstack SEO Directory & SaaS*
-A programmatic local-business directory (~5,400 SEO pages) with a self-serve owner portal where businesses claim, manage, and pay for their listing — a working model of the directory/SaaS business (think Yelp/Yellow Pages) built on a modern Laravel stack.
+### 7. Localist — *Fullstack SEO Directory & SaaS*
+A programmatic local-business directory (~6,100 SEO pages) with a self-serve owner portal where businesses claim, manage, and pay for their listing — a working model of the directory/SaaS business (think Yelp/Yellow Pages) built on a modern Laravel stack.
 
 **Links:** [Live](https://localist-0mlt.onrender.com/) · [Source](https://github.com/NichoHo/Localist)
 
-**Overview:** Generates a large public directory from listing data — home, per-category, per-city, and city×category landing pages plus individual business pages — all cacheable and search-optimized. Business owners claim their page via a slug link, edit it live, manage photos and leads, and upgrade to Featured/Premium plans through Stripe Checkout, which lifts their ranking in the directory. Seeded with 5,000 synthetic Malaysian listings, clearly labeled as demo content.
+**Overview:** Generates a large public directory from listing data — home, per-category, per-city, and city×category landing pages plus individual business pages — all cacheable and search-optimized. Business owners claim their page via a slug link, edit it live, manage photos and leads, and upgrade to Featured/Premium plans through Stripe Checkout, which lifts their ranking in the directory. Seeded with about 5,800 real Malaysian businesses from Foursquare's open Places dataset (Apache 2.0), with Stripe running in test mode.
 
-**Role — Full Stack Developer (solo build):** Designed and built the entire platform end to end across four phases — the public directory and ranking engine, the Livewire owner portal (claim/edit/photos/leads), Stripe payments and plan gating, full technical SEO (JSON-LD, sitemaps, canonicals), the Cloudflare caching/purge layer, an admin approval console, and the Dockerized deploy — with a 48-test suite as the correctness proof.
+**Role — Full Stack Developer (solo build):** Designed and built the entire platform end to end across four phases — the public directory and ranking engine, the Livewire owner portal (claim/edit/photos/leads), Stripe payments and plan gating, full technical SEO (JSON-LD, sitemaps, canonicals), the Cloudflare caching/purge layer, an admin approval console, and the Dockerized deploy — with a 60-test suite as the correctness proof.
 
 **Key Features:**
-- Programmatic SEO: ~5,400 generated pages across categories, cities, and city×category combinations, with featured-first ranking via a `Business::ranked()` scope
+- Programmatic SEO: ~6,100 generated pages across categories, cities, and city×category combinations, with featured-first ranking via a `Business::ranked()` scope
 - Livewire 3 owner portal: claim-by-slug flow, live listing editing, drag-reorder photo management (plan-gated max photos), and a leads inbox with unread badges
-- Stripe payments via Cashier: Checkout-based upgrade to Featured/Premium, plan downgrade with cancellation, plans directly driving directory ranking
+- Stripe payments via Cashier: Checkout-based upgrade to Featured/Premium in MYR, in-place plan switching on the existing subscription (no double billing), plan downgrade with cancellation, plans directly driving directory ranking
 - SEO integrity: schema.org JSON-LD (LocalBusiness/BreadcrumbList/ItemList), canonical tags, `noindex` on search, and a chunked `sitemap.xml` index regenerated daily and after each import
 - Slug-change → 301 redirect handling (a `redirects` table + prepended middleware) so renaming a business never breaks its indexed URL — explicitly regression-tested
 - Cloudflare edge caching: public routes send `Cache-Control: public, max-age=600` + ETag while authed portal/admin routes stay no-cache; editing or approving a listing dispatches a job that purges just the affected URLs
 - Admin approval console (role-gated) with status tabs, search, and approve/unpublish
 - Responsive, dark-mode-aware UI (`prefers-color-scheme`)
 
-**Test suite (the correctness proof):** 48 passing tests covering directory rendering and featured ranking, the claim flow, live editing, the slug-change → working-301 check (the silent SEO-breaker if it regresses), photo plan gating, leads, JSON-LD validity, sitemap chunking, billing plan changes, cache headers, purge dispatch, and admin approval.
+**Test suite (the correctness proof):** 60 passing tests covering directory rendering and featured ranking, the claim flow, live editing, the slug-change → working-301 check (the silent SEO-breaker if it regresses), photo plan gating, leads, JSON-LD validity, sitemap chunking, billing plan changes, cache headers, purge dispatch, and admin approval.
 
 **Tech Stack:** PHP 8.3, Laravel 12, Livewire 3, Alpine.js, Blade, Tailwind CSS 4, Vite, MySQL/MariaDB, Stripe (Laravel Cashier), Cloudflare (edge cache + purge API), Docker (multi-stage → Apache), PHPUnit
 
 **Architecture:** A Laravel monolith serving a cacheable public directory (behind Cloudflare) alongside an authenticated Livewire SPA-like portal; Stripe Checkout drives plan state that feeds the ranking scope, and listing edits/approvals dispatch a queued Cloudflare purge job. The cache boundary is enforced at the origin (public = cacheable, session-cookie = bypass) so the edge config is a thin mirror of Laravel's own headers.
 
-> **Note:** Portfolio/showcase project demonstrating the full directory-SaaS playbook — programmatic SEO at scale, a self-serve paid-listing portal, and edge caching — for fullstack/SaaS roles. Seed data is synthetic; deployed live on Render at https://localist-0mlt.onrender.com/.
+> **Note:** Portfolio/showcase project demonstrating the full directory-SaaS playbook — programmatic SEO at scale, a self-serve paid-listing portal, and edge caching — for fullstack/SaaS roles. Seed data is real, openly licensed Foursquare data; deployed live on Render at https://localist-0mlt.onrender.com/.
 
 ---
 
-### 9. Switch — *Payment Systems & Backend Engineering*
+### 8. Switch — *Payment Systems & Backend Engineering*
 
-A card-payment switch: the authorization engine that sits between a merchant and the acquirers — tokenizes a card, scores it for risk, picks a downstream processor, holds the authorization state machine, and keeps a ledger that balances. Built for payment-platform engineering roles (Adyen/N26/Trade Republic/SAP-style stacks).
-
+A card-payment switch: the authorization engine that sits between a merchant and the acquirers — tokenizes a card, scores it for risk, picks a downstream processor, holds the authorization state machine, and keeps a ledger that balances.
 **Links:** [Source](https://github.com/NichoHo/switch) *(live demo pending deployment)*
 
 **Overview:** Models the routing core of a real payment stack rather than a checkout or wallet. A merchant request is authenticated, idempotency-checked, resolved against a tokenized card vault, scored by a risk engine, routed to one of several simulated acquirers with failover, and posted to a double-entry ledger — all backed by an exhaustive payment state machine so the authorization lifecycle can't be driven into an invalid state.
@@ -376,7 +347,7 @@ A card-payment switch: the authorization engine that sits between a merchant and
 
 ---
 
-### 10. Orbit — *Cross-Platform Mobile Engineering*
+### 9. Orbit — *Cross-Platform Mobile Engineering*
 An offline-first task and habit tracking app for iOS/Android, built with Expo/React Native on a Supabase (Postgres) backend.
 
 **Links:** *(not yet pushed to a public repo)*
@@ -399,7 +370,7 @@ An offline-first task and habit tracking app for iOS/Android, built with Expo/Re
 
 ---
 
-### 11. Maravellante — *Frontend Engineering & Design Systems*
+### 10. Maravellante — *Frontend Engineering & Design Systems*
 A gallery-style portfolio site for a fictional contemporary painter, built to demonstrate interaction-level frontend craft — a floating pill navigation with a pointer-tracked sliding indicator, magnetic buttons, 3D tilt on artwork cards, and a full light/dark design system — in dependency-free HTML/CSS/JS.
 
 **Links:** [Live](https://maravellante.vercel.app) · [Source](https://github.com/NichoHo/maravellante)
@@ -420,7 +391,7 @@ A gallery-style portfolio site for a fictional contemporary painter, built to de
 
 **Architecture:** No framework, no bundler, no dependencies — plain HTML per page sharing two files (`site.css`, `site.js`) plus a single JS array (`data.js`) as the content source for the work catalogue, so adding a painting is a one-object edit that appears across the home page, catalogue, and detail-page routing automatically.
 
-> **Note:** A design/frontend showcase rather than a fullstack build — no backend, no CMS; the contact form validates client-side but isn't wired to a real mail endpoint. Included for breadth: demonstrates production-grade interaction/motion engineering, accessibility discipline, and the judgment to pick a zero-dependency stack when a framework would have been overhead — a different register from the backend/systems depth of the Tally/Vault/Switch entries.
+> **Note:** A design/frontend showcase rather than a fullstack build — no backend, no CMS; the contact form validates client-side but isn't wired to a real mail endpoint. Included for breadth: demonstrates production-grade interaction/motion engineering, accessibility discipline, and the judgment to pick a zero-dependency stack when a framework would have been overhead — a different register from the backend/systems depth of the Agora/Switch entries.
 
 ---
 
@@ -529,7 +500,9 @@ Supported orphaned children by facilitating social activities and engaging the c
 - **Update (2026-08-19):** Added a new current role, Software Engineering Intern (Backend) at SIRCLO, starting Aug 2026, sourced from the "[SIP 2026] Onboarding Slide.pdf" you shared (SIRCLO is an Indonesian digital-commerce enabler). The slide deck is company-wide onboarding content, not project-specific, so per your instruction the entry is a placeholder — role, company, and start date only, no project description or tech stack until you're actually assigned one. Revisit and fill in once known.
 - **Update (2026-08-19):** Reworded the Professional Summary to lead with distributed backend systems and AI/ML ahead of frontend (matching the employability-first reordering applied earlier to Technical Skills), and moved the SIRCLO internship to the front of the "Currently..." sentence as the most current role. Made the same change to the site's hero paragraph and SEO meta description — both previously led with "Warehouse Management Systems" as the flagship example and only named Nexus/Galva, dropping the more recent fintech-style/distributed-systems work (Tally, Vault, Switch) and the SIRCLO internship entirely.
 - **Update (2026-08-19):** Revised the SIRCLO entry to name the program structure you already know — a 6-month, end-to-end project with a cross-functional team (PM, Frontend, QA) — instead of a bare "onboarding" placeholder, since that's a known fact and gives real signal (full-SDLC exposure, cross-functional collaboration) without claiming a specific project or outcome that isn't decided yet. Still explicitly marked TBD for project scope and tech stack.
-- **Update (2026-08-28):** Added Featured Project #11 (Maravellante), a solo-built frontend/design-system showcase (fictional-artist portfolio site), sourced directly from the local project build. Live at https://maravellante.vercel.app, source at https://github.com/NichoHo/maravellante. Newly surfaced skill: Vercel (added to DevOps & Tooling). Deliberately framed as a design/frontend-craft entry (motion engineering, accessibility, design systems) rather than a backend/systems build, to sit alongside the Tally/Vault/Switch entries without overlapping their claims — no backend, no CMS, contact form is client-side validation only.
+- **Update (2026-08-28):** Added Featured Project #11 (Maravellante), a solo-built frontend/design-system showcase (fictional-artist portfolio site), sourced directly from the local project build. Live at https://maravellante.vercel.app, source at https://github.com/NichoHo/maravellante. Newly surfaced skill: Vercel (added to DevOps & Tooling). Deliberately framed as a design/frontend-craft entry (motion engineering, accessibility, design systems) rather than a backend/systems build, to sit alongside the Agora/Switch entries without overlapping their claims — no backend, no CMS, contact form is client-side validation only.
 - **Update (2026-08-18):** Per your clarification, the Freelance role's headline bullets now name the Inventory Project directly (previously generic "sales dashboards" phrasing carried over from the old CV/site copy) and lead with the double-entry ledger/API work rather than the frontend, since that's the stronger signal for backend/fintech-leaning roles. Also folded in a full technical writeup of the Intern role's project — previously covered only by two thin bullets ("location-tracking CRUD app," "real-time chat features") — now documented as geofencing access control (Haversine formula distance check), SignalR/WebSockets real-time chat, and Google Maps visualization, with a new project deep dive. Newly surfaced skills/concepts: SignalR/WebSockets, geofencing & geospatial distance calculation (Haversine formula) — added to Backend & APIs and Concepts & Practices respectively. Also reordered every category in Technical Skills (Consolidated), plus the Freelance/Intern bullet and tech lists, by employability (most in-demand/differentiating first) per your instruction — this is a presentation change only, no skills were added or removed by the reordering itself.
 - **Update (2026-10-02):** Localist deployed live to Render (https://localist-0mlt.onrender.com/). Updated master portfolio and web portfolio project cards/details with live links and fresh screenshots of the new UI.
 - **Update (2026-10-06):** Updated NVIDIA certification title to "Building Conversational AI Applications" across the web portfolio and master portfolio.
+- **Update (2026-10-07):** Replaced the Tally (#6) and Vault (#7) entries with a single Agora entry (#6), since Tally was merged into Vault and the combined project was renamed Agora. Later projects renumbered. Web portfolio cards and detail page updated; Agora thumbnail is a placeholder pending a new one.
+- **Update (2026-10-07):** Localist moved to real Malaysian data (about 5,800 listings from Foursquare Open Source Places), with a redesigned billing page, a fixed Stripe Checkout redirect bug, a fix for double billing when switching plans, and all project screenshots retaken in dark mode. Test count is now 60.
