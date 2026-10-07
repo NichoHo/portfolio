@@ -49,15 +49,15 @@ Computer Science undergraduate (Binus University, Global Class) and fullstack de
 
 **Frontend:** Next.js, React, Redux / Redux Toolkit, Tailwind CSS, Material UI (MUI), Vue.js, Bootstrap (incl. v5), Framer Motion, Zod, Figma, Lucide React, DevExpress, Blade Templates, jQuery, DataTables.net, Flatpickr, Lodash, Moment.js
 
-**Backend & APIs:** ASP.NET Core / .NET Core (.NET 8+), Node.js, Express, ASP.NET Web API, Laravel, Flask, SignalR / WebSockets (real-time bi-directional messaging), ASP.NET Web Forms, ADO.NET, Google Maps API
+**Backend & APIs:** ASP.NET Core / .NET Core (.NET 8+), Node.js, Express, Auth.js (Google OAuth), GitHub GraphQL API & webhooks, ASP.NET Web API, Laravel, Flask, SignalR / WebSockets (real-time bi-directional messaging), ASP.NET Web Forms, ADO.NET, Google Maps API
 
-**Databases & ORMs:** PostgreSQL, SQL Server, MySQL, Supabase, Dapper (Micro-ORM), SQLAlchemy, Firebase
+**Databases & ORMs:** PostgreSQL, SQL Server, MySQL, Supabase, Dapper (Micro-ORM), Drizzle ORM, SQLAlchemy, Firebase
 
 **Mobile:** Expo, React Native, Expo Router, TanStack Query, Zustand, NativeWind, react-native-mmkv (offline-first local storage), WidgetKit (native iOS widgets) — *secondary to web fullstack/data science focus*
 
 **AI, Machine Learning & Data Science:** LangChain, HuggingFace (incl. all-MiniLM-L6-v2 embeddings), FAISS, TensorFlow, Scikit-learn, XGBoost, SHAP (SHapley Additive exPlanations), OpenCV, MediaPipe, GRU (Gated Recurrent Unit), Optuna, Pandas, NumPy, Matplotlib, Plotly, Streamlit, FastF1
 
-**DevOps & Tooling:** Docker, Docker Compose, Git/GitHub, Nginx, Vite, Vercel
+**DevOps & Tooling:** Docker, Docker Compose, Git/GitHub, Nginx, Caddy, Vite, Vercel
 
 **Concepts & Practices:** RAG (Retrieval-Augmented Generation) pipeline design, Explainable AI (XAI), vector embeddings & semantic search, distributed transaction management (`TransactionScope`), double-entry accounting / General Ledger systems, token-based authentication, real-time computer vision, geofencing & geospatial distance calculation (Haversine formula), predictive maintenance & time-series forecasting, Repository Pattern, Unit of Work pattern, Service-Repository pattern, domain-driven repository interfaces, API-first / decoupled SPA architecture, MVC architecture, monolithic / code-behind & session-state architecture, primary constructors (modern C#), i18n/localization, Agile/Scrum team leadership, Warehouse Management System (WMS) domain expertise
 
@@ -73,7 +73,14 @@ Computer Science undergraduate (Binus University, Global Class) and fullstack de
 
 ### Software Engineering Intern (Backend) — SIRCLO
 **Aug 2026 – Present**
-Selected for a 6-month, end-to-end project — collaborating with a cross-functional team (PM, Frontend, QA) from spec through delivery. Project scope and tech stack not yet assigned — update this entry once known.
+Backend engineer on the **Project Portfolio Dashboard (PPD)**, an internal web app that gives PMs and leadership one view of epic progress, timelines, schedule risk, delivery speed, and quality, built from the engineering team's GitHub Projects boards. 6-month program (18 Aug 2026 to 17 Feb 2027) with a cross-functional team (PM, Frontend, QA) and a second backend intern; top committer on the repo.
+- Gathered requirements with stakeholders (VP, Engineering Manager, QA Manager, PMs), then co-authored the technical spec and ERD, reviewed and approved by the backend mentor
+- Built the GitHub integration: a sync job over the GitHub GraphQL API that classifies board items into epics/tasks via the sub-issue tree, plus an org webhook receiver (`projects_v2_item`) that records every status move and who made it, added after GitHub stopped returning status-change events in issue timelines
+- Built Google sign-in limited to company domains (Auth.js), onboarding, an admin panel, and per-menu access control; built the backend for the Settings, Users, and Roadmap Hub (PM kanban) pages, including the PM-to-GitHub epic handoff
+- Derived metrics in Postgres (weighted progress, At Risk schedule flags, time-in-status bottlenecks, QA rejection cycles), with At Risk email alerts to PMs over SMTP
+- Deployed the app on a company VM with Docker Compose, Postgres 16, and Caddy (TLS reverse proxy)
+
+*Tech: TypeScript, Next.js (App Router), PostgreSQL 16, Drizzle ORM, Auth.js (Google OAuth), GitHub GraphQL API + webhooks, Zod, Recharts, Tailwind CSS, Vitest, Docker Compose, Caddy, Nodemailer*
 
 ### Lead Developer — Nexus Software Agency
 **Oct 2025 – Present**
@@ -469,6 +476,8 @@ Supported orphaned children by facilitating social activities and engaging the c
 |---|---|---|---|---|
 | Alibaba Cloud Associate — Cloud Engineer | Alibaba Cloud | May 2025 | IACA13250500210461L | [Certificate](https://nichoho.github.io/portfolio/alibaba-certificate.jpg) |
 | Building Conversational AI Applications | NVIDIA Deep Learning Institute | Aug 2025 | C8GNGRZhTAicYiL42FWjVw | [PDF](https://nichoho.github.io/portfolio/nvidia-certificate.pdf) · [Verify](https://learn.nvidia.com/certificates?id=zMTLXpF7RrCNjBoxDcKf5A) |
+| IELTS Academic — Band 7.5 | British Council / IDP / Cambridge English | Jun 2025 | 25ID500396HON161A | [PDF](https://nichoho.github.io/portfolio/IELTS.pdf) |
+| Azure AI Fundamentals (AI-900T00-A), course completion | Microsoft elevAIte Indonesia (with Komdigi, BINUS) | Apr 2025 | 69a03d23-9008-4c0a-ae46-96afc813dc8c | [PDF](https://nichoho.github.io/portfolio/azure-certificate.pdf) |
 | Getting Started with Compute | AWS Educate | Oct 2024 | — | [Verify (Credly)](https://www.credly.com/badges/2f074998-a38b-4769-9bbc-14503a42893d/linked_in_profile) |
 | Introduction to Cloud 101 | AWS Educate | Oct 2024 | — | [Verify (Credly)](https://www.credly.com/badges/8bc28ca2-d1db-49e0-802a-f78b4ad922f8/linked_in_profile) |
 
@@ -479,7 +488,7 @@ Supported orphaned children by facilitating social activities and engaging the c
 - Research preview image 1 (HIV/AIDS paper): https://nichoho.github.io/portfolio/research.jpg
 - Research preview image 2 (BISINDO thesis): https://nichoho.github.io/portfolio/research-2.jpg
 - Volunteering photo: https://nichoho.github.io/portfolio/volunteering.jpg
-- Issuer logos: alibaba-logo.png, nvidia-logo.jpg, aws-logo.jpg (same domain)
+- Issuer logos: alibaba-logo.png, ielts.webp, nvidia-logo.jpg, azure-logo.jpg, aws-logo.jpg (same domain)
 
 ---
 
@@ -500,9 +509,11 @@ Supported orphaned children by facilitating social activities and engaging the c
 - **Update (2026-08-19):** Added a new current role, Software Engineering Intern (Backend) at SIRCLO, starting Aug 2026, sourced from the "[SIP 2026] Onboarding Slide.pdf" you shared (SIRCLO is an Indonesian digital-commerce enabler). The slide deck is company-wide onboarding content, not project-specific, so per your instruction the entry is a placeholder — role, company, and start date only, no project description or tech stack until you're actually assigned one. Revisit and fill in once known.
 - **Update (2026-08-19):** Reworded the Professional Summary to lead with distributed backend systems and AI/ML ahead of frontend (matching the employability-first reordering applied earlier to Technical Skills), and moved the SIRCLO internship to the front of the "Currently..." sentence as the most current role. Made the same change to the site's hero paragraph and SEO meta description — both previously led with "Warehouse Management Systems" as the flagship example and only named Nexus/Galva, dropping the more recent fintech-style/distributed-systems work (Tally, Vault, Switch) and the SIRCLO internship entirely.
 - **Update (2026-08-19):** Revised the SIRCLO entry to name the program structure you already know — a 6-month, end-to-end project with a cross-functional team (PM, Frontend, QA) — instead of a bare "onboarding" placeholder, since that's a known fact and gives real signal (full-SDLC exposure, cross-functional collaboration) without claiming a specific project or outcome that isn't decided yet. Still explicitly marked TBD for project scope and tech stack.
+- **Update (2026-10-07):** Added IELTS (already on the site) and Azure AI Fundamentals to the Certifications table. The Azure entry is a completion certificate for the self-paced AI-900T00-A course via the Microsoft elevAIte program, not the proctored AI-900 exam; label it that way in applications. Introduction to Cloud 101 stays here for completeness but was dropped from the site as the weakest entry (Alibaba Cloud Associate and AWS Compute already cover cloud basics).
 - **Update (2026-08-28):** Added Featured Project #11 (Maravellante), a solo-built frontend/design-system showcase (fictional-artist portfolio site), sourced directly from the local project build. Live at https://maravellante.vercel.app, source at https://github.com/NichoHo/maravellante. Newly surfaced skill: Vercel (added to DevOps & Tooling). Deliberately framed as a design/frontend-craft entry (motion engineering, accessibility, design systems) rather than a backend/systems build, to sit alongside the Agora/Switch entries without overlapping their claims — no backend, no CMS, contact form is client-side validation only.
 - **Update (2026-08-18):** Per your clarification, the Freelance role's headline bullets now name the Inventory Project directly (previously generic "sales dashboards" phrasing carried over from the old CV/site copy) and lead with the double-entry ledger/API work rather than the frontend, since that's the stronger signal for backend/fintech-leaning roles. Also folded in a full technical writeup of the Intern role's project — previously covered only by two thin bullets ("location-tracking CRUD app," "real-time chat features") — now documented as geofencing access control (Haversine formula distance check), SignalR/WebSockets real-time chat, and Google Maps visualization, with a new project deep dive. Newly surfaced skills/concepts: SignalR/WebSockets, geofencing & geospatial distance calculation (Haversine formula) — added to Backend & APIs and Concepts & Practices respectively. Also reordered every category in Technical Skills (Consolidated), plus the Freelance/Intern bullet and tech lists, by employability (most in-demand/differentiating first) per your instruction — this is a presentation change only, no skills were added or removed by the reordering itself.
 - **Update (2026-10-02):** Localist deployed live to Render (https://localist-0mlt.onrender.com/). Updated master portfolio and web portfolio project cards/details with live links and fresh screenshots of the new UI.
 - **Update (2026-10-06):** Updated NVIDIA certification title to "Building Conversational AI Applications" across the web portfolio and master portfolio.
 - **Update (2026-10-07):** Replaced the Tally (#6) and Vault (#7) entries with a single Agora entry (#6), since Tally was merged into Vault and the combined project was renamed Agora. Later projects renumbered. Web portfolio cards and detail page updated; Agora thumbnail is a placeholder pending a new one.
+- **Update (2026-10-07):** Filled in the SIRCLO entry with the Project Portfolio Dashboard (PPD), sourced from the internship daily logbook, the PPD technical spec (v0.30, co-authored with Muhammad Nauffal Ramdhani), and the repo (67 of 129 commits). Internal company tool: no links, URLs, or infrastructure details should go in public materials. Newly surfaced skills: Drizzle ORM, Auth.js, GitHub GraphQL API and webhooks, Caddy, Vitest, Nodemailer.
 - **Update (2026-10-07):** Localist moved to real Malaysian data (about 5,800 listings from Foursquare Open Source Places), with a redesigned billing page, a fixed Stripe Checkout redirect bug, a fix for double billing when switching plans, and all project screenshots retaken in dark mode. Test count is now 60.

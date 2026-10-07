@@ -249,9 +249,22 @@ export default function Home() {
                             </div>
 
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-                                <li>Selected for a <strong className="text-[var(--text-primary)]">6-month, end-to-end</strong> project, collaborating with a cross-functional team (PM, Frontend, QA) from spec through delivery</li>
-                                <li>Project scope and tech stack to be confirmed</li>
+                                <li>Building and deploying the backend of the <strong className="text-[var(--text-primary)]">Project Portfolio Dashboard (PPD)</strong>, an internal app that turns GitHub Projects boards into progress, risk, and QA views for leadership, hosted on a company VM with Docker Compose and Caddy</li>
+                                <li>Gathered requirements with stakeholders (VP, Engineering and QA Managers, PMs) and co-authored the technical spec and ERD</li>
+                                <li>Built a <strong className="text-[var(--text-primary)]">GitHub GraphQL sync job</strong> and an org webhook receiver that logs every status change and who made it, plus Google sign-in, per-menu access control, and At Risk email alerts</li>
                             </ul>
+
+                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">TypeScript</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">PostgreSQL</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Drizzle ORM</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Auth.js</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">GitHub GraphQL API</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Webhooks</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Docker Compose</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Caddy</span>
+                            </div>
                         </Card>
                     </div>
                 </motion.div>
@@ -315,7 +328,7 @@ export default function Home() {
 
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
                                 <li>Architected a comprehensive <strong className="text-[var(--text-primary)]">Warehouse Management System (WMS)</strong> using ASP.NET.</li>
-                                <li>Developed a comprehensive <strong className="text-[var(--text-primary)]">Transport Tracker</strong> system using React for the frontend and C# Web API for the backend to monitor product logistics in real-time.</li>
+                                <li>Built <strong className="text-[var(--text-primary)]">Kargolo</strong>, a logistics data management system using React for the frontend and C# Web API for the backend to configure carrier networks and expedition shipping services.</li>
                                 <li>Engineered a comprehensive <strong className="text-[var(--text-primary)]">Project Management System</strong> (PMS) using Next.js, Tailwind CSS, Supabase, and AWS S3.</li>
                             </ul>
 
@@ -430,8 +443,8 @@ export default function Home() {
                     variants={fadeUp}
                     className="md:col-span-2"
                 >
-                    <Link href="/projects/agora">
                         <div className="group relative rounded-2xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 cursor-pointer">
+                            <Link href="/projects/agora" aria-label="View Agora details" className="absolute inset-0 z-10" />
                             <div className="grid md:grid-cols-5 gap-0">
                                 <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
                                      <img src="/portfolio/Agora Thumbnail.jpg" alt="Agora" className="object-cover w-full h-full"/>
@@ -462,8 +475,7 @@ export default function Home() {
                                             href="https://github.com/NichoHo/agora"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()}
-                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
+                                            className="relative z-20 inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                         >
                                             Source <Github className="w-3.5 h-3.5" />
                                         </a>
@@ -472,13 +484,12 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
                 </motion.div>
 
                 {/* PROJECT 2: SWITCH */}
                 <motion.div variants={fadeUp}>
-                    <Link href="/projects/switch">
-                         <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+                         <div className="group relative h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+                             <Link href="/projects/switch" aria-label="View Switch details" className="absolute inset-0 z-10" />
                             <div className="h-auto bg-[#d4ff3a]/10 relative overflow-hidden flex items-center justify-center group-hover:bg-[#d4ff3a]/20 transition-colors">
                                 <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
                             </div>
@@ -508,8 +519,7 @@ export default function Home() {
                                             href="https://switch-gateway.onrender.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()}
-                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
+                                            className="relative z-20 inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                         >
                                             Live Site <ExternalLink className="w-3.5 h-3.5" />
                                         </a>
@@ -517,13 +527,12 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
                 </motion.div>
 
                 {/* PROJECT 3: LOCALIST */}
                 <motion.div variants={fadeUp}>
-                    <Link href="/projects/localist">
-                         <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+                         <div className="group relative h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+                             <Link href="/projects/localist" aria-label="View Localist details" className="absolute inset-0 z-10" />
                             <div className="h-auto bg-yellow-50 dark:bg-yellow-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900/20 transition-colors">
                                 <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
                             </div>
@@ -553,8 +562,7 @@ export default function Home() {
                                             href="https://localist-0mlt.onrender.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()}
-                                            className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
+                                            className="relative z-20 inline-flex items-center gap-1.5 text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors sm:ml-auto"
                                         >
                                             Live Site <ExternalLink className="w-3.5 h-3.5" />
                                         </a>
@@ -562,7 +570,6 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
                 </motion.div>
             </motion.div>
         </section>
