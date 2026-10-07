@@ -1,144 +1,81 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, GraduationCap, BookOpen, Download } from "lucide-react";
-import { Card } from "@/components/Card";
+import { Download } from "lucide-react";
 import { fadeUp } from "@/lib/motion";
+
+const papers = [
+  {
+    year: "2025",
+    kind: "Published paper",
+    venue: "ICORIS 2025",
+    title: "Machine Learning Algorithms for HIV/AIDS Prediction using Explainable AI",
+    summary:
+      "Compares ML models for predicting HIV/AIDS susceptibility from socio-behavioral data, then uses SHAP to show which features drive each prediction, so clinicians can check the reasoning.",
+    tags: ["Explainable AI", "Healthcare", "SHAP", "Python"],
+    cover: "/portfolio/research.jpg",
+    pdf: "/portfolio/research.pdf",
+    cta: "Read full paper",
+  },
+  {
+    year: "2025",
+    kind: "Thesis",
+    venue: "In progress",
+    title: "Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition",
+    summary:
+      "A lightweight Indonesian Sign Language recognizer that reads hand gestures and facial markers, and runs offline in real time on budget devices.",
+    tags: ["Deep Learning", "MediaPipe", "GRU", "Low-resource"],
+    cover: "/portfolio/research-2.jpg",
+    pdf: "/portfolio/research-2.pdf",
+    cta: "Read current version",
+  },
+];
 
 export function Research() {
   return (
-    <section id="research" className="py-20 bg-[var(--surface)]/50 border-y border-[var(--border)]">
-      <div className="max-w-6xl mx-auto px-4 space-y-8">
+    <section id="research">
+      <div className="space-y-12">
+        <h2 className="text-3xl font-bold text-[var(--text-primary)]">Research & Publications</h2>
 
-        <motion.div
-          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-          className="space-y-4"
-        >
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] flex items-center gap-3">
-            Research & Publications
-          </h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl">
-            Academic contributions to the field of Artificial Intelligence and Healthcare.
-          </p>
-        </motion.div>
+        <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+          {papers.map((p) => (
+            <motion.div
+              key={p.title}
+              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              className="grid gap-4 md:grid-cols-[9rem_1fr_12rem] md:gap-10 py-10 md:py-12 items-start"
+            >
+              <div>
+                <p className="text-4xl md:text-5xl font-bold tracking-tighter text-emerald-500">{p.year}</p>
+                <p className="mt-2 text-sm text-[var(--text-tertiary)]">{p.kind}</p>
+              </div>
 
-        <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-        >
-            <Card className="group hover:shadow-xl transition-all">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                    <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
-                        <FileText className="w-7 h-7 text-blue-500" />
-                    </div>
-
-                    <div className="space-y-3 flex-1">
-                        <div className="flex flex-wrap items-center gap-3 text-sm">
-                            <span className="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 font-medium">
-                                Published Paper
-                            </span>
-                            <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
-                                ICORIS 2025
-                            </span>
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            Machine Learning Algorithms for HIV/AIDS Prediction using Explainable AI
-                        </h3>
-
-                        <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
-                            Conducted in-depth research on applying Explainable Artificial Intelligence (XAI) to medical diagnostics.
-                            The study evaluates various ML models to predict HIV/AIDS susceptibility based on socio-behavioral data, using <strong>SHAP (SHapley Additive exPlanations)</strong> to provide transparent, interpretable reasoning for model decisions.
-                            This work aims to bridge the trust gap between AI systems and medical practitioners.
-                        </p>
-
-                        <div className="flex flex-wrap gap-2">
-                            {["Explainable AI (XAI)", "Healthcare Informatics", "SHAP Analysis", "Python", "Machine Learning"].map((tag) => (
-                                <span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-full bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="pt-4 flex flex-wrap gap-4">
-                            <a
-                                href="/portfolio/research.pdf"
-                                target="_blank"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20"
-                            >
-                                <BookOpen className="w-4 h-4" />
-                                Read Full Paper
-                            </a>
-                            <a
-                                href="/portfolio/research.pdf"
-                                download="Machine Learning Algorithms for HIV/AIDS.pdf"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] font-medium text-sm hover:bg-[var(--border)] transition-colors"
-                            >
-                                <Download className="w-4 h-4" />
-                                Download PDF
-                            </a>
-                        </div>
-                    </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-4xl font-bold tracking-tight leading-[1.1] text-[var(--text-primary)] max-w-[24ch]">
+                  {p.title}
+                </h3>
+                <p className="text-[var(--text-secondary)] leading-relaxed max-w-[58ch]">{p.summary}</p>
+                <p className="text-sm text-[var(--text-tertiary)]">
+                  {p.venue}. {p.tags.join(", ")}.
+                </p>
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-1">
+                  <a href={p.pdf} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 font-medium text-emerald-600 dark:text-emerald-400 hover:underline underline-offset-4">
+                    {p.cta}
+                  </a>
+                  <a href={p.pdf} download className="inline-flex items-center gap-1.5 text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">
+                    <Download className="w-4 h-4" /> PDF
+                  </a>
                 </div>
-            </Card>
-        </motion.div>
+              </div>
 
-        <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-        >
-            <Card className="group hover:shadow-xl transition-all">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                    <div className="w-14 h-14 rounded-xl bg-teal-500/10 flex items-center justify-center shrink-0">
-                        <GraduationCap className="w-7 h-7 text-teal-500" />
-                    </div>
-
-                    <div className="space-y-3 flex-1">
-                        <div className="flex flex-wrap items-center gap-3 text-sm">
-                            <span className="px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300 font-medium">
-                                Thesis
-                            </span>
-                            <span className="text-[var(--text-tertiary)] font-medium flex items-center gap-1.5">
-                                2025-ongoing
-                            </span>
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                            Hybrid MediaPipe-GRU Architecture for Efficient BISINDO Recognition Integrating Non-Manual Markers in LowResource Environments
-                        </h3>
-
-                        <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
-                            This thesis develops a highly efficient Sign Language Recognition (SLR) system for Indonesian Sign Language (BISINDO) targeting low-resource environments. By shifting to a MediaPipe-GRU architecture, the model accurately captures both manual gestures and non-manual signals with minimal computational overhead. The optimized system achieves robust real-time performance on budget devices, promoting greater accessibility in communication technology.
-                        </p>
-
-                        <div className="flex flex-wrap gap-2">
-                            {["Deep Learning", "MediaPipe", "GRU", "Sign Language Recognition", "Low-Resource"].map((tag) => (
-                                <span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-full bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="pt-4 flex flex-wrap gap-4">
-                            <a
-                                href="/portfolio/research-2.pdf"
-                                target="_blank"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal-600 text-white font-medium text-sm hover:bg-teal-700 transition-colors shadow-lg shadow-teal-500/20"
-                            >
-                                <BookOpen className="w-4 h-4" />
-                                Read Current Version
-                            </a>
-                            <a
-                                href="/portfolio/research-2.pdf"
-                                download="Hybrid_MediaPipe_GRU_Architecture.pdf"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] font-medium text-sm hover:bg-[var(--border)] transition-colors"
-                            >
-                                <Download className="w-4 h-4" />
-                                Download PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </Card>
-        </motion.div>
+              <a href={p.pdf} target="_blank" rel="noreferrer" aria-label={`Open ${p.title}`} className="block w-44 md:w-full">
+                <img
+                  src={p.cover} alt={`First page of ${p.title}`} loading="lazy"
+                  className="w-full rotate-2 rounded-lg border border-[var(--border)] shadow-2xl"
+                />
+              </a>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
