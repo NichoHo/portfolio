@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Code2, Server, Brain } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download, ChevronRight, Calendar, ExternalLink, Server } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/Card";
@@ -11,6 +11,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
 import { Research } from "@/components/Research";
+import { Skills } from "@/components/Skills";
 import Organization from "@/components/Organization";
 import { fadeUp, staggerContainer, easeOut } from "@/lib/motion";
 
@@ -53,7 +54,7 @@ export default function Home() {
         We use max-w-6xl for the main content to make it wider, 
         and wrap ALL sections inside it so they share the exact same padding.
       */}
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20 space-y-24">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20 space-y-24 [&>section+section]:border-t [&>section+section]:border-[var(--border)] [&>section+section]:pt-24">
         
         {/* 2. HERO SECTION */}
         <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
@@ -126,90 +127,7 @@ export default function Home() {
         </section>
 
         {/* 3. TECHNICAL SKILLS */}
-        <section className="space-y-8">
-            <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-            >
-                <h2 className="text-3xl font-bold text-[var(--text-primary)]">Technical Skills</h2>
-            </motion.div>
-
-            <motion.div
-              variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-4"
-            >
-                {/* Frontend Development */}
-                <motion.div variants={fadeUp}>
-                <Card className="flex flex-col justify-between h-full">
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center shrink-0">
-                                <Code2 className="w-5 h-5 text-sky-500" />
-                            </div>
-                            <h3 className="font-bold text-lg text-[var(--text-primary)]">Frontend Development</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            {["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "Vue.js", "Bootstrap", "Framer Motion", "Zod", "Figma", "Lucide React"].map(tech => (
-                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-sky-100 dark:bg-sky-500/10 text-sky-700 dark:text-sky-300">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                        Specializing in building modern, responsive web interfaces and high-performance landing pages. Focus on creating seamless user experiences using the latest frontend frameworks.
-                    </p>
-                </Card>
-                </motion.div>
-
-                {/* Backend Development */}
-                <motion.div variants={fadeUp}>
-                <Card className="flex flex-col justify-between h-full">
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
-                                <Server className="w-5 h-5 text-amber-500" />
-                            </div>
-                            <h3 className="font-bold text-lg text-[var(--text-primary)]">Backend Development</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            {["Go", "Java", "Spring Boot", "C#", "ASP.NET Core", "Node.js", "Express", "PostgreSQL", "Docker", "Kubernetes", "Laravel", "PHP", "Supabase", "MySQL", "SQL Server"].map(tech => (
-                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-amber-100 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                        Specializing in robust API architectures across C#, Go, and Java. Experienced in architecting complex Warehouse Management Systems (WMS), payment ledgers, and inventory tracking systems, with a focus on data correctness, idempotency, and distributed transactions.
-                    </p>
-                </Card>
-                </motion.div>
-
-                {/* Artificial Intelligence */}
-                <motion.div variants={fadeUp}>
-                <Card className="flex flex-col justify-between h-full">
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center shrink-0">
-                                <Brain className="w-5 h-5 text-violet-500" />
-                            </div>
-                            <h3 className="font-bold text-lg text-[var(--text-primary)]">Artificial Intelligence</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            {["LangChain", "HuggingFace", "FAISS", "TensorFlow", "Scikit-learn", "XGBoost", "SHAP", "OpenCV", "MediaPipe", "GRU", "Pandas", "NumPy"].map(tech => (
-                                <span key={tech} className="px-2 py-1 text-xs font-medium rounded bg-violet-100 dark:bg-violet-500/10 text-violet-700 dark:text-violet-300">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                        Engineering intelligent systems including RAG pipelines for document retrieval, real-time Computer Vision for sign language recognition, and predictive modeling for sports analytics. Published researcher in Explainable AI, applying predictive modeling to healthcare diagnostics with a focus on model interpretability.
-                    </p>
-                </Card>
-                </motion.div>
-            </motion.div>
-        </section>
+        <Skills />
 
         {/* 4. WORK EXPERIENCE */}
         <section id="work" className="space-y-8">
@@ -281,16 +199,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
-                                    <div className="flex flex-col items-end gap-1.5 shrink-0">
-                                        <span className="text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap">Oct 2025 - Present</span>
-                                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent)]">
-                                            <span className="relative flex h-1.5 w-1.5">
-                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
-                                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
-                                            </span>
-                                            Current
-                                        </span>
-                                    </div>
+                                    <span className="text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap shrink-0">Oct 2025 - Present</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Nexus Software Agency</span>
                             </div>
@@ -300,10 +209,19 @@ export default function Home() {
                                 <li>Translated business requirements into modern, scalable frontend code</li>
                             </ul>
 
-                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
+                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-2">
+                                <div className="flex flex-wrap gap-2">
+                                    <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                    <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                    <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
+                                </div>
+                                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent)]">
+                                    <span className="relative flex h-1.5 w-1.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
+                                    </span>
+                                    Current
+                                </span>
                             </div>
                         </Card>
                     </div>
@@ -587,7 +505,7 @@ export default function Home() {
         <Volunteering />
 
         {/* 11. CERTIFICATIONS */}
-        <section className="space-y-8 py-20 border-t border-[var(--border)]">
+        <section className="space-y-8">
             <motion.div
                 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
             >
