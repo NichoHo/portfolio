@@ -37,7 +37,7 @@ export function Skills() {
 
         <div className="grid gap-4 md:grid-cols-3">
           {skills.map((s) => (
-            <div key={s.name} className="flex flex-col gap-4 rounded-2xl border border-[var(--border)] p-6">
+            <div key={s.name} className="flex flex-col gap-4 rounded-2xl border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 p-6">
               <p className="text-sm font-semibold text-emerald-500">{s.name}</p>
               <p className="text-2xl font-bold tracking-tight leading-tight text-[var(--text-primary)]">
                 {s.lead.join(", ")}

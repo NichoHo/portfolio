@@ -1,81 +1,72 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
 import { fadeUp } from "@/lib/motion";
+
+const events = [
+  {
+    role: "Staff, KIT Division",
+    title: "HIMTI KIT & TECHNO 2024",
+    description:
+      "Collaborated on the development of the official TECHNO 2024 website and authored structured university material notes (HIMTI KIT) to support academic peer success.",
+    repo: "https://github.com/NichoHo/Techno2024",
+    skills: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    role: "Web Development Division",
+    title: "TECHFEST 2024",
+    description:
+      "Managed the official digital platform for TECHFEST 2024, focusing on ensuring reliable performance and accessibility for event participants.",
+    repo: "https://github.com/NichoHo/techfest2024",
+    skills: ["JavaScript", "Team Collaboration"],
+  },
+];
+
+const chip = "px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]";
 
 export default function Organization() {
   return (
     <section id="organization">
-      <div className="space-y-12">
-        <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
-            Organizations
-            </h2>
-            <p className="text-[var(--text-secondary)] mt-2">
-            Active involvement in campus technology and community initiatives.
-            </p>
-        </div>
+      <motion.div
+        variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+        className="space-y-10"
+      >
+        <h2 className="text-3xl font-bold text-[var(--text-primary)]">Organizations</h2>
 
-        <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-            className="bg-[var(--surface)] rounded-2xl p-6 md:p-8 border border-[var(--border)] shadow-sm hover:shadow-md dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300"
-        >
-            <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+        <div className="space-y-5">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--border)] pb-5">
             <div>
-                <h3 className="text-xl font-bold text-[var(--text-primary)]">
-                HIMTI Bina Nusantara
-                </h3>
-                <p className="text-md text-sky-600 dark:text-sky-400 font-medium mt-1">
-                Activist / Web Development Division
-                </p>
+              <h3 className="text-2xl font-bold tracking-tight text-[var(--text-primary)]">HIMTI Bina Nusantara</h3>
+              <p className="mt-1 text-sm font-semibold text-emerald-500">Activist, Web Development Division</p>
             </div>
-            {/* DATE BADGE */}
-            <span className="flex items-center gap-1.5 px-3 py-1 bg-[var(--border)] text-[var(--text-secondary)] text-sm font-medium rounded-md shrink-0 mt-2 md:mt-0">
-                <Calendar className="w-4 h-4" />
-                2023 - Present
-            </span>
-            </div>
+            <span className="text-sm text-[var(--text-tertiary)]">2023 - 2024</span>
+          </div>
 
-            <div className="space-y-6 mb-8">
-            <div className="relative pl-4 border-l-2 border-[var(--border)]">
-                <h4 className="text-md font-bold text-[var(--text-primary)]">
-                HIMTI KIT & TECHNO 2024
-                </h4>
-                <p className="text-sm text-[var(--text-tertiary)] mb-2 italic">
-                Staff of KIT Division
-                </p>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Collaborated on the development of the official TECHNO 2024 website and authored structured university material notes (HIMTI KIT) to support academic peer success.
-                </p>
-            </div>
-
-            <div className="relative pl-4 border-l-2 border-[var(--border)]">
-                <h4 className="text-md font-bold text-[var(--text-primary)]">
-                TECHFEST 2024
-                </h4>
-                <p className="text-sm text-[var(--text-tertiary)] mb-2 italic">
-                Web Development Division
-                </p>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Managed the official digital platform for TECHFEST 2024, focusing on ensuring reliable performance and accessibility for event participants.
-                </p>
-            </div>
-            </div>
-
-            {/* TECH STACK CARDS */}
-            <div className="flex flex-wrap gap-2">
-            {["HTML5", "CSS3", "JavaScript", "Team Collaboration"].map((tag) => (
-                <span
-                key={tag}
-                className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]"
+          <div className="grid gap-4 md:grid-cols-2">
+            {events.map((e) => (
+              <div key={e.title} className="flex flex-col gap-4 rounded-2xl border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 p-6">
+                <p className="text-sm font-semibold text-emerald-500">{e.role}</p>
+                <h4 className="text-2xl font-bold tracking-tight leading-tight text-[var(--text-primary)]">{e.title}</h4>
+                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">{e.description}</p>
+                <a
+                  href={e.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="self-start text-sm font-semibold text-emerald-500 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500"
                 >
-                {tag}
-                </span>
+                  View on GitHub &rarr;
+                </a>
+                <div className="mt-auto border-t border-[var(--border)] pt-4">
+                  <p className="mb-2 text-xs font-bold text-[var(--text-primary)]">Skills</p>
+                  <div className="flex flex-wrap gap-2">
+                    {e.skills.map((t) => <span key={t} className={chip}>{t}</span>)}
+                  </div>
+                </div>
+              </div>
             ))}
-            </div>
-        </motion.div>
-      </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

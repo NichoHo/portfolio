@@ -38,7 +38,7 @@ export default function ProjectsPage() {
 
             {/* AGORA CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#f97316" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#f97316" } as React.CSSProperties}>
                     <Link href="/projects/agora" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Agora Thumbnail.jpg" alt="Agora" className="object-cover"/>
                     </Link>
@@ -78,7 +78,7 @@ export default function ProjectsPage() {
 
             {/* LOCALIST CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
                     <Link href="/projects/localist" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
                     </Link>
@@ -118,7 +118,7 @@ export default function ProjectsPage() {
 
             {/* SWITCH CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#a3c400" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#a3c400" } as React.CSSProperties}>
                     <Link href="/projects/switch" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
                     </Link>
@@ -158,7 +158,7 @@ export default function ProjectsPage() {
 
             {/* ORBIT CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
                     <Link href="/projects/orbit" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Orbit Thumbnail.jpg" alt="Orbit" className="object-cover"/>
                     </Link>
@@ -198,7 +198,7 @@ export default function ProjectsPage() {
 
             {/* 1. SIGNLINGO CARD (Standard) */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#10b981" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#10b981" } as React.CSSProperties}>
                     <Link href="/projects/signlingo" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Signlingo Thumbnail.png" alt="Signlingo" className="object-cover"/>
                     </Link>
@@ -238,7 +238,7 @@ export default function ProjectsPage() {
 
             {/* 2. FLUX CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#5a9a8c" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#5a9a8c" } as React.CSSProperties}>
                     <Link href="/projects/flux" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Flux Thumbnail.png" alt="Flux" className="object-cover"/>
                     </Link>
@@ -277,7 +277,7 @@ export default function ProjectsPage() {
 
              {/* 3. FAQ ASSISTANT CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
                     <Link href="/projects/faq-assistant" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/FaQ Assistant Thumbnail.png" alt="FAQ Assistant" className="object-cover"/>
                     </Link>
@@ -316,7 +316,7 @@ export default function ProjectsPage() {
 
             {/* 4. JET ENGINE HEALTH MONITOR CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
                     <Link href="/projects/jet-engine-monitor" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Jet Engine Monitor Thumbnail.png" alt="Jet Engine Health Monitor" className="object-cover"/>
                     </Link>
@@ -356,7 +356,7 @@ export default function ProjectsPage() {
 
             {/* 5. F1 UNDERCUT PREDICTOR CARD */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#ef4444" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#ef4444" } as React.CSSProperties}>
                     <Link href="/projects/f1-undercut-predictor" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
                     </Link>
@@ -390,7 +390,7 @@ export default function ProjectsPage() {
 
              {/* 6. NEXUS AGENCY CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#4fd36a" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#4fd36a" } as React.CSSProperties}>
                     <Link href="/projects/nexus" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Nexus Development Thumbnail.png" alt="Nexus Agency" className="object-cover"/>
                     </Link>
@@ -424,7 +424,7 @@ export default function ProjectsPage() {
 
             {/* 7. ASIA TRADING EXPORT CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
                     <Link href="/projects/asia-trading-export" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Asia Trading Export Thumbnail.png" alt="Asia Trading Export" className="object-cover"/>
                     </Link>
@@ -458,7 +458,7 @@ export default function ProjectsPage() {
 
             {/* 8. HAMMOUDA CHARCOAL CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#5b8def" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#5b8def" } as React.CSSProperties}>
                     <Link href="/projects/hammouda-charcoal" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Coco Hamodah Thumbnail.png" alt="Hammouda Charcoal" className="object-cover"/>
                     </Link>
@@ -491,7 +491,7 @@ export default function ProjectsPage() {
 
             {/* 9. MARA VELLANTE CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col" style={{ "--accent": "#2563eb" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#2563eb" } as React.CSSProperties}>
                     <Link href="/projects/maravellante" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Maravellante Thumbnail.jpg" alt="Mara Vellante" className="object-cover"/>
                     </Link>

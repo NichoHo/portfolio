@@ -27,7 +27,7 @@ export function ImageCarousel({
   const prev = () => setCurrent((p) => (p - 1 + slides.length) % slides.length);
 
   return (
-    <div className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-md">
+    <div className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border-strong)] shadow-md">
       {phonesPerSlide ? (
         <>
           {/* Sizer: fixed-height panel keeps container height stable */}

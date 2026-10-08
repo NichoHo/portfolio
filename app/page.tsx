@@ -355,7 +355,7 @@ export default function Home() {
                     variants={fadeUp}
                     className="md:col-span-2"
                 >
-                        <div className="group relative rounded-2xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 cursor-pointer">
+                        <div className="group relative rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 cursor-pointer">
                             <Link href="/projects/agora" aria-label="View Agora details" className="absolute inset-0 z-10" />
                             <div className="grid md:grid-cols-5 gap-0">
                                 <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
@@ -400,7 +400,7 @@ export default function Home() {
 
                 {/* PROJECT 2: SWITCH */}
                 <motion.div variants={fadeUp}>
-                         <div className="group relative h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col cursor-pointer">
                              <Link href="/projects/switch" aria-label="View Switch details" className="absolute inset-0 z-10" />
                             <div className="h-auto bg-[#d4ff3a]/10 relative overflow-hidden flex items-center justify-center group-hover:bg-[#d4ff3a]/20 transition-colors">
                                 <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
@@ -443,7 +443,7 @@ export default function Home() {
 
                 {/* PROJECT 3: LOCALIST */}
                 <motion.div variants={fadeUp}>
-                         <div className="group relative h-full bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 dark:shadow-none dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col cursor-pointer">
                              <Link href="/projects/localist" aria-label="View Localist details" className="absolute inset-0 z-10" />
                             <div className="h-auto bg-yellow-50 dark:bg-yellow-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900/20 transition-colors">
                                 <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
@@ -508,7 +508,7 @@ export default function Home() {
 
             <motion.div
                 variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-                className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] divide-y divide-[var(--border)] overflow-hidden"
+                className="rounded-2xl border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 divide-y divide-[var(--border)] overflow-hidden"
             >
                 {/* 1. ALIBABA CLOUD */}
                 <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">

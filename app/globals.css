@@ -7,6 +7,8 @@
   --surface: #ffffff;
   --border: #e2e8f0;
   --border-hover: #cbd5e1;
+  --border-strong: #cbd5e1;
+  --border-strong-hover: #94a3b8;
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-tertiary: #64748b;
@@ -19,6 +21,8 @@
   --surface: #0d0f0d;
   --border: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --border-strong-hover: rgba(255, 255, 255, 0.3);
   --text-primary: #f2f5f2;
   --text-secondary: #a8ada9;
   --text-tertiary: #8b918c;
