@@ -111,12 +111,13 @@ bullets("Lightweight sign-language recognition for budget devices; applied in Si
 
 section("SKILLS &amp; CERTIFICATIONS")
 for k, v in [
-    ("Languages", "Go, Java, Python, TypeScript, JavaScript, C#, SQL, PHP, VB.NET, C | <b>Spoken:</b> English (IELTS 7.5), Indonesian (native)"),
+    ("Programming", "Go, Java, Python, TypeScript, JavaScript, C#, SQL, PHP, VB.NET, C"),
     ("Backend", "Spring Boot, ASP.NET Core / .NET 8, Node.js, Express, FastAPI, Flask, Laravel, REST, OAuth 2.0 / OIDC"),
     ("Data &amp; Messaging", "PostgreSQL, SQL Server, MySQL, Redis, Kafka (Redpanda), Supabase, Drizzle, Dapper"),
     ("DevOps &amp; Testing", "Docker, Terraform, GitHub Actions (CI/CD), AWS S3, Cloudflare, OpenTelemetry, JUnit 5, Testcontainers, Playwright, k6"),
     ("Frontend", "React, Next.js, Redux Toolkit, Tailwind CSS, Vue.js, Livewire"),
     ("AI / ML", "Scikit-learn, XGBoost, TensorFlow, LangChain, FAISS, RAG, SHAP, OpenCV, MediaPipe, Pandas"),
+    ("Spoken Languages", "English (IELTS Academic 7.5), Indonesian (native)"),
     ("Certifications", "Alibaba Cloud Associate: Cloud Engineer (2025), NVIDIA DLI: Building Conversational AI Applications (2025)"),
 ]:
     story.append(Paragraph(f"<b>{k}:</b> {v}", body))
