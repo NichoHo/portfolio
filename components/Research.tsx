@@ -31,6 +31,8 @@ const papers = [
   },
 ];
 
+const chip = "px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]";
+
 export function Research() {
   return (
     <section id="research">
@@ -50,13 +52,19 @@ export function Research() {
               </div>
 
               <div className="space-y-4">
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden />
+                  {p.venue}
+                </p>
                 <h3 className="text-2xl md:text-4xl font-bold tracking-tight leading-[1.1] text-[var(--text-primary)] max-w-[24ch]">
                   {p.title}
                 </h3>
                 <p className="text-[var(--text-secondary)] leading-relaxed max-w-[58ch]">{p.summary}</p>
-                <p className="text-sm text-[var(--text-tertiary)]">
-                  {p.venue}. {p.tags.join(", ")}.
-                </p>
+                <div className="flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <span key={t} className={chip}>{t}</span>
+                  ))}
+                </div>
                 <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-1">
                   <a href={p.pdf} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 font-medium text-emerald-600 dark:text-emerald-400 hover:underline underline-offset-4">
                     {p.cta}
