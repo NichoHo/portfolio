@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import { fadeUp } from "@/lib/motion";
+import { reveal } from "@/lib/motion";
 
 const papers = [
   {
@@ -41,7 +41,7 @@ export function Research() {
           {papers.map((p) => (
             <motion.div
               key={p.title}
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              {...reveal}
               className="grid gap-4 md:grid-cols-[9rem_1fr_12rem] md:gap-10 py-10 md:py-12 items-start"
             >
               <div>

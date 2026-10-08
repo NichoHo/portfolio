@@ -28,9 +28,9 @@ export default function FaqPage() {
 
         {/* HEADER */}
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: easeOut }}
+            transition={{ duration: 0.6, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-medium">
@@ -63,9 +63,9 @@ export default function FaqPage() {
 
         {/* HERO VISUAL */}
         <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.6, ease: easeOut }}
             className="w-full h-auto md:bg-rose-50 dark:bg-[var(--surface)] rounded-2xl flex items-center justify-center border border-[var(--border)] overflow-hidden relative"
         >
              <img src="/portfolio/faq-assistant.jpg" alt="FaQ Assistant" className="object-cover"/>

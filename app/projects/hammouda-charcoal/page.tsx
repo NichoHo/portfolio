@@ -45,9 +45,9 @@ export default function HammoudaPage() {
 
         {/* HEADER */}
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: easeOut }}
+            transition={{ duration: 0.6, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5b8def]/15 dark:bg-[#5b8def]/10 text-[#2f5fc4] dark:text-[#8fb0f5] text-xs font-medium">
@@ -80,9 +80,9 @@ export default function HammoudaPage() {
 
         {/* HERO VISUAL (CAROUSEL) */}
         <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.6, ease: easeOut }}
             className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-md"
         >
              {/* Sizer: invisible first image keeps container height stable */}

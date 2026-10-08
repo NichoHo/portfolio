@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUp } from "@/lib/motion";
+import { reveal } from "@/lib/motion";
 
 const schools = [
   {
@@ -49,7 +49,7 @@ export function Education() {
           {schools.map((s) => (
             <motion.div
               key={s.school}
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              {...reveal}
               className="grid gap-3 md:grid-cols-[9rem_1fr_14rem] md:gap-10 py-8 md:py-10 items-start"
             >
               {/* only the current school is green, so the eye lands on "now" */}

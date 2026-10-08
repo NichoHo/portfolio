@@ -48,9 +48,9 @@ export default function FluxPage() {
 
         {/* HEADER */}
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: easeOut }}
+            transition={{ duration: 0.6, ease: easeOut }}
             className="space-y-6"
         >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5a9a8c]/15 dark:bg-[#5a9a8c]/10 text-[#3d7a6c] dark:text-[#7fc0b0] text-xs font-medium">
@@ -83,9 +83,9 @@ export default function FluxPage() {
 
         {/* HERO VISUAL (CAROUSEL) */}
         <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: easeOut }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.6, ease: easeOut }}
             className="group relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-md"
         >
              {/* Sizer: invisible first image keeps container height stable */}

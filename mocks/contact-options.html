@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact section options</title>
+<style>
+:root{--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--border-hover:#cbd5e1;--text-primary:#0f172a;--text-secondary:#475569;--text-tertiary:#64748b;--accent:#10b981;--accent-fg:#059669}
+:root[data-theme=dark]{--bg:#060706;--surface:#0d0f0d;--border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.14);--text-primary:#f2f5f2;--text-secondary:#a8ada9;--text-tertiary:#8b918c;--accent-fg:#34d399}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text-primary);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:var(--bg);border-bottom:1px solid var(--border);font-size:14px;color:var(--text-secondary)}
+button.t{font:inherit;color:var(--text-primary);background:var(--surface);border:1px solid var(--border-hover);border-radius:999px;padding:6px 14px;cursor:pointer}
+.opt{border-bottom:8px solid var(--border)}
+.tag{padding:14px 24px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary)}
+.tag b{color:var(--accent-fg)}
+section{max-width:1152px;margin:0 auto;padding:72px 24px}
+h2{font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-.045em;line-height:1.05}
+.lead{margin-top:16px;color:var(--text-secondary);line-height:1.6;max-width:52ch}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-fg);margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent)}
+a{color:inherit;text-decoration:none}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:9px 16px;border:1px solid var(--border-hover);border-radius:999px;color:var(--text-secondary);background:transparent;font-family:inherit;cursor:pointer;transition:.2s}
+.pill:hover{border-color:var(--accent);color:var(--text-primary)}
+.pill.p{background:var(--accent);border-color:var(--accent);color:#04120c;font-weight:600}
+.pill.p:hover{filter:brightness(1.08);color:#04120c}
+svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.mono{font-feature-settings:"tnum";}
+/* A */
+.A .mail{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:40px;padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:.2s}
+.A .mail:hover{border-color:var(--accent)}
+.A .mail span{font-size:clamp(20px,3.6vw,40px);font-weight:600;letter-spacing:-.03em;word-break:break-all;transition:.2s}
+.A .mail:hover span,.A .mail:hover svg{color:var(--accent-fg)}
+.A .mail svg{width:32px;height:32px;color:var(--text-tertiary);transition:.2s}
+.A .mail:hover svg{transform:translate(4px,-4px)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+/* B */
+.B .grid{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:start}
+.B .list{border-top:1px solid var(--border)}
+.B .r{display:grid;grid-template-columns:7rem 1fr auto;gap:16px;align-items:center;padding:22px 0;border-bottom:1px solid var(--border);transition:.2s}
+.B .r:hover{padding-left:10px}
+.B .r small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary);font-weight:600}
+.B .r em{font-style:normal;font-size:20px;font-weight:600;letter-spacing:-.02em;word-break:break-all}
+.B .r svg{color:var(--text-tertiary);transition:.2s}
+.B .r:hover svg{color:var(--accent-fg);transform:translate(3px,-3px)}
+.B .r:hover em{color:var(--accent-fg)}
+/* C */
+.C .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.card{background:transparent;border:1px solid var(--border);border-radius:20px;padding:28px;transition:.2s;display:flex;flex-direction:column;justify-content:space-between;min-height:150px}
+.card:hover{border-color:var(--border-hover)}
+.card:hover .arr{color:var(--accent-fg);transform:translate(3px,-3px)}
+.card small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary);font-weight:600}
+.card .arr{color:var(--text-tertiary);transition:.2s}
+.card h3{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.card p{font-size:14px;color:var(--text-secondary);margin-top:4px}
+.C .big{grid-column:span 3;min-height:200px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,transparent),transparent 60%)}
+.C .big em{font-style:normal;display:block;font-size:clamp(22px,4vw,44px);font-weight:700;letter-spacing:-.04em;margin:18px 0 22px;word-break:break-all}
+.top{display:flex;justify-content:space-between;align-items:center}
+/* D */
+.D{position:relative;overflow:hidden}
+.D::before{content:"";position:absolute;left:50%;top:50%;width:640px;height:320px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 18%,transparent),transparent);pointer-events:none}
+.D section{position:relative;text-align:center;padding:112px 24px}
+.D h2{font-size:clamp(40px,7vw,80px);max-width:14ch;margin:0 auto}
+.D .lead{margin:20px auto 0}
+.D .row{justify-content:center;margin-top:36px}
+.D .soc{display:flex;justify-content:center;gap:28px;margin-top:40px;font-size:14px;color:var(--text-tertiary)}
+.D .soc a{display:inline-flex;gap:6px;align-items:center;transition:.2s}
+.D .soc a:hover{color:var(--text-primary)}
+.D .addr{margin-top:20px;font-size:14px;color:var(--text-tertiary)}
+@media(max-width:800px){.B .grid{grid-template-columns:1fr;gap:40px}.B .r{grid-template-columns:1fr auto}.B .r small{grid-column:1/-1}.C .bento{grid-template-columns:1fr}.C .big{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="bar"><span>Contact section: 4 options. Pick a letter.</span><button class="t" id="tg">Toggle dark</button></div>
+
+<svg style="display:none"><defs>
+<symbol id="up" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+<symbol id="cp" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+<symbol id="li" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></symbol>
+<symbol id="gh" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.4-2.6-1.3-3.6.4-1.100.4-2.400-.1-3.600 0 0-1.200-.4-3.800 1.300a13.400 13.400 0 0 0-7 0C6.200 2.400 5 2.800 5 2.800a5.200 5.200 0 0 0-.1 3.600A5.400 5.400 0 0 0 3.500 10c0 3.500 3 5.500 6 5.500-.4.400-.7 1-.8 1.700-.1.600-.1 1.200-.1 1.800v4"/><path d="M9 18c-4.500 2-5-2-7-2"/></symbol>
+<symbol id="dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+<symbol id="ml" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+</defs></svg>
+
+<!-- A -->
+<div class="opt A">
+<div class="tag"><b>A</b> / Current design, refined</div>
+<section>
+  <div class="eyebrow"><span class="dot"></span>Contact</div>
+  <h2>Have a role or project<br>in mind?</h2>
+  <p class="lead">Open to full-time roles and freelance work. Email is the fastest way to reach me.</p>
+  <a class="mail" href="#"><span>nikko150905@gmail.com</span><svg><use href="#up"/></svg></a>
+  <div class="row">
+    <button class="pill p"><svg><use href="#cp"/></svg>Copy address</button>
+    <a class="pill" href="#"><svg><use href="#li"/></svg>LinkedIn</a>
+    <a class="pill" href="#"><svg><use href="#gh"/></svg>GitHub</a>
+    <a class="pill" href="#"><svg><use href="#dl"/></svg>Download CV</a>
+  </div>
+</section></div>
+
+<!-- B -->
+<div class="opt B">
+<div class="tag"><b>B</b> / Split with link list (matches Education rows)</div>
+<section><div class="grid">
+  <div>
+    <div class="eyebrow"><span class="dot"></span>Open to work</div>
+    <h2>Let's build something.</h2>
+    <p class="lead">Full-time roles and freelance projects. I reply within a day or two.</p>
+  </div>
+  <div class="list">
+    <a class="r" href="#"><small>Email</small><em>nikko150905@gmail.com</em><svg><use href="#up"/></svg></a>
+    <a class="r" href="#"><small>LinkedIn</small><em>in/nichoho</em><svg><use href="#up"/></svg></a>
+    <a class="r" href="#"><small>GitHub</small><em>NichoHo</em><svg><use href="#up"/></svg></a>
+    <a class="r" href="#"><small>Resume</small><em>Download CV (PDF)</em><svg><use href="#dl"/></svg></a>
+  </div>
+</div></section></div>
+
+<!-- C -->
+<div class="opt C">
+<div class="tag"><b>C</b> / Bento cards (matches Skills section)</div>
+<section>
+  <div class="eyebrow"><span class="dot"></span>Contact</div>
+  <h2>Have a role or project in mind?</h2>
+  <div class="bento">
+    <div class="card big">
+      <div class="top"><small>Fastest way to reach me</small><a class="pill" href="#"><svg><use href="#cp"/></svg>Copy</a></div>
+      <div><em>nikko150905@gmail.com</em><a class="pill p" href="#"><svg><use href="#ml"/></svg>Send an email</a></div>
+    </div>
+    <a class="card" href="#"><div class="top"><small>LinkedIn</small><svg class="arr"><use href="#up"/></svg></div><div><h3>Connect</h3><p>in/nichoho</p></div></a>
+    <a class="card" href="#"><div class="top"><small>GitHub</small><svg class="arr"><use href="#up"/></svg></div><div><h3>Browse code</h3><p>NichoHo</p></div></a>
+    <a class="card" href="#"><div class="top"><small>Resume</small><svg class="arr"><use href="#dl"/></svg></div><div><h3>Download CV</h3><p>PDF, 2 pages</p></div></a>
+  </div>
+</section></div>
+
+<!-- D -->
+<div class="opt D">
+<div class="tag" style="position:relative"><b>D</b> / Centered closing call to action</div>
+<section>
+  <div class="eyebrow"><span class="dot"></span>Available for new roles</div>
+  <h2>Have a role or project in mind?</h2>
+  <p class="lead">Open to full-time roles and freelance work. Email is the fastest way to reach me.</p>
+  <div class="row">
+    <a class="pill p" href="#" style="padding:13px 24px;font-size:16px"><svg><use href="#ml"/></svg>Email me</a>
+    <button class="pill" style="padding:13px 24px;font-size:16px"><svg><use href="#cp"/></svg>Copy address</button>
+  </div>
+  <p class="addr mono">nikko150905@gmail.com</p>
+  <div class="soc"><a href="#"><svg><use href="#li"/></svg>LinkedIn</a><a href="#"><svg><use href="#gh"/></svg>GitHub</a><a href="#"><svg><use href="#dl"/></svg>CV</a></div>
+</section></div>
+
+<script>
+const r=document.documentElement;
+document.getElementById('tg').onclick=()=>r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';
+if(matchMedia('(prefers-color-scheme:dark)').matches)r.dataset.theme='dark';
+</script>
+</body>
+</html>

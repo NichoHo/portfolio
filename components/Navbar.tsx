@@ -2,6 +2,7 @@
 
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+import { easeOut } from "@/lib/motion";
 
 export function Navbar({ children }: { children: React.ReactNode }) {
   const { scrollY } = useScroll();
@@ -17,7 +18,7 @@ export function Navbar({ children }: { children: React.ReactNode }) {
     <motion.nav
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.25, ease: "easeInOut" }}
+      transition={{ duration: 0.4, ease: easeOut }}
       className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur-md"
     >
       {children}

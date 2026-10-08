@@ -449,7 +449,7 @@ Managed the Student Council's social media accounts, creating content to increas
 ## Organizations & Leadership
 
 ### HIMTI Bina Nusantara — Activist / Web Development Division
-**2023 – Present**
+**2023 – 2024**
 
 **HIMTI KIT & TECHNO 2024 — Staff of KIT Division**
 Collaborated on development of the official TECHNO 2024 website; authored structured university material notes (HIMTI KIT) to support academic peer success.

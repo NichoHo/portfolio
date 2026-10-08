@@ -1,62 +1,56 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
-import { fadeUp } from "@/lib/motion";
+import { reveal } from "@/lib/motion";
+
+const highlights = [
+  {
+    title: "Social activities",
+    body: "Facilitated interactive play and educational sessions with orphaned children, building trust and emotional connection.",
+  },
+  {
+    title: "Awareness",
+    body: "Raised awareness about corruption risks and engaged the wider community.",
+  },
+  {
+    title: "Essential supplies",
+    body: "Helped supply food and cooking necessities to meet their fundamental needs.",
+  },
+];
 
 export function Volunteering() {
   return (
     <section id="volunteering">
-      <div className="space-y-12">
+      <motion.div {...reveal} className="space-y-10">
+        <h2 className="text-3xl font-bold text-[var(--text-primary)]">Volunteering</h2>
 
-        <motion.div
-          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-          className="space-y-4"
-        >
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] flex items-center gap-3">
-            Volunteering
-          </h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl">
-            Giving back to the community and fostering social impact.
-          </p>
-        </motion.div>
-
-        <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-            className="rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300"
-        >
-            <div className="grid md:grid-cols-2 gap-0">
-
-                {/* CONTENT SIDE */}
-                <div className="p-8 md:p-12 flex flex-col justify-center space-y-6">
-                    <div>
-                        <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-2xl font-bold text-[var(--text-primary)]">Teach For Indonesia</h3>
-                            <span className="px-3 py-1 text-xs font-medium rounded-full bg-rose-100 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-                                Educator
-                            </span>
-                        </div>
-                        <div className="flex flex-wrap gap-4 text-sm text-[var(--text-tertiary)] mb-6">
-                            <span className="flex items-center gap-1"><Calendar className="w-4 h-4"/> Oct 2023 - Dec 2023</span>
-                            <span className="flex items-center gap-1"><MapPin className="w-4 h-4"/> Jakarta, Indonesia</span>
-                        </div>
-                        <p className="text-[var(--text-secondary)] leading-relaxed">
-                            Supported orphaned children by facilitating social activities and engaging the community. I focused on building trust and emotional connections through interactive play and educational sessions, specifically raising awareness about corruption risks. Additionally, I helped supply essential items including food and cooking necessities to help meet their fundamental needs.
-                        </p>
-                    </div>
-                </div>
-
-                {/* IMAGE SIDE */}
-                <div className="relative h-64 md:h-auto bg-[var(--border)] flex items-center justify-center">
-                    <img
-                      src="/portfolio/volunteering.jpg"
-                      alt="Volunteering"
-                      className="object-cover w-full h-full"
-                    />
-                </div>
+        <div className="overflow-hidden rounded-2xl border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300">
+          <img
+            src="/portfolio/volunteering.jpg"
+            alt="Teach For Indonesia volunteering"
+            className="aspect-[16/9] w-full object-cover md:aspect-[21/9]"
+          />
+          <div className="p-6 md:p-9">
+            <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--border)] pb-5">
+              <div>
+                <h3 className="text-2xl font-bold tracking-tight text-[var(--text-primary)]">Teach For Indonesia</h3>
+                <p className="mt-1 text-sm font-semibold text-emerald-500">Educator</p>
+              </div>
+              <span className="text-sm text-[var(--text-tertiary)]">Oct 2023 - Dec 2023 · Jakarta, Indonesia</span>
             </div>
-        </motion.div>
-      </div>
+
+            <div className="mt-6 grid gap-7 md:grid-cols-3">
+              {highlights.map((h, i) => (
+                <div key={h.title}>
+                  <p className="mb-2 text-xs font-bold tabular-nums text-emerald-500">{String(i + 1).padStart(2, "0")}</p>
+                  <h4 className="mb-1.5 text-[15px] font-bold text-[var(--text-primary)]">{h.title}</h4>
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">{h.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

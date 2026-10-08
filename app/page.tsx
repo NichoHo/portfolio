@@ -10,10 +10,11 @@ import Link from "next/link";
 import { ContactSection } from "@/components/ContactSection";
 import { Education } from "@/components/Education";
 import { Volunteering } from "@/components/Volunteering";
+import { Certifications } from "@/components/Certifications";
 import { Research } from "@/components/Research";
 import { Skills } from "@/components/Skills";
 import Organization from "@/components/Organization";
-import { fadeUp, staggerContainer, easeOut } from "@/lib/motion";
+import { fadeUp, staggerContainer, reveal, enter } from "@/lib/motion";
 
 export default function Home() {
   return (
@@ -60,9 +61,7 @@ export default function Home() {
         <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
           {/* TEXT SIDE */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: easeOut }}
+            {...enter()}
             className="relative flex-1 space-y-6 text-center md:text-left"
           >
 
@@ -78,7 +77,7 @@ export default function Home() {
               {/* CONTACT BUTTON -> Mailto */}
               <a
                 href="mailto:nikko150905@gmail.com"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--text-primary)] text-[var(--bg)] px-8 py-3 text-sm font-semibold transition-transform hover:scale-105"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--text-primary)] text-[var(--bg)] px-8 py-3 text-sm font-semibold transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 Contact Me <ArrowRight className="ml-2 w-4 h-4" />
               </a>
@@ -112,9 +111,7 @@ export default function Home() {
 
           {/* IMAGE SIDE: top of the photo is empty backdrop, so crop it with a 6:7 box anchored to the bottom */}
           <motion.div
-             initial={{ opacity: 0, y: 16 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.15, duration: 0.6, ease: easeOut }}
+             {...enter(0.15)}
              className="relative"
           >
             <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-emerald-500/50" />
@@ -132,7 +129,7 @@ export default function Home() {
         {/* 4. WORK EXPERIENCE */}
         <section id="work" className="space-y-8">
             <motion.div
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              {...reveal}
               className="flex items-center justify-between"
             >
                 <h2 className="text-3xl font-bold text-[var(--text-primary)]">Work Experience</h2>
@@ -142,7 +139,7 @@ export default function Home() {
 
                 {/* ROLE 0: SIRCLO (Intern) */}
                 <motion.div
-                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+                    {...reveal}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--accent)] z-10"></div>
@@ -152,7 +149,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern</h3>
-                                    <span className="inline-flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 text-xs font-bold bg-cyan-50 dark:bg-cyan-900/30 px-2 py-1 rounded whitespace-nowrap shrink-0">
+                                    <span className="inline-flex items-center gap-1.5 text-[var(--accent)] text-xs font-bold bg-[var(--accent)]/10 px-2 py-1 rounded whitespace-nowrap shrink-0">
                                         <span className="relative flex h-1.5 w-1.5">
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
                                             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
@@ -186,7 +183,7 @@ export default function Home() {
 
                 {/* ROLE 1: NEXUS */}
                 <motion.div
-                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+                    {...reveal}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--accent)] z-10"></div>
@@ -196,7 +193,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
-                                    <span className="inline-flex items-center gap-1.5 text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap shrink-0">
+                                    <span className="inline-flex items-center gap-1.5 text-[var(--accent)] text-xs font-bold bg-[var(--accent)]/10 px-2 py-1 rounded whitespace-nowrap shrink-0">
                                         <span className="relative flex h-1.5 w-1.5">
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
                                             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
@@ -223,7 +220,7 @@ export default function Home() {
 
                 {/* ROLE 2: GALVA (Part-Time) */}
                 <motion.div
-                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+                    {...reveal}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
@@ -233,7 +230,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Part-time)</span></h3>
-                                    <span className="text-amber-600 dark:text-amber-400 text-xs font-bold bg-amber-50 dark:bg-amber-900/30 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
+                                    <span className="text-[var(--accent)] text-xs font-bold bg-[var(--accent)]/10 px-2 py-1 rounded whitespace-nowrap">Apr 2024 - July 2026</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -263,7 +260,7 @@ export default function Home() {
 
                 {/* ROLE 3: GALVA (Freelance) */}
                 <motion.div
-                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+                    {...reveal}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
@@ -273,7 +270,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
-                                    <span className="text-teal-600 dark:text-teal-400 text-xs font-bold bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
+                                    <span className="text-[var(--accent)] text-xs font-bold bg-[var(--accent)]/10 px-2 py-1 rounded whitespace-nowrap">May 2023 - Aug 2023</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -299,7 +296,7 @@ export default function Home() {
 
                  {/* ROLE 4: GALVA (Intern) */}
                  <motion.div
-                    variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+                    {...reveal}
                     className="relative flex flex-col md:flex-row items-center md:justify-between group"
                 >
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
@@ -309,7 +306,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
-                                    <span className="text-fuchsia-600 dark:text-fuchsia-400 text-xs font-bold bg-fuchsia-50 dark:bg-fuchsia-900/30 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
+                                    <span className="text-[var(--accent)] text-xs font-bold bg-[var(--accent)]/10 px-2 py-1 rounded whitespace-nowrap">June 2022 - July 2022</span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Galva Group</span>
                             </div>
@@ -336,7 +333,7 @@ export default function Home() {
         {/* 6. SELECTED PROJECTS */}
         <section id="projects" className="space-y-8">
             <motion.div
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              {...reveal}
               className="flex items-center justify-between"
             >
                 <h2 className="text-3xl font-bold text-[var(--text-primary)]">Selected Projects</h2>
@@ -346,7 +343,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+              variants={staggerContainer} initial="hidden" whileInView="visible" viewport={reveal.viewport}
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
             >
 
@@ -355,7 +352,7 @@ export default function Home() {
                     variants={fadeUp}
                     className="md:col-span-2"
                 >
-                        <div className="group relative rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 cursor-pointer">
+                        <div className="group relative rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 cursor-pointer">
                             <Link href="/projects/agora" aria-label="View Agora details" className="absolute inset-0 z-10" />
                             <div className="grid md:grid-cols-5 gap-0">
                                 <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
@@ -400,7 +397,7 @@ export default function Home() {
 
                 {/* PROJECT 2: SWITCH */}
                 <motion.div variants={fadeUp}>
-                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col cursor-pointer">
+                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col cursor-pointer">
                              <Link href="/projects/switch" aria-label="View Switch details" className="absolute inset-0 z-10" />
                             <div className="h-auto bg-[#d4ff3a]/10 relative overflow-hidden flex items-center justify-center group-hover:bg-[#d4ff3a]/20 transition-colors">
                                 <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
@@ -443,7 +440,7 @@ export default function Home() {
 
                 {/* PROJECT 3: LOCALIST */}
                 <motion.div variants={fadeUp}>
-                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col cursor-pointer">
+                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col cursor-pointer">
                              <Link href="/projects/localist" aria-label="View Localist details" className="absolute inset-0 z-10" />
                             <div className="h-auto bg-yellow-50 dark:bg-yellow-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900/20 transition-colors">
                                 <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
@@ -499,122 +496,7 @@ export default function Home() {
         <Volunteering />
 
         {/* 11. CERTIFICATIONS */}
-        <section className="space-y-8">
-            <motion.div
-                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-            >
-                <h2 className="text-3xl font-bold text-[var(--text-primary)]">Certifications</h2>
-            </motion.div>
-
-            <motion.div
-                variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-                className="rounded-2xl border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 divide-y divide-[var(--border)] overflow-hidden"
-            >
-                {/* 1. ALIBABA CLOUD */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <img src="/portfolio/alibaba-logo.png" alt="Alibaba" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Alibaba Cloud Associate</p>
-                        <p className="text-xs text-[var(--text-tertiary)] truncate">Cloud Engineer · Issued May 2025 · ID IACA13250500210461L</p>
-                    </div>
-                    <a
-                        href="/portfolio/alibaba-certificate.jpg"
-                        download="Alibaba_Certificate.jpg"
-                        aria-label="Download Certificate"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <Download className="w-4 h-4" />
-                    </a>
-                </motion.div>
-
-                {/* 2. IELTS */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <img src="/portfolio/ielts.webp" alt="IELTS" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">IELTS Academic — Band 7.5</p>
-                        <p className="text-xs text-[var(--text-tertiary)] truncate">British Council / IDP / Cambridge English · Issued Jun 2025 · ID 25ID500396HON161A</p>
-                    </div>
-                    <a
-                        href="/portfolio/IELTS.pdf"
-                        download="IELTS.pdf"
-                        aria-label="Download Certificate"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <Download className="w-4 h-4" />
-                    </a>
-                </motion.div>
-
-                {/* 3. NVIDIA */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <img src="/portfolio/nvidia-logo.jpg" alt="NVIDIA" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Building Conversational AI Applications</p>
-                        <p className="text-xs text-[var(--text-tertiary)] truncate">NVIDIA Deep Learning Institute · Issued Aug 2025 · ID C8GNGRZhTAicYiL42FWjVw</p>
-                    </div>
-                    <a
-                        href="/portfolio/nvidia-certificate.pdf"
-                        download="NVIDIA_Certificate.pdf"
-                        aria-label="PDF"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <Download className="w-4 h-4" />
-                    </a>
-                    <a
-                        href="https://learn.nvidia.com/certificates?id=zMTLXpF7RrCNjBoxDcKf5A"
-                        target="_blank"
-                        aria-label="Verify"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <ExternalLink className="w-4 h-4" />
-                    </a>
-                </motion.div>
-
-                {/* 4. MICROSOFT AZURE AI */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <img src="/portfolio/azure-logo.jpg" alt="Microsoft Azure" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Azure AI Fundamentals (AI-900T00-A)</p>
-                        <p className="text-xs text-[var(--text-tertiary)] truncate">Microsoft elevAIte Indonesia · Issued Apr 2025 · ID 69a03d23-9008-4c0a-ae46-96afc813dc8c</p>
-                    </div>
-                    <a
-                        href="/portfolio/azure-certificate.pdf"
-                        download="Azure_AI_Fundamentals_Certificate.pdf"
-                        aria-label="Download Certificate"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <Download className="w-4 h-4" />
-                    </a>
-                </motion.div>
-
-                {/* 5. AWS COMPUTE */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 p-4 hover:bg-[var(--border)]/40 transition-colors">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center border border-[var(--border)] shrink-0">
-                        <img src="/portfolio/aws-logo.jpg" alt="AWS" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                        <p className="font-bold text-[var(--text-primary)] text-sm truncate">Getting Started with Compute</p>
-                        <p className="text-xs text-[var(--text-tertiary)] truncate">AWS Educate · Issued Oct 2024</p>
-                    </div>
-                    <a
-                        href="https://www.credly.com/badges/2f074998-a38b-4769-9bbc-14503a42893d/linked_in_profile"
-                        target="_blank"
-                        aria-label="Verify on Credly"
-                        className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--border-hover)] transition-colors shrink-0"
-                    >
-                        <ExternalLink className="w-4 h-4" />
-                    </a>
-                </motion.div>
-
-            </motion.div>
-        </section>
+        <Certifications />
 
       {/* END MASTER LAYOUT WRAPPER */}
       </div>

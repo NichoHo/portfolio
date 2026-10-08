@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUp } from "@/lib/motion";
+import { reveal } from "@/lib/motion";
 
 const events = [
   {
@@ -28,7 +28,7 @@ export default function Organization() {
   return (
     <section id="organization">
       <motion.div
-        variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+        {...reveal}
         className="space-y-10"
       >
         <h2 className="text-3xl font-bold text-[var(--text-primary)]">Organizations</h2>

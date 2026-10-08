@@ -1,14 +1,14 @@
 "use client";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
+import { easeOut } from "@/lib/motion";
 
+// Fade only: each page's own content already rises in, so moving here too would double up.
 export default function Template({ children }: { children: React.ReactNode }) {
-  const reduceMotion = useReducedMotion();
-
   return (
     <motion.div
-      initial={reduceMotion ? false : { opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: reduceMotion ? 0 : 0.25, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4, ease: easeOut }}
     >
       {children}
     </motion.div>
