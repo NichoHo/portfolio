@@ -352,16 +352,16 @@ export default function Home() {
                     variants={fadeUp}
                     className="md:col-span-2"
                 >
-                        <div className="group relative rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 cursor-pointer">
+                        <div className="group relative rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 cursor-pointer">
                             <Link href="/projects/agora" aria-label="View Agora details" className="absolute inset-0 z-10" />
                             <div className="grid md:grid-cols-5 gap-0">
-                                <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative group-hover:opacity-90 transition-opacity">
+                                <div className="md:col-span-3 h-auto md:h-auto bg-[var(--border)] flex items-center justify-center overflow-hidden relative transition-opacity">
                                      <img src="/portfolio/Agora Thumbnail.jpg" alt="Agora" className="object-cover w-full h-full"/>
                                 </div>
                                 <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center border-l border-[var(--border)] relative">
                                     <div className="mb-4">
                                         <span className="text-orange-600 dark:text-orange-400 font-mono text-xs uppercase tracking-wider font-semibold">Marketplace & Payments</span>
-                                        <h3 className="text-3xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-orange-500 transition-colors">Agora</h3>
+                                        <h3 className="text-3xl font-bold text-[var(--text-primary)] mt-2 transition-colors">Agora</h3>
                                     </div>
                                     <p className="text-[var(--text-secondary)] mb-8 leading-relaxed">
                                         A marketplace platform built around the hard parts: its own secure sign-in, escrow payments that never lose a cent, and limited-stock sales that stay fair when thousands of people hit buy at once. Every purchase is also checked for fraud.
@@ -376,7 +376,7 @@ export default function Home() {
                                       </div>
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500 transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-orange-600 dark:text-orange-400 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
 
@@ -397,15 +397,15 @@ export default function Home() {
 
                 {/* PROJECT 2: SWITCH */}
                 <motion.div variants={fadeUp}>
-                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col cursor-pointer">
+                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col cursor-pointer">
                              <Link href="/projects/switch" aria-label="View Switch details" className="absolute inset-0 z-10" />
-                            <div className="h-auto bg-[#d4ff3a]/10 relative overflow-hidden flex items-center justify-center group-hover:bg-[#d4ff3a]/20 transition-colors">
+                            <div className="h-auto bg-[#d4ff3a]/10 relative overflow-hidden flex items-center justify-center transition-colors">
                                 <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
                                     <span className="text-[#5a6b00] dark:text-[#d4ff3a] font-mono text-xs uppercase tracking-wider font-semibold">Payment Gateway</span>
-                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-[#b8e000] transition-colors">Switch</h3>
+                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 transition-colors">Switch</h3>
                                 </div>
                                 <p className="text-[var(--text-secondary)] mb-6 leading-relaxed text-sm">
                                     A card-payment switch that sits between a merchant and the banks behind it: checks the card, screens the transaction for fraud, picks which bank to route it to, and keeps a ledger that always balances.
@@ -420,7 +420,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-[#5a6b00] dark:text-[#d4ff3a] group-hover:text-[#b8e000] transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-[#5a6b00] dark:text-[#d4ff3a] transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
 
@@ -440,15 +440,15 @@ export default function Home() {
 
                 {/* PROJECT 3: LOCALIST */}
                 <motion.div variants={fadeUp}>
-                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col cursor-pointer">
+                         <div className="group relative h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col cursor-pointer">
                              <Link href="/projects/localist" aria-label="View Localist details" className="absolute inset-0 z-10" />
-                            <div className="h-auto bg-yellow-50 dark:bg-yellow-900/10 relative overflow-hidden flex items-center justify-center group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900/20 transition-colors">
+                            <div className="h-auto bg-yellow-50 dark:bg-yellow-900/10 relative overflow-hidden flex items-center justify-center transition-colors">
                                 <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <div className="mb-4">
                                     <span className="text-yellow-700 dark:text-yellow-400 font-mono text-xs uppercase tracking-wider font-semibold">Directory & Subscriptions</span>
-                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 group-hover:text-yellow-500 transition-colors">Localist</h3>
+                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] mt-2 transition-colors">Localist</h3>
                                 </div>
                                 <p className="text-[var(--text-secondary)] mb-6 leading-relaxed text-sm">
                                     An online directory of local businesses with about 6,100 pages built to rank on Google. Owners claim their page, edit it, and pay to rank higher.
@@ -463,7 +463,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
-                                        <div className="flex items-center gap-2 text-sm font-bold text-yellow-700 dark:text-yellow-400 group-hover:text-yellow-500 transition-colors">
+                                        <div className="flex items-center gap-2 text-sm font-bold text-yellow-700 dark:text-yellow-400 transition-colors">
                                             View Details <ArrowRight className="w-4 h-4" />
                                         </div>
 

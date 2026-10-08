@@ -38,14 +38,14 @@ export default function ProjectsPage() {
 
             {/* AGORA CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#f97316" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#f97316" } as React.CSSProperties}>
                     <Link href="/projects/agora" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Agora Thumbnail.jpg" alt="Agora" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/agora">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Agora</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Agora</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 A marketplace platform with its own secure sign-in, escrow payments that never lose a cent, fair limited-stock sales under heavy traffic, and fraud checks on every purchase.
@@ -78,14 +78,14 @@ export default function ProjectsPage() {
 
             {/* LOCALIST CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
                     <Link href="/projects/localist" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/localist">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Localist</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Localist</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 An online directory of local businesses with about 6,100 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
@@ -118,14 +118,14 @@ export default function ProjectsPage() {
 
             {/* SWITCH CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#a3c400" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#a3c400" } as React.CSSProperties}>
                     <Link href="/projects/switch" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Switch Thumbnail.jpg" alt="Switch" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/switch">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Switch</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Switch</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 The authorization engine that sits between a merchant and the banks: checks the card, screens for fraud, picks a bank to route the payment to, and keeps a ledger that balances.
@@ -158,14 +158,14 @@ export default function ProjectsPage() {
 
             {/* ORBIT CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
                     <Link href="/projects/orbit" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Orbit Thumbnail.jpg" alt="Orbit" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/orbit">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Orbit</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Orbit</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 A cross-platform, offline-first task and habit tracking engine. Built with React Native and Supabase, featuring instant optimistic writes, background synchronization, and native iOS widgets.
@@ -198,14 +198,14 @@ export default function ProjectsPage() {
 
             {/* 1. SIGNLINGO CARD (Standard) */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#10b981" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#10b981" } as React.CSSProperties}>
                     <Link href="/projects/signlingo" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Signlingo Thumbnail.png" alt="Signlingo" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/signlingo">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Signlingo</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Signlingo</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 AI-powered sign language learning platform using TensorFlow and OpenCV for real-time feedback.
@@ -238,14 +238,14 @@ export default function ProjectsPage() {
 
             {/* 2. FLUX CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#5a9a8c" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#5a9a8c" } as React.CSSProperties}>
                     <Link href="/projects/flux" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Flux Thumbnail.png" alt="Flux" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/flux">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Flux Budget App</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Flux Budget App</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Comprehensive financial tracking system with automated recurring billing and multi-currency support.
@@ -277,14 +277,14 @@ export default function ProjectsPage() {
 
              {/* 3. FAQ ASSISTANT CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
                     <Link href="/projects/faq-assistant" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/FaQ Assistant Thumbnail.png" alt="FAQ Assistant" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/faq-assistant">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">FaQ Assistant</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">FaQ Assistant</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Intelligent RAG-based document assistant using LangChain and Gemini to chat with uploaded PDF documents.
@@ -316,14 +316,14 @@ export default function ProjectsPage() {
 
             {/* 4. JET ENGINE HEALTH MONITOR CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#f43f5e" } as React.CSSProperties}>
                     <Link href="/projects/jet-engine-monitor" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Jet Engine Monitor Thumbnail.png" alt="Jet Engine Health Monitor" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/jet-engine-monitor">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Jet Engine Monitor</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Jet Engine Monitor</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Predictive maintenance dashboard calculating Remaining Useful Life (RUL) of turbofan engines using NASA C-MAPSS data and Explainable AI.
@@ -356,14 +356,14 @@ export default function ProjectsPage() {
 
             {/* 5. F1 UNDERCUT PREDICTOR CARD */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#ef4444" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#ef4444" } as React.CSSProperties}>
                     <Link href="/projects/f1-undercut-predictor" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/F1 Undercut Predictor Thumbnail.png" alt="F1 Undercut Predictor" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/f1-undercut-predictor">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">F1 Undercut Predictor</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">F1 Undercut Predictor</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Machine learning model predicting race strategy success probabilities using historical telemetry data.
@@ -390,14 +390,14 @@ export default function ProjectsPage() {
 
              {/* 6. NEXUS AGENCY CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#4fd36a" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#4fd36a" } as React.CSSProperties}>
                     <Link href="/projects/nexus" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Nexus Development Thumbnail.png" alt="Nexus Agency" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/nexus">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Nexus Agency</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Nexus Agency</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 High-performance digital agency website featuring advanced Framer Motion animations and modular Next.js architecture.
@@ -424,14 +424,14 @@ export default function ProjectsPage() {
 
             {/* 7. ASIA TRADING EXPORT CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#3b82f6" } as React.CSSProperties}>
                     <Link href="/projects/asia-trading-export" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Asia Trading Export Thumbnail.png" alt="Asia Trading Export" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/asia-trading-export">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Asia Trading Export</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Asia Trading Export</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Premium B2B export platform featuring interactive D3.js globe visualizations for global trade routes.
@@ -458,14 +458,14 @@ export default function ProjectsPage() {
 
             {/* 8. HAMMOUDA CHARCOAL CARD (Dual Action) */}
              <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#5b8def" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#5b8def" } as React.CSSProperties}>
                     <Link href="/projects/hammouda-charcoal" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                          <img src="/portfolio/Coco Hamodah Thumbnail.png" alt="Hammouda Charcoal" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/hammouda-charcoal">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Hammouda Charcoal</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Hammouda Charcoal</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Corporate website for a charcoal manufacturing company featuring extensive product galleries and client mapping.
@@ -491,14 +491,14 @@ export default function ProjectsPage() {
 
             {/* 9. MARA VELLANTE CARD */}
             <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-[transform,border-color] duration-300 hover:-translate-y-0.5 flex flex-col" style={{ "--accent": "#2563eb" } as React.CSSProperties}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#2563eb" } as React.CSSProperties}>
                     <Link href="/projects/maravellante" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
                         <img src="/portfolio/Maravellante Thumbnail.jpg" alt="Mara Vellante" className="object-cover"/>
                     </Link>
                     <div className="p-6 flex flex-col flex-1">
                         <div className="mb-4 flex-1">
                             <Link href="/projects/maravellante">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">Mara Vellante</h3>
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Mara Vellante</h3>
                             </Link>
                             <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
                                 Editorial portfolio and artwork catalogue for a contemporary painter, engineered with zero build-step dependencies, interactive series filtering, and physics-driven micro-interactions.
