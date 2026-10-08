@@ -16,7 +16,7 @@ export const Card = ({
     <div
       className={cn(
         "relative overflow-hidden rounded-2xl p-6 transition-colors duration-300",
-        "border border-[var(--border)] hover:border-[var(--border-hover)]",
+        "border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)]",
         className
       )}
     >

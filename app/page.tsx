@@ -266,7 +266,7 @@ export default function Home() {
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:mr-auto md:pr-0">
-                        <Card className="p-6 opacity-90 hover:opacity-100">
+                        <Card className="p-6">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Full Stack Developer <span className="text-xs font-normal opacity-70">(Freelance)</span></h3>
@@ -302,7 +302,7 @@ export default function Home() {
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-0.5 h-6 rounded-full bg-[var(--text-tertiary)] z-10"></div>
 
                     <div className="w-full md:w-[calc(50%-2rem)] md:ml-auto md:pl-0">
-                        <Card className="p-6 opacity-90 hover:opacity-100">
+                        <Card className="p-6">
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Developer <span className="text-xs font-normal opacity-70">(Intern)</span></h3>
