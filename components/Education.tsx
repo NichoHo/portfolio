@@ -45,7 +45,7 @@ export function Education() {
       <div className="space-y-12">
         <h2 className="text-3xl font-bold text-[var(--text-primary)]">Education</h2>
 
-        <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+        <div className="divide-y divide-[var(--border)]">
           {schools.map((s) => (
             <motion.div
               key={s.school}

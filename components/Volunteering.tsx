@@ -7,7 +7,7 @@ import { fadeUp } from "@/lib/motion";
 export function Volunteering() {
   return (
     <section id="volunteering">
-      <div className="max-w-6xl mx-auto px-4 space-y-12">
+      <div className="space-y-12">
 
         <motion.div
           variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}

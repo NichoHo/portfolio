@@ -15,7 +15,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 overflow-hidden px-6 md:px-12 lg:px-24">
+    <section id="contact" className="relative py-24 border-t border-[var(--border)] overflow-hidden px-6 md:px-12 lg:px-24">
       
       {/* 1. GRID BACKGROUND */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030_1px,transparent_1px),linear-gradient(to_bottom,#80808030_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_90%_at_80%_0%,#000_70%,transparent_100%)] pointer-events-none" />

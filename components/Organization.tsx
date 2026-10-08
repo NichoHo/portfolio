@@ -6,8 +6,8 @@ import { fadeUp } from "@/lib/motion";
 
 export default function Organization() {
   return (
-    <section id="organization" className="py-20 bg-[var(--surface)]/50 border-y border-[var(--border)]">
-      <div className="max-w-6xl mx-auto px-4 space-y-12">
+    <section id="organization">
+      <div className="space-y-12">
         <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
             Organizations

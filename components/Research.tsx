@@ -37,7 +37,7 @@ export function Research() {
       <div className="space-y-12">
         <h2 className="text-3xl font-bold text-[var(--text-primary)]">Research & Publications</h2>
 
-        <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+        <div className="divide-y divide-[var(--border)]">
           {papers.map((p) => (
             <motion.div
               key={p.title}

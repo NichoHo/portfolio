@@ -135,7 +135,7 @@ export default function SwitchPage() {
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Java 21", "Spring Boot", "Thymeleaf", "Spring Data JPA", "PostgreSQL", "Flyway", "Resilience4j", "Bucket4j", "JUnit 5", "Testcontainers", "ArchUnit", "jqwik", "WireMock", "Docker", "Maven", "GitHub Actions"].map(tech => (
-                            <span key={tech} className="px-2 py-1 text-xs font-mono rounded bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
+                            <span key={tech} className="px-2 py-1 text-xs rounded bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
                                 {tech}
                             </span>
                         ))}
