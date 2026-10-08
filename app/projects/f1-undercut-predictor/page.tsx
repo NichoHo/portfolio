@@ -184,7 +184,7 @@ export default function F1PredictorPage() {
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Python", "Flask", "Scikit-Learn", "Pandas", "FastF1", "NumPy", "Matplotlib", "HTML/CSS"].map(tech => (
-                            <span key={tech} className="px-2 py-1 text-xs rounded bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
+                            <span key={tech} className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">
                                 {tech}
                             </span>
                         ))}

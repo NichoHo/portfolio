@@ -170,15 +170,15 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">TypeScript</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">PostgreSQL</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Drizzle ORM</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Auth.js</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">GitHub GraphQL API</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Webhooks</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Docker Compose</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Caddy</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">TypeScript</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Next.js</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">PostgreSQL</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Drizzle ORM</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Auth.js</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">GitHub GraphQL API</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Webhooks</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Docker Compose</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Caddy</span>
                             </div>
                         </Card>
                     </div>
@@ -213,9 +213,9 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Next.js</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Tailwind CSS</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">React</span>
                             </div>
                         </Card>
                     </div>
@@ -245,17 +245,17 @@ export default function Home() {
                             </ul>
 
                             <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">HTML</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">CSS</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">jQuery</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Supabase</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">AWS S3</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">C# ASP.NET</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">React</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">HTML</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">CSS</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">SQL Server</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">JavaScript</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">jQuery</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Next.js</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Tailwind CSS</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Supabase</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">AWS S3</span>
                             </div>
                         </Card>
                     </div>
@@ -285,13 +285,13 @@ export default function Home() {
                             </ul>
 
                              <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">C# ASP.NET Web API</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Vue.js</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Dapper</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Bootstrap 5</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">DataTables.net</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">JavaScript</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">C# ASP.NET Web API</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Vue.js</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Dapper</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Bootstrap 5</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">SQL Server</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">DataTables.net</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">JavaScript</span>
                             </div>
                         </Card>
                     </div>
@@ -321,10 +321,10 @@ export default function Home() {
                             </ul>
 
                              <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">VB.NET</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SignalR</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Google Maps API</span>
-                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">SQL Server</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">VB.NET</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">SignalR</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Google Maps API</span>
+                                <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">SQL Server</span>
                             </div>
                         </Card>
                     </div>
@@ -372,10 +372,10 @@ export default function Home() {
 
                                     <div className="space-y-6 mt-auto">
                                       <div className="flex flex-wrap gap-2">
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Go</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">OAuth 2.0</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">PostgreSQL</span>
-                                          <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Next.js</span>
+                                          <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Go</span>
+                                          <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">OAuth 2.0</span>
+                                          <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">PostgreSQL</span>
+                                          <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Next.js</span>
                                       </div>
 
                                       <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
@@ -416,10 +416,10 @@ export default function Home() {
 
                                 <div className="space-y-6 mt-auto">
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Java</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Spring Boot</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">PostgreSQL</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Docker</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Java</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Spring Boot</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">PostgreSQL</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Docker</span>
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">
@@ -459,10 +459,10 @@ export default function Home() {
 
                                 <div className="space-y-6 mt-auto">
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Laravel</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Livewire</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Stripe</span>
-                                        <span className="px-2.5 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--border)]">Cloudflare</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Laravel</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Livewire</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Stripe</span>
+                                        <span className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">Cloudflare</span>
                                     </div>
 
                                     <div className="flex sm:flex-row sm:items-center justify-start gap-4 sm:gap-6 mt-auto">

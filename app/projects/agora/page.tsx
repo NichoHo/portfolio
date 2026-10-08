@@ -126,7 +126,7 @@ export default function AgoraPage() {
                     <h3 className="font-bold text-[var(--text-primary)] mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {["Go", "PostgreSQL 17", "Redis", "Python", "FastAPI", "scikit-learn", "Anthropic API", "Redpanda", "Java", "OpenTelemetry", "k6", "Next.js", "TypeScript", "Tailwind CSS", "Docker", "Terraform", "GitHub Actions", "Playwright"].map(tech => (
-                            <span key={tech} className="px-2 py-1 text-xs rounded bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
+                            <span key={tech} className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">
                                 {tech}
                             </span>
                         ))}

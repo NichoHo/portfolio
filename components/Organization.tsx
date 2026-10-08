@@ -68,7 +68,7 @@ export default function Organization() {
             {["HTML5", "CSS3", "JavaScript", "Team Collaboration"].map((tag) => (
                 <span
                 key={tag}
-                className="px-3 py-1 bg-[var(--border)] text-[var(--text-secondary)] text-xs font-medium rounded-md"
+                className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]"
                 >
                 {tag}
                 </span>

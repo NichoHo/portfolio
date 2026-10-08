@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/motion";
 
 const skills = [
@@ -25,9 +24,9 @@ const skills = [
   },
 ];
 
+const chip = "px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]";
+
 export function Skills() {
-  const [active, setActive] = useState(0);
-  const s = skills[active];
   return (
     <section>
       <motion.div
@@ -36,35 +35,23 @@ export function Skills() {
       >
         <h2 className="text-3xl font-bold text-[var(--text-primary)]">Technical Skills</h2>
 
-        <div role="tablist" className="flex gap-8 border-b border-[var(--border)]">
-          {skills.map((k, i) => (
-            <button
-              key={k.name} role="tab" aria-selected={i === active} onClick={() => setActive(i)}
-              className={`relative pb-3 text-lg font-semibold transition-colors ${i === active ? "text-[var(--text-primary)]" : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"}`}
-            >
-              {k.name}
-              {i === active && <motion.span layoutId="skills-tab" className="absolute inset-x-0 -bottom-px h-0.5 bg-emerald-500" />}
-            </button>
+        <div className="grid gap-4 md:grid-cols-3">
+          {skills.map((s) => (
+            <div key={s.name} className="flex flex-col gap-4 rounded-2xl border border-[var(--border)] p-6">
+              <p className="text-sm font-semibold text-emerald-500">{s.name}</p>
+              <p className="text-2xl font-bold tracking-tight leading-tight text-[var(--text-primary)]">
+                {s.lead.join(", ")}
+              </p>
+              <p className="text-sm text-[var(--text-secondary)]">{s.summary}</p>
+              <div className="mt-auto border-t border-[var(--border)] pt-4">
+                <p className="mb-2 text-xs font-bold text-[var(--text-primary)]">Also used</p>
+                <div className="flex flex-wrap gap-2">
+                  {s.also.map((t) => <span key={t} className={chip}>{t}</span>)}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={s.name}
-            initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.25 }}
-            className="space-y-8 min-h-72"
-          >
-            <p className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--text-primary)]">
-              {s.lead.join(", ")}
-            </p>
-            <p className="text-[var(--text-secondary)] max-w-[44ch]">{s.summary}</p>
-            <p className="text-lg md:text-xl leading-relaxed text-[var(--text-secondary)] max-w-[52ch]">
-              <span className="text-emerald-500 font-semibold">Also </span>
-              {s.also.join(", ")}.
-            </p>
-          </motion.div>
-        </AnimatePresence>
       </motion.div>
     </section>
   );

@@ -149,7 +149,7 @@ export default function OrbitPage() {
                             "Deno",
                             "Edge Functions",
                         ].map(tech => (
-                            <span key={tech} className="px-2 py-1 text-xs rounded bg-[var(--border)] text-[var(--text-secondary)] border border-[var(--border)]">
+                            <span key={tech} className="px-2.5 py-1 text-xs rounded-full border border-[var(--border)] text-[var(--text-secondary)]">
                                 {tech}
                             </span>
                         ))}
