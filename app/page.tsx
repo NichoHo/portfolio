@@ -151,19 +151,16 @@ export default function Home() {
                         <Card>
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start gap-3">
-                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern <span className="text-xs font-normal opacity-70">(Backend)</span></h3>
-                                    <div className="flex flex-col items-end gap-1.5 shrink-0">
-                                        <span className="text-cyan-600 dark:text-cyan-400 text-xs font-bold bg-cyan-50 dark:bg-cyan-900/30 px-2 py-1 rounded whitespace-nowrap">Aug 2026 - Present</span>
-                                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent)]">
-                                            <span className="relative flex h-1.5 w-1.5">
-                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
-                                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
-                                            </span>
-                                            Current
+                                    <h3 className="font-bold text-[var(--text-primary)] text-lg">Software Engineering Intern</h3>
+                                    <span className="inline-flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 text-xs font-bold bg-cyan-50 dark:bg-cyan-900/30 px-2 py-1 rounded whitespace-nowrap shrink-0">
+                                        <span className="relative flex h-1.5 w-1.5">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
                                         </span>
-                                    </div>
+                                        Aug 2026 - Present
+                                    </span>
                                 </div>
-                                <span className="text-[var(--text-secondary)] font-medium text-sm">SIRCLO</span>
+                                <span className="text-[var(--text-secondary)] font-medium text-sm">SIRCLO · Backend</span>
                             </div>
 
                             <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
@@ -199,7 +196,13 @@ export default function Home() {
                             <div className="flex flex-col gap-1 mb-3">
                                 <div className="flex justify-between items-start gap-3">
                                     <h3 className="font-bold text-[var(--text-primary)] text-lg">Lead Developer</h3>
-                                    <span className="text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap shrink-0">Oct 2025 - Present</span>
+                                    <span className="inline-flex items-center gap-1.5 text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded whitespace-nowrap shrink-0">
+                                        <span className="relative flex h-1.5 w-1.5">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
+                                        </span>
+                                        Oct 2025 - Present
+                                    </span>
                                 </div>
                                 <span className="text-[var(--text-secondary)] font-medium text-sm">Nexus Software Agency</span>
                             </div>
@@ -209,19 +212,10 @@ export default function Home() {
                                 <li>Translated business requirements into modern, scalable frontend code</li>
                             </ul>
 
-                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-2">
-                                <div className="flex flex-wrap gap-2">
-                                    <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
-                                    <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
-                                    <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
-                                </div>
-                                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent)]">
-                                    <span className="relative flex h-1.5 w-1.5">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)]"></span>
-                                    </span>
-                                    Current
-                                </span>
+                            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Next.js</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">Tailwind CSS</span>
+                                <span className="text-xs text-[var(--text-tertiary)] border border-[var(--border)] px-1.5 py-0.5 rounded">React</span>
                             </div>
                         </Card>
                     </div>
