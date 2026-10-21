@@ -183,12 +183,12 @@ export default function ProjectsPage() {
                                     View Project <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
-                                    href="https://github.com/NichoHo/Orbit"
+                                    href="https://orbit-kappa-steel.vercel.app/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
                                 >
-                                    Source <ExternalLink className="w-3.5 h-3.5" />
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
                         </div>

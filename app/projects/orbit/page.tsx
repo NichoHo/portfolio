@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Github, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -52,6 +52,14 @@ export default function OrbitPage() {
             </p>
 
             <div className="flex flex-wrap gap-6">
+                <a
+                    href="https://orbit-kappa-steel.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors"
+                >
+                    <ExternalLink className="w-5 h-5" /> Live Website
+                </a>
                 <a
                     href="https://github.com/NichoHo/Orbit"
                     target="_blank"
