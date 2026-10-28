@@ -46,7 +46,7 @@ story += [
 
 section("SUMMARY")
 story.append(Paragraph(
-    "Computer Science student (Binus University Global Class, GPA 3.83) and backend-focused full-stack engineer, "
+    "Computer Science student (Binus University Global Class, GPA 3.86) and backend-focused full-stack engineer, "
     "shipping production software since 2023. Currently a Backend Software Engineering Intern at SIRCLO. "
     "Built enterprise logistics and finance systems in C#/.NET at Galva Group, and solo-built payment and marketplace "
     "systems in Go and Java with idempotency, double-entry ledgers, and event-driven services, proven by "
@@ -100,7 +100,7 @@ row("FaQ Assistant | RAG Document Q&amp;A (Technical Lead, team of 3)", "Python,
 bullets("Led Agile sprints and built a local RAG pipeline (LangChain, HuggingFace embeddings, FAISS) that answers "
         "questions about uploaded PDFs with exact source excerpts and no external LLM API.")
 section("EDUCATION")
-row("Computer Science (Global Class) | Binus University | GPA 3.83 / 4.00", "2023 - Present")
+row("Computer Science (Global Class) | Binus University | GPA 3.86 / 4.00", "2023 - Present")
 row("Student Exchange, Computer Science | Sejong University, Seoul | GPA 4.40 / 4.50 (top 2%)", "Feb 2026 - Jun 2026")
 
 section("RESEARCH")

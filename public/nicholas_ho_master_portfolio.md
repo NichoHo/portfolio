@@ -433,7 +433,7 @@ Currently participating in a student exchange program, expanding global perspect
 
 ### Binus University
 **Computer Science (Global Class)** · 2023 – Present
-GPA: 3.83/4.00
+GPA: 3.86/4.00
 
 **Freshmen Leader & Partner** (Sep 2024 – June 2025, 10 mo)
 Guided freshmen through their first year — delivered presentations and ongoing mentorship to help them adapt to university life and academic expectations.

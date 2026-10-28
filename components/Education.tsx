@@ -21,7 +21,7 @@ const schools = [
     degree: "Computer Science, Global Class",
     place: "Alam Sutera, Indonesia",
     dates: "2023 to Present",
-    gpa: "GPA 3.83 / 4.00",
+    gpa: "GPA 3.86 / 4.00",
     note: "",
     blurb: "Freshmen Leader & Partner (Sep 2024 to Jun 2025). Mentored first-year students and presented their orientation sessions.",
     current: true,
