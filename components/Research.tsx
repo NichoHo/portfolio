@@ -44,14 +44,14 @@ export function Research() {
             <motion.div
               key={p.title}
               {...reveal}
-              className="grid gap-4 md:grid-cols-[9rem_1fr_12rem] md:gap-10 py-10 md:py-12 items-start"
+              className="grid grid-cols-[1fr_auto] gap-4 md:grid-cols-[9rem_1fr_12rem] md:gap-10 py-10 md:py-12 items-start"
             >
               <div>
                 <p className="text-4xl md:text-5xl font-bold tracking-tighter text-emerald-500">{p.year}</p>
                 <p className="mt-2 text-sm text-[var(--text-tertiary)]">{p.kind}</p>
               </div>
 
-              <div className="space-y-4">
+              <div className="col-span-2 md:col-span-1 space-y-4">
                 <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden />
                   {p.venue}
@@ -75,10 +75,10 @@ export function Research() {
                 </div>
               </div>
 
-              <a href={p.pdf} target="_blank" rel="noreferrer" aria-label={`Open ${p.title}`} className="block w-44 md:w-full">
+              <a href={p.pdf} target="_blank" rel="noreferrer" aria-label={`Open ${p.title}`} className="block sm:hidden md:block w-14 col-start-2 row-start-1 md:col-start-3 md:w-full">
                 <img
                   src={p.cover} alt={`First page of ${p.title}`} loading="lazy"
-                  className="w-full rotate-2 rounded-lg border border-[var(--border)] shadow-2xl"
+                  className="w-full md:rotate-2 rounded-md md:rounded-lg border border-[var(--border)] shadow-2xl"
                 />
               </a>
             </motion.div>
