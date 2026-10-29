@@ -76,46 +76,6 @@ export default function ProjectsPage() {
                 </div>
             </motion.div>
 
-            {/* LOCALIST CARD */}
-            <motion.div variants={fadeUp}>
-                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
-                    <Link href="/projects/localist" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
-                        <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
-                    </Link>
-                    <div className="p-6 flex flex-col flex-1">
-                        <div className="mb-4 flex-1">
-                            <Link href="/projects/localist">
-                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Localist</h3>
-                            </Link>
-                            <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
-                                An online directory of local businesses with about 6,100 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
-                            </p>
-                        </div>
-                        <div className="space-y-6">
-                            <div className="flex flex-wrap gap-2">
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Laravel</span>
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Livewire</span>
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Stripe</span>
-                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Cloudflare</span>
-                            </div>
-                            <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
-                                <Link href="/projects/localist" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
-                                    View Project <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <a
-                                    href="https://localist-0mlt.onrender.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
-                                >
-                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-
             {/* SWITCH CARD */}
             <motion.div variants={fadeUp}>
                 <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#a3c400" } as React.CSSProperties}>
@@ -144,6 +104,46 @@ export default function ProjectsPage() {
                                 </Link>
                                 <a
                                     href="https://switch-gateway.onrender.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
+                                >
+                                    Live Site <ExternalLink className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* LOCALIST CARD */}
+            <motion.div variants={fadeUp}>
+                <div className="group h-full rounded-2xl overflow-hidden border border-[var(--border-strong)] hover:border-[var(--border-strong-hover)] transition-colors duration-300 flex flex-col" style={{ "--accent": "#eab308" } as React.CSSProperties}>
+                    <Link href="/projects/localist" className="h-auto bg-[var(--accent)]/10 relative overflow-hidden flex items-center justify-center block">
+                        <img src="/portfolio/Localist Thumbnail.jpg" alt="Localist" className="object-cover"/>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-1">
+                        <div className="mb-4 flex-1">
+                            <Link href="/projects/localist">
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">Localist</h3>
+                            </Link>
+                            <p className="text-sm text-[var(--text-secondary)] line-clamp-3">
+                                An online directory of local businesses with about 6,100 pages built to rank on Google. Owners can claim their page, edit it, and pay to move their listing higher up.
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="flex flex-wrap gap-2">
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Laravel</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Livewire</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Stripe</span>
+                                <span className="text-xs font-medium px-2 py-1 rounded-md bg-[var(--border)] text-[var(--text-secondary)]">Cloudflare</span>
+                            </div>
+                            <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+                                <Link href="/projects/localist" className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] hover:gap-2 transition-all">
+                                    View Project <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a
+                                    href="https://localist-0mlt.onrender.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-1 text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
